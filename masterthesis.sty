@@ -1,0 +1,75 @@
+%%
+%% This is file `masterthesis.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% thesis.dtx  (with options: `master')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2015 by Hassán Lombera Rodríguez <hlombera@uci.cu>
+%% Maintainers: Luis Guillermo Silva Rojas <lgsilva@uci.cu>
+%%              Rubén Alcolea Núñez <ralcolea@uci.cu>
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2006/05/20 or later.
+%% ==========================================================================
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{masterthesis}[2014/03/25 version 0.1 Master Thesis document style]
+
+\doctype{Tesis de maestría}
+
+\renewcommand{\@logoFoot}
+{
+\textsc{\large Vicerrectoría de Investigación y Postgrado}     \\
+\textsc{\large Dirección de Formación Postgraduada} \\
+}
+
+\renewcommand{\@doctypeText}
+{
+\centering
+{\bfseries Tesis presentada en opción al título de\\
+ Máster en Informática Aplicada}
+}
+
+\renewcommand{\@validateUserInput}
+{
+\ifx\@dedicatory\@undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\dedicatory\space to continue}{}
+\fi
+\ifx\@acknowledgment\@undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\acknowledgment\space to continue}{}
+\fi
+\ifx\@keywords\@undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\keywords\space to continue}{}
+\fi
+\ifx\@abstract\@undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\abstract\space to continue}{}
+\fi
+\ifx\@thought\@undefined\relax
+\PackageError{Thesis}{You need to define the command \protect\thought\space to continue}{}
+\fi
+\ifthenelse{\equal{\@author}{undefined}}
+{
+\PackageError{Thesis}{You need to define the command \protect\author\space to continue}{}
+}{}
+
+\ifnum\thecnt=0
+\PackageError{Thesis}{You need to define at least one tutor. Use command \protect\addtutor\space to continue}{}
+\else
+\ifnum\thecnt=1
+\def\tutorsheading{Tutor:}
+\fi
+\fi
+}
+\endinput
+%%
+%% End of file `masterthesis.sty'.

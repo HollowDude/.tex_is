@@ -1,0 +1,72 @@
+%%
+%% Copyright (C) 2015 by Hassán Lombera Rodríguez <hlombera@uci.cu>
+%%
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%%
+%% http://www.latex-project.org/lppl.txt
+%%
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2006/05/20 or later.
+%% ==========================================================================
+
+\input docstrip.tex
+\askforoverwritefalse
+\keepsilent
+
+\usedir{tex/latex/thesis}
+
+\declarepreamble\thesispreamble
+
+This is a generated file.
+
+Copyright (C) 2015 by Hassán Lombera Rodríguez <hlombera@uci.cu>
+Maintainers: Luis Guillermo Silva Rojas <lgsilva@uci.cu>
+             Rubén Alcolea Núñez <ralcolea@uci.cu>
+
+This file may be distributed and/or modified under the conditions of
+the LaTeX Project Public License, either version 1.3c of this license
+or (at your option) any later version. The latest version of this
+license is in:
+
+	http://www.latex-project.org/lppl.txt
+
+and version 1.3c or later is part of all distributions of LaTeX
+version 2006/05/20 or later.
+==========================================================================
+\endpreamble
+
+\generate{\usepreamble\thesispreamble
+\file{thesis.cls}{\from{thesis.dtx}{class}}}
+
+\Msg{*********************************************************}
+\Msg{*}
+\Msg{* To finish the installation you have to move the}
+\Msg{* following file into a directory searched by TeX:}
+\Msg{*}
+\Msg{* \space\space thesis.cls}
+\Msg{*}
+\Msg{* To produce the documentation run the file thesis.dtx}
+\Msg{* through LaTeX.}
+\Msg{*}
+\Msg{* Happy TeXing!}
+\Msg{*********************************************************}
+
+\nopreamble\nopostamble
+\Msg{*** Generating the LogoUCI.eps file ***}
+\generate{\file{LogoUCI.eps}{\from{thesis.dtx}{logo}}}
+
+\nopreamble\nopostamble
+\generate{\file{README.txt}{\from{thesis.dtx}{README}}}
+
+\nopreamble\nopostamble
+\generate{\file{example.tex}{\from{thesis.dtx}{EXAMPLE}}}
+
+\generate{\usepreamble\thesispreamble
+\usepostamble\defaultpostamble
+\file{masterthesis.sty}{\from{thesis.dtx}{master}}
+}
+
+\endbatchfile
