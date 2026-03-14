@@ -1,0 +1,942 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{noauthor_en_nodate}{online}{}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{En qué consiste la preparación de los datos, cómo y por qué motivos los negocios utilizan Scrum y de qué manera se usa Scrum con {AWS}.}
+      \field{langid}{spanish}
+      \field{shorttitle}{¿En qué consiste Scrum?}
+      \field{title}{¿En qué consiste Scrum? - Explicación sobre la metodología Scrum - {AWS}}
+      \field{titleaddon}{Amazon Web Services, Inc.}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\C324ZHZA\\scrum.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://aws.amazon.com/es/what-is/scrum/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/es/what-is/scrum/
+      \endverb
+    \endentry
+    \entry{noauthor_que_nodate-4}{online}{}{}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Qué es el {SDK}, cómo y por qué lo utilizan las empresas y cómo utilizarlo con {AWS}.}
+      \field{langid}{spanish}
+      \field{shorttitle}{¿Qué es el {SDK}?}
+      \field{title}{¿Qué es el {SDK}? - Explicación del {SDK} - {AWS}}
+      \field{titleaddon}{Amazon Web Services, Inc.}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\GF3H5IMP\\sdk.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://aws.amazon.com/es/what-is/sdk/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/es/what-is/sdk/
+      \endverb
+    \endentry
+    \entry{noauthor_que_nodate-1}{online}{}{}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué es {JavaScript}? - Explicación de {JavaScript} ({JS}) - {AWS}}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ¿Qué es JavaScript? - Explicación de JavaScript (JS) - AWS:C\:\\Users\\Hollow\\Zotero\\storage\\25EXP99G\\javascript.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://aws.amazon.com/es/what-is/javascript/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/es/what-is/javascript/
+      \endverb
+    \endentry
+    \entry{noauthor_que_nodate-2}{online}{}{}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{¿Qué es Postman y para qué sirve? Aprende cómo esta herramienta te permite probar y automatizar el desarrollo de servicios web de manera eficiente.}
+      \field{langid}{spanish}
+      \field{title}{¿Qué es Postman y para qué sirve?}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\VKDU4KVY\\que-es-postman-y-para-que-sirve.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://imaginaformacion.com/tutoriales/que-es-postman-y-para-que-sirve
+      \endverb
+      \verb{url}
+      \verb https://imaginaformacion.com/tutoriales/que-es-postman-y-para-que-sirve
+      \endverb
+    \endentry
+    \entry{noauthor_que_nodate}{online}{}{}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué es Python? {|} Oracle América Latina}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ¿Qué es Python? | Oracle América Latina:C\:\\Users\\Hollow\\Zotero\\storage\\HBGPRHZL\\what-is-python-for-developers.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.oracle.com/latam/developer/what-is-python-for-developers/
+      \endverb
+      \verb{url}
+      \verb https://www.oracle.com/latam/developer/what-is-python-for-developers/
+      \endverb
+    \endentry
+    \entry{noauthor_que_nodate-3}{online}{}{}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué es una {API}? Explicación de qué es una interfaz de programación de aplicaciones. {AWS}}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ¿Qué es una API? Explicación de qué es una interfaz de programación de aplicaciones. AWS:C\:\\Users\\Hollow\\Zotero\\storage\\W5ZKLDXJ\\api.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://aws.amazon.com/es/what-is/api/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/es/what-is/api/
+      \endverb
+    \endentry
+    \entry{noauthor_acerca_nodate}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Acerca de Visual Paradigm}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Acerca de Visual Paradigm:C\:\\Users\\Hollow\\Zotero\\storage\\IXJEGLGP\\about-us.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://online.visual-paradigm.com/es/about-us/
+      \endverb
+      \verb{url}
+      \verb https://online.visual-paradigm.com/es/about-us/
+      \endverb
+    \endentry
+    \entry{noauthor_ad_nodate}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Ad hoc tasks: Insights and strategies – {TimeTrack} Blog}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.timetrackapp.com/en/blog/ad-hoc-tasks/
+      \endverb
+      \verb{url}
+      \verb https://www.timetrackapp.com/en/blog/ad-hoc-tasks/
+      \endverb
+    \endentry
+    \entry{noauthor_amazon_nodate}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Amazon S3 es un almacenamiento de objetos en la nube con una escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en el sector. S3 es ideal para los lagos de datos, las aplicaciones móviles, las copias de seguridad y la restauración, el archivo, los dispositivos de {IoT}, el machine learning, la inteligencia artificial y el análisis.}
+      \field{langid}{spanish}
+      \field{title}{Amazon S3 - Almacenamiento de objetos en la nube - {AWS}}
+      \field{titleaddon}{Amazon Web Services, Inc.}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\25ACFHNP\\s3.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://aws.amazon.com/es/s3/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/es/s3/
+      \endverb
+    \endentry
+    \entry{ayala_espanol_2013}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d64d813448544ff1505f46a679bba7e6}{%
+           family={Ayala},
+           familyi={A\bibinitperiod},
+           given={Maxie},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d64d813448544ff1505f46a679bba7e6}
+      \strng{fullhash}{d64d813448544ff1505f46a679bba7e6}
+      \strng{fullhashraw}{d64d813448544ff1505f46a679bba7e6}
+      \strng{bibnamehash}{d64d813448544ff1505f46a679bba7e6}
+      \strng{authorbibnamehash}{d64d813448544ff1505f46a679bba7e6}
+      \strng{authornamehash}{d64d813448544ff1505f46a679bba7e6}
+      \strng{authorfullhash}{d64d813448544ff1505f46a679bba7e6}
+      \strng{authorfullhashraw}{d64d813448544ff1505f46a679bba7e6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metodología SCRUM}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://commons.wikimedia.org/wiki/File:Scrumm.PNG
+      \endverb
+      \verb{url}
+      \verb https://commons.wikimedia.org/wiki/File:Scrumm.PNG
+      \endverb
+    \endentry
+    \entry{noauthor_clasificacion_nodate}{online}{}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scribd es red social de lectura y publicación más importante del mundo.}
+      \field{langid}{spanish}
+      \field{title}{Clasificación de Patrones {GoF} en Diseño {|} {PDF} {|} Patrón de diseño de software {|} Objeto (informática)}
+      \field{titleaddon}{Scribd}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\AE2ATY7S\\Patrones-GoF-docx.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://es.scribd.com/document/443499646/Patrones-GoF-docx
+      \endverb
+      \verb{url}
+      \verb https://es.scribd.com/document/443499646/Patrones-GoF-docx
+      \endverb
+    \endentry
+    \entry{noauthor_comprobar_nodate}{online}{}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{El checksum es un valor numérico calculado a partir de una secuencia de datos. Se usa en las aplicac...}
+      \field{langid}{spanish}
+      \field{title}{Comprobar Checksum {|} Wikicrática}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\YQG2Z5DC\\comprobar-checksum.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://tecnocratica.net/wikicratica/books/linux/page/comprobar-checksum
+      \endverb
+      \verb{url}
+      \verb https://tecnocratica.net/wikicratica/books/linux/page/comprobar-checksum
+      \endverb
+    \endentry
+    \entry{noauthor_delivery_nodate}{online}{}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Delivery Planning - Platform Development Playbook}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Delivery Planning - Platform Development Playbook:C\:\\Users\\Hollow\\Zotero\\storage\\7PNJNJJS\\Delivery-Planning.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://playbook.platformdev.amdigital.co.uk/Ways-of-Working/Governance/Delivery-Governance/Delivery-Planning/
+      \endverb
+      \verb{url}
+      \verb https://playbook.platformdev.amdigital.co.uk/Ways-of-Working/Governance/Delivery-Governance/Delivery-Planning/
+      \endverb
+    \endentry
+    \entry{noauthor_django_nodate}{online}{}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The web framework for perfectionists with deadlines.}
+      \field{langid}{english}
+      \field{title}{Django}
+      \field{titleaddon}{Django Project}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\Z7INFSGB\\www.djangoproject.com.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.djangoproject.com/
+      \endverb
+      \verb{url}
+      \verb https://www.djangoproject.com/
+      \endverb
+    \endentry
+    \entry{noauthor_experiencias_nodate}{online}{}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{La consistencia, la libertad de elección y la sincronización de canales son clave para que la experiencia de compra del cliente sea única y seamless (sin “fisuras“, “costuras“). Este es el resultado de un experimento realizado por un equipo de profesoras que ganó el Primer Premio en la modalidad de Publicidad y Marketing en el Premio Estudios Financieros 2020 con la investigación titulada ‘Be seamless, my firm! Cómo gestionar la experiencia de interacción omnicanal con los consumidores’. Por Rocío González}
+      \field{langid}{spanish}
+      \field{title}{Experiencias únicas en la era del seamless {|} {CEF}}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\7RWRHRQD\\experiencias-unicas-era-seamless.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cef.com/noticias/experiencias-unicas-era-seamless
+      \endverb
+      \verb{url}
+      \verb https://www.cef.com/noticias/experiencias-unicas-era-seamless
+      \endverb
+    \endentry
+    \entry{fahiz_understanding_2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=042d7cbe98b3929c01ee29240bc2be51}{%
+           family={Fahiz},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{fullhash}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{fullhashraw}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{bibnamehash}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{authorbibnamehash}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{authornamehash}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{authorfullhash}{042d7cbe98b3929c01ee29240bc2be51}
+      \strng{authorfullhashraw}{042d7cbe98b3929c01ee29240bc2be51}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Introduction}
+      \field{day}{11}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{shorttitle}{Understanding Django Rest Framework ({DRF})}
+      \field{title}{Understanding Django Rest Framework ({DRF}): A Comprehensive Guide}
+      \field{titleaddon}{Medium}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\C5E4QK6C\\understanding-django-rest-framework-drf-a-comprehensive-guide-f47463f85965.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://fahizkp.medium.com/understanding-django-rest-framework-drf-a-comprehensive-guide-f47463f85965
+      \endverb
+      \verb{url}
+      \verb https://fahizkp.medium.com/understanding-django-rest-framework-drf-a-comprehensive-guide-f47463f85965
+      \endverb
+    \endentry
+    \entry{noauthor_front_nodate}{online}{}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{¿Cuál es la diferencia entre front-end y back-end? Cómo utilizar el front-end y el back-end con {AWS}.}
+      \field{langid}{spanish}
+      \field{shorttitle}{Front End frente a back-end}
+      \field{title}{Front End frente a back-end: diferencia entre el desarrollo de aplicaciones - {AWS}}
+      \field{titleaddon}{Amazon Web Services, Inc.}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\43M6NAU8\\the-difference-between-frontend-and-backend.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://aws.amazon.com/es/compare/the-difference-between-frontend-and-backend/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/es/compare/the-difference-between-frontend-and-backend/
+      \endverb
+    \endentry
+    \entry{noauthor_importancia_nodate}{online}{}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{La fundamentación teórica es una parte esencial de la tesis que se desarrolla a lo largo del tiempo mediante la búsqueda, análisis y síntesis de información teórica. Sus funciones principales son sustentar bibliográficamente la investigación y garantizar que se base en el conocimiento previo. Las bases teóricas contienen los fundamentos bibliográficos para comprender a profundidad el tema e investigación.}
+      \field{langid}{spanish}
+      \field{title}{Importancia de la Fundamentación Teórica {|} {PDF} {|} Teoría {|} Conocimiento}
+      \field{titleaddon}{Scribd}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\VIVECY3G\\La-Fundamentacion-Teorica-Es.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://es.scribd.com/document/396194604/La-Fundamentacion-Teorica-Es
+      \endverb
+      \verb{url}
+      \verb https://es.scribd.com/document/396194604/La-Fundamentacion-Teorica-Es
+      \endverb
+    \endentry
+    \entry{jain_que_2025}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=238f43ce9bbd0aef6e3e9028bb4c1386}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Anushtha},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21d257bf09444379d2e4904544a4d34c}{%
+           family={Solutions},
+           familyi={S\bibinitperiod},
+           given={Visure},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{fullhash}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{fullhashraw}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{bibnamehash}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{authorbibnamehash}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{authornamehash}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{authorfullhash}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \strng{authorfullhashraw}{4484c0b831ca59f7a5847ffcbba0c91d}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Optimice la gestión de sus requisitos no funcionales. Comience su prueba gratuita de 30 días y agilice su proceso de gestión de requisitos con Visure Solutions.}
+      \field{day}{7}
+      \field{langid}{spanish}
+      \field{month}{5}
+      \field{shorttitle}{¿Qué son los requisitos no funcionales?}
+      \field{title}{¿Qué son los requisitos no funcionales? Tipos, ejemplos y enfoques}
+      \field{titleaddon}{Visure Solutions}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\9PS9QR9L\\requerimientos-no-funcionales.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://visuresolutions.com/es/gu%C3%ADa-de-limosna/requerimientos-no-funcionales/
+      \endverb
+      \verb{url}
+      \verb https://visuresolutions.com/es/gu%C3%ADa-de-limosna/requerimientos-no-funcionales/
+      \endverb
+    \endentry
+    \entry{lucena_que_2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e8d0e1b7aa15c3802b0fabbaaf3c386c}{%
+           family={Lucena},
+           familyi={L\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{fullhash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{fullhashraw}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{bibnamehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{authorbibnamehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{authornamehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{authorfullhash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \strng{authorfullhashraw}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{El framework es una herramienta para los desarrolladores a la hora de crear sitios web o aplicaciones. Continúa leyendo para saber más.}
+      \field{day}{6}
+      \field{langid}{spanish}
+      \field{month}{5}
+      \field{shorttitle}{¿Qué es el framework?}
+      \field{title}{¿Qué es el framework? {|} 2025}
+      \field{titleaddon}{Maestrías y {MBA}}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cesuma.mx/blog/que-es-el-framework.html
+      \endverb
+      \verb{url}
+      \verb https://www.cesuma.mx/blog/que-es-el-framework.html
+      \endverb
+    \endentry
+    \entry{noauthor_miniominio-py_2025}{software}{}{}
+      \list{publisher}{1}{%
+        {MinIO}%
+      }
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{MinIO} Client {SDK} for Python}
+      \field{day}{27}
+      \field{month}{11}
+      \field{note}{original-date: 2015-06-17T03:51:15Z}
+      \field{title}{minio/minio-py}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/minio/minio-py
+      \endverb
+      \verb{url}
+      \verb https://github.com/minio/minio-py
+      \endverb
+      \keyw{aws-s3,minio,minio-client,s3-bucket,sdk}
+    \endentry
+    \entry{noauthor_picta_nodate}{online}{}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Picta {|} Dale Play!}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Picta | Dale Play!:C\:\\Users\\Hollow\\Zotero\\storage\\38BGLTC2\\about.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.picta.cu/about
+      \endverb
+      \verb{url}
+      \verb https://www.picta.cu/about
+      \endverb
+    \endentry
+    \entry{regalado_miranda_internet_1997}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=2f957a5947b407523a0b9e64b91af628}{%
+           family={Regalado\bibnamedelima Miranda},
+           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Ester\bibnamedelima María},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=49cb5e9062654d7408ab1746b2e4503d}{%
+           family={Regalado\bibnamedelima Miranda},
+           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Elsa},
+           giveni={E\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Los autores conservan todos los derechos sobre sus obras, las cuales pueden reproducir y distribuir siempre y cuando citen la fuente primaria de publicación y lo hagan con fines no comerciales.}%
+      }
+      \strng{namehash}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{fullhash}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{fullhashraw}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{bibnamehash}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{authorbibnamehash}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{authornamehash}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{authorfullhash}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{authorfullhashraw}{1e3f206fe8de93f902e036bd8b493edb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0864-2141}
+      \field{journaltitle}{Educación Médica Superior}
+      \field{month}{6}
+      \field{number}{1}
+      \field{shorttitle}{Internet}
+      \field{title}{Internet: la red de redes en Cuba}
+      \field{urlday}{14}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{11}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{39\bibrangedash 46}
+      \range{pages}{8}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\WYLJYH27\\scielo.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://scielo.sld.cu/scielo.php?script=sci_abstract&pid=S0864-21411997000100006&lng=es&nrm=iso&tlng=pt
+      \endverb
+      \verb{url}
+      \verb http://scielo.sld.cu/scielo.php?script=sci_abstract&pid=S0864-21411997000100006&lng=es&nrm=iso&tlng=pt
+      \endverb
+    \endentry
+    \entry{noauthor_scrum_2025}{inreference}{}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scrum es un marco de trabajo para desarrollo ágil de software que se ha expandido a otras industrias. Es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo y obtener el mejor resultado posible de proyectos, caracterizado por:​ Adoptar una estrategia de desarrollo incremental, en lugar de la planificación y ejecución completa del producto. Basar la calidad del resultado más en el conocimiento tácito de las personas en equipos autoorganizados, que en la calidad de los procesos empleados. Solapar las diferentes fases del desarrollo, en lugar de realizar una tras otra en un ciclo secuencial o en cascada. Las metodologías ágiles, en que se basa scrum, son aquellas que permiten adaptar la forma de trabajo a las condiciones del proyecto, consiguiendo flexibilidad e inmediatez en la respuesta para amoldar el proyecto y su desarrollo a las circunstancias específicas del entorno.​}
+      \field{booktitle}{Wikipedia, la enciclopedia libre}
+      \field{day}{20}
+      \field{langid}{spanish}
+      \field{month}{10}
+      \field{note}{Page Version {ID}: 170075837}
+      \field{title}{Scrum (desarrollo de software)}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\WVQBSUS4\\index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/w/index.php?title=Scrum_(desarrollo_de_software)&oldid=170075837
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/w/index.php?title=Scrum_(desarrollo_de_software)&oldid=170075837
+      \endverb
+    \endentry
+    \entry{noauthor_software_nodate-1}{online}{}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Your All-in-One Learning Portal: {GeeksforGeeks} is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exams, and more.}
+      \field{langid}{english}
+      \field{note}{Section: Software Engineering}
+      \field{title}{Software development effort estimation}
+      \field{titleaddon}{{GeeksforGeeks}}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\EMNRDKNV\\software-development-effort-estimation.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/software-engineering/software-development-effort-estimation/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/software-engineering/software-development-effort-estimation/
+      \endverb
+    \endentry
+    \entry{noauthor_software_nodate}{online}{}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Navicat es un software de gestión y administración de bases de datos. Permite a los usuarios conectarse y administrar múltiples tipos de bases de datos, incluyendo {MySQL}, {MariaDB}, {SQL} Server y Oracle, entre otros.}
+      \field{langid}{spanish}
+      \field{title}{Software Shop}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\47SDHCW4\\navicat.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://software-shop.com/producto/navicat
+      \endverb
+      \verb{url}
+      \verb https://software-shop.com/producto/navicat
+      \endverb
+    \endentry
+    \entry{noauthor_user_2023}{online}{}{}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{User stories are very high-level definitions of a requirement, containing just enough information so that the developers can produce a reasonable estimate.}
+      \field{day}{21}
+      \field{langid}{american}
+      \field{month}{4}
+      \field{shorttitle}{User Stories}
+      \field{title}{User Stories: An Agile Introduction}
+      \field{urlday}{13}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://agilemodeling.com/artifacts/userstory.htm
+      \endverb
+      \verb{url}
+      \verb https://agilemodeling.com/artifacts/userstory.htm
+      \endverb
+    \endentry
+    \entry{valtx_metodologias_2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=84930f0ce36b48eb28260c361d515274}{%
+           family={Valtx},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{84930f0ce36b48eb28260c361d515274}
+      \strng{fullhash}{84930f0ce36b48eb28260c361d515274}
+      \strng{fullhashraw}{84930f0ce36b48eb28260c361d515274}
+      \strng{bibnamehash}{84930f0ce36b48eb28260c361d515274}
+      \strng{authorbibnamehash}{84930f0ce36b48eb28260c361d515274}
+      \strng{authornamehash}{84930f0ce36b48eb28260c361d515274}
+      \strng{authorfullhash}{84930f0ce36b48eb28260c361d515274}
+      \strng{authorfullhashraw}{84930f0ce36b48eb28260c361d515274}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Descubre los tipos de metodologías de desarrollo de software existen y cuáles son sus principales características.}
+      \field{day}{19}
+      \field{langid}{spanish}
+      \field{month}{4}
+      \field{note}{Section: Software Factory}
+      \field{shorttitle}{Metodologías de desarrollo de software}
+      \field{title}{Metodologías de desarrollo de software: ¿Qué son y para qué sirven?}
+      \field{titleaddon}{Valtx}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\6BCDNR5W\\metodologias-para-el-desarrollo-de-software-que-son-y-para-que-sirven.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.valtx.pe/blog/metodologias-para-el-desarrollo-de-software-que-son-y-para-que-sirven
+      \endverb
+      \verb{url}
+      \verb https://www.valtx.pe/blog/metodologias-para-el-desarrollo-de-software-que-son-y-para-que-sirven
+      \endverb
+    \endentry
+    \entry{noauthor_visual_2025}{inreference}{}{}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Visual Studio Code (también llamado {VS} Code) es un editor de código fuente desarrollado por Microsoft para Windows, Linux, {macOS} y Web. Incluye soporte para la depuración, control integrado de Git, resaltado de sintaxis, finalización inteligente de código, fragmentos y refactorización de código. También es personalizable, por lo que los usuarios pueden cambiar el tema del editor, los atajos de teclado y las preferencias. Es software gratuito y de código abierto,​​ aunque la descarga oficial está bajo software privativo e incluye características personalizadas por Microsoft.​ Visual Studio Code se basa en Electron, un framework que se utiliza para implementar Chromium y Node.js como aplicaciones para escritorio, que se ejecuta en el motor de diseño Blink. Aunque utiliza el framework Electron, el software no usa Atom y en su lugar emplea el mismo componente editor (Monaco) utilizado en Visual Studio Team Services (anteriormente llamado Visual Studio Online).​}
+      \field{booktitle}{Wikipedia, la enciclopedia libre}
+      \field{day}{18}
+      \field{langid}{spanish}
+      \field{month}{11}
+      \field{note}{Page Version {ID}: 170554736}
+      \field{title}{Visual Studio Code}
+      \field{urlday}{27}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\6AM8HPCU\\index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/w/index.php?title=Visual_Studio_Code&oldid=170554736
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/w/index.php?title=Visual_Studio_Code&oldid=170554736
+      \endverb
+    \endentry
+    \entry{noauthor_what_nodate-3}{online}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Angular? • Angular}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb What is Angular? • Angular:C\:\\Users\\Hollow\\Zotero\\storage\\IJIU22Y9\\overview.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://angular.dev/overview
+      \endverb
+      \verb{url}
+      \verb https://angular.dev/overview
+      \endverb
+    \endentry
+    \entry{noauthor_what_nodate}{online}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The {SSH} protocol (also referred to as Secure Shell) is a method for secure remote login from one computer to another.}
+      \field{langid}{english}
+      \field{shorttitle}{What is the Secure Shell ({SSH}) Protocol?}
+      \field{title}{What is the Secure Shell ({SSH}) Protocol? {|} {SSH} Academy}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\KV4VXXDJ\\protocol.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ssh.com/academy/ssh/protocol
+      \endverb
+      \verb{url}
+      \verb https://www.ssh.com/academy/ssh/protocol
+      \endverb
+    \endentry
+    \entry{noauthor_what_nodate-2}{online}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{What is transcoding? In this post, we’ll explain why it’s a must for video streaming strategies for the web and mobile devices.}
+      \field{langid}{spanish}
+      \field{shorttitle}{What is Transcoding?}
+      \field{title}{What is Transcoding? And Why is it Important for Video Streaming?}
+      \field{titleaddon}{Kaltura}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\L2D3WEXQ\\what-is-transcoding.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://corp.kaltura.com/blog/what-is-transcoding/
+      \endverb
+      \verb{url}
+      \verb https://corp.kaltura.com/blog/what-is-transcoding/
+      \endverb
+    \endentry
+    \entry{noauthor_world_2025}{inreference}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{abstract}{En informática, la World Wide Web (La Web/{WWW}) o red informática mundial​ es un sistema que funciona a través de internet, por el cual se pueden transmitir diversos tipos de datos a través del Protocolo de Transferencia de Hipertextos o {HTTP}, que son los enlaces de la página web. Es un sistema a través del cual se gestiona información que será compartida por internet; es necesario tener conexión a internet a través de alguna aplicación para poder utilizar la web, por ejemplo, Chrome, Mozilla, Safari y otros navegadores web, que son herramientas de internet que nos permiten acceder a un gran número de contenidos que a su vez nos direccionan a otras páginas y así sucesivamente; para su creación se emplea lenguaje informático {HTML} (Hypertext Markup Language), lenguaje de marcas que permite crear documentos para compartir a través de internet; emplea el sistema de Localización Uniforme de Recursos o {URL}, que es la dirección concreta que determina cada uno de los recursos que se encuentran en la red, es decir, es un identificador propio para cada página, documento, archivo, entre otros, que se encuentran en la web. La Web se desarrolló entre marzo y diciembre de 1989​​ por el inglés Tim Berners-Lee con la ayuda del belga Robert Cailliau mientras trabajaban en el {CERN} en Ginebra, Suiza, y se publicó como una propuesta formal en 1991. Desde entonces, Berners-Lee ha jugado un papel activo guiando el desarrollo de estándares Web (como los lenguajes de marcado con los que se crean las páginas web), y en los últimos años ha abogado por su visión de una Web semántica. Utilizando los conceptos de sus anteriores sistemas de hipertexto como {ENQUIRE}, el físico británico Tim Berners-Lee, un científico de la computación y en ese tiempo uno de los empleados del {CERN}, ahora director del World Wide Web Consortium (W3C), escribió una propuesta en marzo de 1989 con lo que se convertiría en la World Wide Web.​ La propuesta de 1989 fue destinada a un sistema de comunicación {CERN} pero Berners-Lee finalmente se dio cuenta de que el concepto podría aplicarse en todo el mundo.​ En la {CERN}, la organización europea de investigación cerca de Ginebra, en la frontera entre Francia y Suiza,​ Berners-Lee y el científico de la computación belga Robert Cailliau propusieron en 1990 utilizar el hipertexto «para vincular y acceder a información de diversos tipos como una red de nodos en los que el usuario puede navegar a voluntad»,​ y Berners-Lee terminó el primer sitio web en diciembre de ese año.​ Berners-Lee publicó el proyecto en el grupo de noticias alt.hypertext el 6 de agosto de 1991.​​}
+      \field{booktitle}{Wikipedia, la enciclopedia libre}
+      \field{day}{28}
+      \field{langid}{spanish}
+      \field{month}{11}
+      \field{note}{Page Version {ID}: 170703008}
+      \field{title}{World Wide Web}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\I9UKCT4S\\index.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://es.wikipedia.org/w/index.php?title=World_Wide_Web&oldid=170703008
+      \endverb
+      \verb{url}
+      \verb https://es.wikipedia.org/w/index.php?title=World_Wide_Web&oldid=170703008
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

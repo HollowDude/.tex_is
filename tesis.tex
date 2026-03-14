@@ -1,0 +1,38 @@
+\documentclass[spanish]{thesis}
+
+\addauthor{Xavier Verdecie Ramos}
+\title{Sistema de subida fragmentada y arquitectura dirigida por eventos para desacoplar subida y renderizado en Picta}
+\ucicenter{Facultad 4}
+\facultynum{4}
+\addtutor[Tutor]{MS. C Lisset Salazar Gómez}
+
+\thought{Lo fácil debe ser fácil, lo difí­cil posible\newline Allan Kay}
+
+\dedicatory{A mi gato que no hace nada pero maulla alentadoramente.}
+
+\acknowledgment{En deuda con Jesucristo}
+
+\abstract{La insuficiente infraestructura de la red nacional de Internet, generadora de bajas velocidades de conexión, impacta negativamente en servicios en línea como la plataforma de streaming Picta. Este contexto afecta específicamente el proceso de subida y renderizado de videos por parte de sus más de 700 canales activos, consumiendo un ancho de banda y recursos del servidor significativos, lo que perjudica la experiencia del usuario y limita la escalabilidad del servicio. La presente investigación se desarrolla con el objetivo de diseñar e implementar un sistema que mitigue estos efectos mediante una estrategia que integra una subida fragmentada de videos y una arquitectura dirigida por eventos para desacoplar la subida del renderizado. La metodología comprendió la caracterización del flujo existente para identificar cuellos de botella, el diseño de la nueva arquitectura y la implementación y evaluación del prototipo. Los principales resultados obtenidos demuestran una mejora sustancial en la experiencia de usuario durante la subida de contenido, otorgándole mayor control, junto con una reducción en el consumo de ancho de banda y una optimización en el uso de los recursos del servidor. Se concluye que la propuesta constituye una solución efectiva para contrarrestar las limitaciones del entorno, garantizando un proceso de publicación más fluido y eficiente, y sentando las bases para una mejor escalabilidad de la plataforma.}
+
+\keywords{Arquitectura, Carga, Eficiencia, Experiencia, Renderizado.}
+
+\input{Glossary}
+\input{Acronyms}
+
+\addbibresource{tesis.bib}
+
+\begin{document}
+  %Marca de DRAFT off
+  \SetWatermarkText{}
+  \maketitle
+  
+  \input{Introduction}
+  \input{Chapter1}
+  \input{Chapter2}
+  %\input{Chapter3}
+  %\input{Conclusions}
+  \input{Suggestions}
+  %\input{Appendices}
+\end{document}
+
+\end{lstlisting}

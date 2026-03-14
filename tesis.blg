@@ -1,0 +1,16 @@
+[1] Config.pm:328> INFO - This is Biber 2.21
+[6] Config.pm:331> INFO - Logfile is 'tesis.blg'
+[664] biber-MSWIN64:342> INFO - === 
+[946] Biber.pm:421> INFO - Reading 'tesis.bcf'
+[1966] Biber.pm:1002> INFO - Found 33 citekeys in bib section 0
+[2075] Biber.pm:4487> INFO - Processing section 0
+[2180] Biber.pm:4678> INFO - Looking for bibtex file 'tesis.bib' for section 0
+[2630] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3026] bibtex.pm:1519> INFO - Found BibTeX data source 'tesis.bib'
+[3567] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3575] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3576] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[3736] bbl.pm:676> INFO - Writing 'tesis.bbl' with encoding 'UTF-8'
+[3780] bbl.pm:779> INFO - Output to tesis.bbl
+[3787] Biber.pm:132> WARN - Duplicate entry key: 'noauthor_clasificacion_nodate' in file 'tesis.bib', skipping ...
+[3791] Biber.pm:134> INFO - WARNINGS: 1

@@ -1,359 +1,789 @@
- \chapter{Propuesta de soluci�n}
-\label{chap:chapter2}
+\chapter{Propuesta de Solución}
 
-\section{Secci�n de prueba}
-Escribir aqu� el cap�tulo 2. Prueba de glosario  \gls{Engine}. A continuaci�n un ejemplo de enlace al anexo \hyperlink{bloque.1}{Bloque Corona}. Este es un ejemplo de matriz con bordes numerados \citep{Mathew2010}.
+\citep{noauthor_importancia_nodate} plantea que la fundamentación teórica es una parte esencial de la
+tesis que se desarrolla a lo largo del tiempo mediante la búsqueda, análisis y síntesis de información
+teórica.
 
-\newcommand{\colorentrygreen}[1]{\multicolumn{1}{c}{\cellcolor{green!20} #1}}
-\newcommand{\colorentryred}[1]{\multicolumn{1}{c}{\cellcolor{red!20} #1}}
+Con una fundamentación teórica bien estructurada y una idea concisa de las deficiencias actuales de la
+plataforma Picta, en este capítulo se presentan las consideraciones de diseño del proyecto, se definen
+formalmente los requisitos funcionales a través de historias de usuario, se definen los requisitos no
+funcionales y se realiza una estimación de esfuerzo a partir de la que se obtiene un plan de entrega.
+Finalmente se discuten los patrones arquitectónicos y de diseño utilizados.
 
-\begin{align*}
-	\kbordermatrix
-	{
-		Padre&1&2&3&4\\
-		1&\colorentrygreen{0}&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		2&0&0&0&1\\
-		3&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		4&0&0&1&0
-	}
-	\begin{array}{l}
-		\rightarrow \mbox{Seleccionada aleatoriamente}\\
-		\quad\\
-		\rightarrow \mbox{Seleccionada aleatoriamente}\\
-		\quad\\
-	\end{array}
-	\qquad
-	\kbordermatrix
-	{
-		Madre&1&2&3&4\\
-		1&1&0&0&0\\
-		2&0&1&0&0\\
-		3&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}&\colorentryred{0}\\
-		4&\colorentryred{0}&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}
-	}
-\end{align*}
-\begin{align}
-\stackrel{\quad Hijo}
-{
-	\kbordermatrix
-	{
-		 &1&2&3&4\\
-		1&\colorentrygreen{0}&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		2&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}&\colorentryred{0}\\
-		3&\colorentrygreen{1}&\colorentrygreen{0}&\colorentrygreen{0}&\colorentrygreen{0}\\
-		4&\colorentryred{0}&\colorentryred{0}&\colorentryred{0}&\colorentryred{1}
-	}
+\section{Propuesta de solución}
+
+Teniendo en cuenta que la necesidad de darle solución a las deficiencias de la plataforma es
+inminente, este documento propone el desarrollo de un módulo que deberá integrarse al sistema que
+actualmente se encuentra funcionando en producción. El módulo tendrá como objetivo ofrecer el servicio
+de subida de multimedia a los servidores de Picta con una resistencia a errores que permita recuperar
+el progreso de la subida en caso de cualquier situación inesperada, mientras mantiene el uso del
+servicio limitado a las personas con los permisos necesarios para administrar un canal. Además,
+mediante el desacoplamiento de la subida y el renderizado de videos, se logrará una alta reducción de
+carga de trabajo del lado del cliente. Más formalmente se desea que la integración del módulo permita:
+
+\begin{itemize}
+  \item \textbf{Gestionar la lista de subida de videos:} El módulo debe brindar a la web la
+  posibilidad de manipular los estados de cada subida de video por parte de un administrador de canal,
+  dándole opciones de cambiar su estado a `en curso', `pausada', `cancelada' y mantener una
+  persistencia de estos datos en el servidor a largo plazo.
+
+  \item \textbf{Pausar subidas de forma arbitraria:} La web debe ser capaz gracias a las
+  funcionalidades brindadas por el módulo de cambiar arbitrariamente al estado `pausada' cualquier
+  subida que se encuentre `en curso'.
+
+  \item \textbf{Reanudar subidas con estado `pausada':} Luego de cambiar el estado a `pausada', el
+  módulo web debe permitirle al cliente autorizado reanudar el proceso desde el punto en que estaba
+  antes de cambiar a ese estado, ya sea de forma automática al haber perdido comunicación con el
+  servidor o manual al haber elegido arbitrariamente detener momentáneamente el proceso.
+
+  \item \textbf{Persistir históricamente registros de subidas en estado `cancelada':} La web debe ser
+  capaz de mostrarle al cliente autorizado todas las subidas con estado `cancelada' que haya
+  registrado.
+
+  \item \textbf{Procesar arbitrariamente metadatos de videos subidos al servidor S3:} El módulo web
+  debe permitirle al usuario autorizado, luego de haber terminado la subida de un video al servidor
+  S3, procesar del lado de la API los metadatos relacionados con el video en cuestión.
+
+  \item \textbf{Listar videos sin metadatos aún asociados:} El sistema debe, gracias al módulo web,
+  mostrarle al usuario autorizado una lista de videos ya subidos al servidor de MinIO S3 pero que aún
+  no han sido renderizados con los metadatos necesarios.
+\end{itemize}
+
+\section{Usuarios}
+
+El sistema está concebido para proporcionar una serie de funcionalidades de calidad a los usuarios de
+la plataforma Picta que publican contenido en la misma. El rol al cual están dirigidas estas nuevas
+funcionalidades es el de \textbf{administrador de canal}, el cual estará autorizado a subir videos a
+su canal de forma fragmentada y procesar los metadatos de los mismos al momento de la operación.
+
+Todo rol que herede los permisos de \textbf{administrador de canal} podrá también tener acceso a las
+mismas funcionalidades.
+
+\section{Posibles estados de una subida}
+
+A continuación, se describe un diagrama de flujo orientado a los posibles estados que deberá poder
+tomar una subida de videos según el nuevo módulo web:
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{Images/flujo_estados}
+  \caption{Flujo de posibles estados de una subida}
+  \label{fig:flujo_estados}
+\end{figure}
+
+A continuación, se describe un diagrama de flujo orientado a ilustrar la lógica que deberá tomar un
+proceso de subida de videos según el nuevo módulo web:
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{Images/flujo_proceso}
+  \caption{Flujo del proceso de subida de videos}
+  \label{fig:flujo_proceso}
+\end{figure}
+
+\section{Historias de Usuario}
+
+De acuerdo con \citep{noauthor_user_2023}, las historias de usuario son uno de los principales
+artefactos de desarrollo para los equipos de Scrum y Programación Extrema (XP). Una historia de
+usuario es una definición de alto nivel de un requisito, que contiene la información justa para que
+los desarrolladores puedan estimar razonablemente el esfuerzo necesario para implementarlo.
+
+Como parte de la metodología Scrum se realizaron varias historias de usuario con el objetivo de tener
+una mejor comprensión de los requisitos de la aplicación. A continuación, se presentan las historias
+generadas.
+
+% ── Macro reutilizable para encabezado de HU ──────────────────────────────────
+\newcommand{\huhead}[4]{%
+  \multicolumn{2}{|l|}{\colorentry{\textbf{Historia de Usuario}}} \\
+  \hline
+  \textbf{Número:} #1 \quad \textbf{Estimación:} #2 & \textbf{Sprint:} #3 \\
+  \hline
+  \multicolumn{2}{|p{13.5cm}|}{\textbf{Nombre:} #4} \\
+  \hline
 }
-\end{align}
 
-\lipsum[1-2]
-\hlblock{Este es un ejemplo de cita \citep{Mathew2010}
-Esta es una prueba de c�mo se escribe un pseudoc�digo en \LaTeX.}
-\begin{algorithm}[!h]
-\caption{Estrategia de BellmanKalaba}\label{alg:algorithtest}
-  \begin{algorithmic}[1]
-\Procedure {BellmanKalaba}{$G$, $u$, $l$, $p$}
-  \ForAll {$v \in V(G)$}
-    \State $l(v) \leftarrow \infty$
-  \EndFor
-  \State $l(u) \leftarrow 0$
-  \Repeat
-    \For {$i \leftarrow 1, n$}
-      \State $min \leftarrow l(v_i)$
-      \For {$j \leftarrow 1, n$}
-        \If {$min > e(v_i, v_j) + l(v_j)$}
-          \State $min \leftarrow e(v_i, v_j) + l(v_j)$
-          \State $p(i) \leftarrow v_j$
-        \EndIf
-      \EndFor
-    \State $l'(i) \leftarrow min$
-    \EndFor
-  \State $changed \leftarrow l \not= l'$
-  \State $l \leftarrow l'$
-  \Until{$\neg changed$}
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
+% ── HU-01 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-01 Iniciar proceso de subida fragmentada de video}
+\label{tb:hu01}\\
+\hline
+\huhead{HU-01}{20 h}{1}{Iniciar proceso de subida fragmentada de video}
+\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal de Picta, quiero poder seleccionar un
+archivo de video y registrar un proceso de subida fragmentada en el servidor, para que el sistema
+divida el archivo en fragmentos (chunks) y comience la transferencia de forma controlada y tolerante
+a fallos de red.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal está autenticado en
+la plataforma Picta y accede al módulo de subida de contenido.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Selecciona un archivo de video local y pulsa el
+botón `Iniciar Subida'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema registra una nueva sesión de subida
+en la base de datos con estado `en curso', divide el archivo en fragmentos de tamaño configurable,
+calcula el checksum de cada fragmento y comienza la transferencia secuencial al servidor MinIO S3.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} El selector de archivos debe aceptar únicamente
+extensiones de video válidas (mp4, mkv, avi, mov). Debe mostrarse una barra de progreso por fragmento
+y global en tiempo real.\newline
+\textbf{Backend:} Se debe verificar la autenticidad del token de sesión antes de crear el registro de
+subida. Cada fragmento recibido debe validarse con su checksum (MD5/SHA256) antes de ser almacenado en
+MinIO. El endpoint debe rechazar solicitudes de roles sin permisos de administrador de canal.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta HU es el núcleo del sistema. Implementa el protocolo de subida
+fragmentada sobre la API Django REST Framework, utilizando la librería minio-py v7.2.18 para la
+interacción con el servidor MinIO S3. La lógica de partición del archivo reside en el frontend Angular
+v15.} \\
+\hline
+\end{longtable}
 
-\section{Ejemplos de c�digo fuente}
-\lipsum[2-4]
-Este es un ejemplo de cita \citep{Mathew2010}
-\singlespacing
-\loadlanguage{C++}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=1, lastline=14, caption=B�squeda de m�ximo]{Anexos/code.cpp}
+% ── HU-02 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-02 Pausar subida de video en curso}
+\label{tb:hu02}\\
+\hline
+\huhead{HU-02}{14 h}{1}{Pausar subida de video en curso}
+\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder pausar de forma arbitraria una
+subida que esté actualmente en curso, para interrumpir temporalmente la transferencia sin perder el
+progreso acumulado hasta ese momento, ya sea por decisión propia o porque las condiciones de red lo
+requieren.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal tiene al menos una
+subida con estado `en curso' en el panel de gestión.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Pulsa el botón `Pausar' sobre la subida activa.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema detiene el envío de nuevos
+fragmentos al servidor, actualiza el estado de la sesión a `pausada' en la base de datos y persiste el
+índice del último fragmento transferido correctamente, para que la reanudación pueda continuar desde
+ese punto exacto.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} El botón `Pausar' debe deshabilitarse visualmente
+mientras el sistema procesa la petición, para evitar acciones duplicadas. Debe mostrarse un indicador
+de estado `Pausada' con el porcentaje de progreso alcanzado.\newline
+\textbf{Backend:} La petición de pausa debe validar que la subida pertenece al canal del usuario
+autenticado (control de acceso por ownership). El endpoint de pausa debe ser idempotente: si la subida
+ya está pausada, debe responder con éxito sin modificar el estado.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{La pausa puede ser disparada de forma manual por el usuario o de forma
+automática por el cliente Angular al detectar la pérdida de conexión con el servidor (evento offline
+del navegador). El estado `pausada' debe persistir en la base de datos PostgreSQL 17 de forma
+inmediata, garantizando que un reinicio total del navegador no provoque pérdida del progreso.} \\
+\hline
+\end{longtable}
 
-\loadlanguage{Java}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=17, lastline=27, caption=Ejemplo de c�digo en Java]{Anexos/code.cpp}
+% ── HU-03 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-03 Reanudar subida con estado pausada}
+\label{tb:hu03}\\
+\hline
+\huhead{HU-03}{16 h}{2}{Reanudar subida con estado pausada}
+\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie (Full-Stack) \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder reanudar una subida que se
+encuentre en estado `pausada' desde el fragmento exacto en que fue detenida pulsando el botón
+correspondiente.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal tiene al menos una
+subida con estado `pausada' en el panel de gestión, ya sea por una pausa manual o por una interrupción
+de red previa.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Pulsa el botón `Reanudar' sobre la subida
+pausada.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema consulta el servidor para obtener
+el índice del último fragmento recibido correctamente, actualiza el estado de la sesión a `en curso'
+en la base de datos, y reanuda la transferencia a partir del fragmento siguiente, sin retransmitir los
+fragmentos ya confirmados.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Backend:} El endpoint de reanudación debe consultar el registro
+en base de datos y en MinIO S3 para confirmar qué fragmentos fueron almacenados íntegramente antes de
+devolver el índice de reanudación al cliente. Se debe verificar el ownership de la subida antes de
+procesarla.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el mecanismo de tolerancia a fallos central del
+sistema. La consulta del índice de reanudación al servidor es crítica para garantizar la integridad de
+la subida en escenarios de corte de energía o desconexión abrupta, cumpliendo con los requisitos no
+funcionales de Confiabilidad.} \\
+\hline
+\end{longtable}
 
-\loadlanguage{PHP}
-\lstset{emph=[3]{join, condition, idtarea, nombre, descripcion, idinstructora, fecha}} % attributes
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=29, lastline=60, caption=Ejemplo de c�digo en PHP]{Anexos/code.cpp}
+% ── HU-04 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-04 Cancelar subida y persistir registro histórico}
+\label{tb:hu04}\\
+\hline
+\huhead{HU-04}{10 h}{2}{Cancelar subida y persistir registro histórico}
+\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder cancelar definitivamente una
+subida (ya sea que esté `en curso' o `pausada') y que el sistema conserve un registro histórico de esa
+cancelación, para poder consultar en el futuro qué subidas fueron interrumpidas y en qué estado se
+encontraban.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal tiene al menos una
+subida en estado `en curso' o `pausada' en el panel de gestión.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Pulsa el botón `Cancelar' sobre una subida
+activa o pausada y confirma la acción en el diálogo de confirmación.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema detiene la transferencia si estaba
+en curso, actualiza el estado de la sesión a `cancelada' en la base de datos con la marca de tiempo de
+la cancelación, y el registro queda disponible en el historial de subidas canceladas del canal.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Debe mostrarse un diálogo de confirmación
+(`¿Estás seguro de que deseas cancelar esta subida? Esta acción no se puede deshacer.') antes de
+ejecutar la cancelación. El botón de confirmación debe requerir una acción explícita del usuario.\newline
+\textbf{Backend:} El estado `cancelada' es terminal: una vez alcanzado, la subida no puede cambiar a
+ningún otro estado. El endpoint debe verificar el ownership antes de procesar la cancelación. Los
+fragmentos parcialmente subidos a MinIO pueden mantenerse por un período configurable antes de su
+limpieza automática.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{El historial de subidas canceladas debe ser accesible desde el panel de
+gestión de subidas y debe mostrar: nombre del archivo, tamaño total, porcentaje de progreso alcanzado,
+fecha y hora de inicio y fecha y hora de cancelación.} \\
+\hline
+\end{longtable}
 
-\loadlanguage{PHP}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=147, caption=Ejemplo de c�digo en PHP]{Anexos/code.cpp}
+% ── HU-05 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-05 Gestionar panel de lista de subidas}
+\label{tb:hu05}\\
+\hline
+\huhead{HU-05}{12 h}{2}{Gestionar panel de lista de subidas}
+\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero visualizar en un panel centralizado
+todas mis subidas de video con su estado actual (en curso, pausada, cancelada, completada), para tener
+una visión clara del estado de mis publicaciones y poder realizar acciones sobre cada una desde un
+mismo lugar.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal está autenticado y
+accede a la sección de gestión de subidas del módulo.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} La página del panel de subidas carga
+completamente.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema muestra una lista con todas las
+subidas del canal del usuario autenticado, incluyendo para cada una: nombre del archivo, tamaño,
+porcentaje de progreso, estado actual y las acciones disponibles según el estado (Pausar, Reanudar,
+Cancelar).} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Las acciones disponibles deben mostrarse u ocultarse
+dinámicamente según el estado de cada subida.\newline
+\textbf{Backend:} El endpoint de listado debe filtrar las subidas por el canal del usuario autenticado,
+garantizando aislamiento de datos entre canales. La respuesta debe ser paginada para soportar canales
+con muchas subidas históricas.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{El panel debe implementarse como un componente Angular reutilizable,
+coherente con el diseño de la interfaz existente de Picta. Se deben mostrar los estados diferenciados
+visualmente: `en curso' (indicador animado), `pausada' (ícono de pausa), `cancelada' (tachado/gris),
+`completada' (check verde). El historial de subidas canceladas debe poder filtrarse de forma
+independiente.} \\
+\hline
+\end{longtable}
 
-\loadlanguage{Python}
-\lstinputlisting[tabsize=3, breaklines, frame=lines, firstline=62, lastline=67, caption=Ejemplo de c�digo en Python]{Anexos/code.cpp}
+% ── HU-06 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-06 Listar videos subidos sin metadatos asociados}
+\label{tb:hu06}\\
+\hline
+\huhead{HU-06}{10 h}{3}{Listar videos subidos sin metadatos asociados}
+\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero ver una lista de todos los videos que
+han sido subidos completamente al servidor MinIO S3 pero que aún no tienen metadatos asociados ni han
+sido enviados al proceso de renderizado, para identificar qué videos requieren completar su ciclo de
+publicación.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal accede a la sección
+dedicada y se filtra por `Videos sin publicar' dentro del módulo.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} La sección carga y consulta el servidor.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema devuelve y muestra una lista de los
+archivos de video presentes en el bucket de MinIO S3 del canal que no tienen un registro de metadatos
+asociado en la base de datos, mostrando para cada uno: nombre del archivo, tamaño y fecha de subida.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} La lista debe mostrar un estado vacío informativo
+(`No hay videos pendientes') cuando todos los videos han sido procesados. Cada ítem de la lista debe
+tener un botón `Procesar y publicar' que redirija al flujo de HU-07.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta funcionalidad es la entrada al flujo de publicación posterior a la
+subida. Un video aparece en esta lista cuando su subida fragmentada ha sido marcada como `completada'
+y todos sus fragmentos han sido ensamblados correctamente en MinIO. La consulta al bucket MinIO se
+realiza utilizando la librería minio-py v7.2.18 a través de la API Django REST Framework.} \\
+\hline
+\end{longtable}
 
-\lstinputlisting[style=htmlcssjs, tabsize=3, breaklines, frame=lines, firstline=69, lastline=87, caption=Ejemplo de c�digo en htmlcssjs]{Anexos/code.cpp}
+% ── HU-07 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-07 Procesar metadatos y disparar renderizado asíncrono}
+\label{tb:hu07}\\
+\hline
+\huhead{HU-07}{18 h}{3}{Procesar metadatos y disparar renderizado asíncrono}
+\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero, una vez completada la subida de un
+video al servidor S3, ingresar los metadatos del video (título, descripción, categoría, etc.) o elegir
+un set de metadatos ya creado anteriormente y enviar la solicitud de renderizado, para que el sistema
+procese el video de forma asíncrona y desacoplada sin bloquear la interfaz ni consumir recursos del
+cliente durante el transcoding.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal selecciona un video
+de la lista de videos pendientes de metadatos (HU-06) y accede al formulario de edición de metadatos.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Completa los campos de metadatos requeridos y
+pulsa el botón `Procesar y publicar'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema persiste los metadatos en la base
+de datos, emite un evento al bus de mensajería (arquitectura dirigida por eventos) que desencadena el
+proceso de renderizado y transcoding de forma asíncrona en el servidor, y devuelve inmediatamente el
+control al usuario con un mensaje de confirmación, sin esperar a que el renderizado termine.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Los campos Título y Categoría son obligatorios. El
+botón `Publicar y renderizar' debe quedar deshabilitado hasta que los campos obligatorios estén
+completados. Tras el envío, debe mostrarse inmediatamente el estado `Renderizado en cola...' sin
+bloquear la interfaz.\newline
+\textbf{Backend:} El endpoint debe persistir los metadatos y emitir el evento de renderizado dentro de
+una transacción atómica: si la emisión del evento falla, no se deben guardar los metadatos, y
+viceversa. Se debe validar que el video objetivo pertenece al canal del usuario autenticado.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el desacoplamiento central de la arquitectura
+dirigida por eventos. El evento emitido es consumido por el worker de renderizado (proceso
+independiente) que ejecuta el transcoding y la generación de calidades (360p, 720p, 1080p) sin
+intervención del cliente. Esta arquitectura permite reducir la carga de trabajo del lado del cliente y
+del servidor web, trasladando el procesamiento intensivo a un proceso asíncrono.} \\
+\hline
+\end{longtable}
 
-\lstinputlisting[style=htmlcssjs, tabsize=3, breaklines, frame=lines, firstline=89, lastline=146, caption=Ejemplo de c�digo en htmlcssjs]{Anexos/code.cpp}
+% ── HU-08 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-08 Monitorear estado del proceso de renderizado}
+\label{tb:hu08}\\
+\hline
+\huhead{HU-08}{14 h}{4}{Monitorear estado del proceso de renderizado}
+\textbf{Prioridad de Negocio:} Media & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder consultar el estado del proceso
+de renderizado de mis videos (en cola, procesando, completado, fallido) en tiempo real dentro de la
+plataforma Picta, para saber cuándo mi contenido estará disponible para los espectadores sin necesidad
+de recargar la página manualmente.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal ha publicado al
+menos un video y disparado su renderizado a través del flujo de HU-07.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Accede al panel de seguimiento de publicaciones
+o al detalle del video en proceso.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema muestra el estado actual del
+renderizado con actualizaciones en tiempo real: porcentaje de progreso del transcoding, calidades
+generadas hasta el momento y estimación de tiempo restante. Si el proceso falla, se muestra un mensaje
+de error descriptivo con la opción de reintentar.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} El componente de estado debe actualizarse
+automáticamente sin recargar la página, usando polling periódico al endpoint de estado o
+actualizaciones push según la disponibilidad del entorno. Los estados deben estar diferenciados
+visualmente: `En cola' (gris), `Procesando' (azul animado), `Completado' (verde), `Fallido' (rojo con
+opción de reintento).\newline
+\textbf{Backend:} El endpoint de consulta de estado debe leer el registro de renderizado actualizado
+por el worker asíncrono. Debe incluir protección de acceso por ownership del video. En caso de estado
+`Fallido', el sistema debe registrar el mensaje de error del worker para su consulta.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta HU cierra el ciclo completo de publicación: subida fragmentada
+$\rightarrow$ metadatos $\rightarrow$ renderizado asíncrono $\rightarrow$ monitoreo. Junto con HU-07
+valida empíricamente la propuesta central de la tesis: el desacoplamiento mediante arquitectura
+dirigida por eventos reduce la carga del servidor web y mejora la experiencia del creador de
+contenido.} \\
+\hline
+\end{longtable}
 
+\section{Requisitos No Funcionales}
 
+Los requisitos no funcionales (NFR) son esenciales para el desarrollo de software y determinan el
+rendimiento de un sistema más allá de sus funciones básicas. Si bien los requisitos funcionales
+especifican \textit{lo que} un sistema debe hacer, los NFR definen \textit{qué tan bien} debe
+funcionar. Estos requisitos cubren aspectos críticos como el rendimiento, la seguridad, la facilidad
+de uso y la escalabilidad, que afectan la confiabilidad del sistema, la experiencia del usuario y el
+éxito a largo plazo \citep{jain_que_2025}.
 
-\chapter{Ejemplo de tabla grande}
-   \section{Tabla aleatoria}
-   
-   
-  
-   \begin{longtable}[c]{|l|l|l|}
-	   \captionsetup{margin=1.15\leftmargin}
-	   \caption{Feasible triples for highly variable Grid, MLMMH.}
-	   \label{grid_mlmmh} \\[2ex]
-	   
-	   \hline \multicolumn{1}{|c|}{\textbf{Time (s)}} & \multicolumn{1}{c|}{\textbf{Triple chosen}} & \multicolumn{1}{c|}{\textbf{Other feasible triples}} \\ \hline 
-	   \endfirsthead
-	   
-	   \caption{continued from previous page} \\
-	   \hline \multicolumn{1}{|c|}{\textbf{Time (s)}} &
-	   \multicolumn{1}{c|}{\textbf{Triple chosen}} &
-	   \multicolumn{1}{c|}{\textbf{Other feasible triples}} \\ \hline 
-	   \endhead
-	   
-	   \hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
-	   \endfoot
-	   
-	   \hline
-	   \endlastfoot
-	   
-	   0 & (1, 11, 13725) & (1, 12, 10980), (1, 13, 8235), (2, 2, 0), (3, 1, 0) \\ \cline{2-3}
-	   2745 & (1, 12, 10980) & (1, 13, 8235), (2, 2, 0), (2, 3, 0), (3, 1, 0) \\
-	   5490 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   8235 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   10980 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   13725 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   16470 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   19215 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   21960 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   24705 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   27450 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   30195 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   32940 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   35685 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   38430 & (1, 13, 10980) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   41175 & (1, 12, 13725) & (1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   43920 & (1, 13, 10980) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   46665 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   49410 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   52155 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   54900 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   57645 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   60390 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   63135 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   65880 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   68625 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   71370 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   74115 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   76860 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   79605 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   82350 & (1, 12, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   85095 & (1, 12, 13725) & (1, 13, 10980), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   87840 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   90585 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   93330 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   96075 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   98820 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   101565 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   104310 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   107055 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   109800 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   112545 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   115290 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   118035 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   120780 & (1, 13, 16470) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   123525 & (1, 13, 13725) & (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   126270 & (1, 12, 16470) & (1, 13, 13725), (2, 2, 2745), (2, 3, 0), (3, 1, 0) \\
-	   129015 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	   131760 & (2, 2, 2745) & (2, 3, 0), (3, 1, 0) \\
-	\end{longtable}
+Dado que el módulo se integra a una plataforma en producción con más de 700 canales activos y opera
+bajo las restricciones de la infraestructura de red nacional, estos requisitos son determinantes para
+garantizar la robustez, eficiencia e integrabilidad de la solución.
 
-\section{Tablas de ingenier�a}
+\subsection{Confiabilidad}
 
-\begin{userstory}[tb:prueba]
-	\storyname{Cargar archivo}
-	\storyuser{Especialista}
-	\storyiter{1}
-	\storypriority{Alta}
-	\storyrisk{Bajo}
-	\storypoints{0.8}
-	\storyprogrammer{Ernesto Gil Capote}
-	\storydescription{
-	Permite cargar los datos de los casos de estudio a utilizar en el m�dulo con el objetivo de determinar secuencias factibles. Estos est�n almacenados en archivos con extensi�n .asp. La estructura est� compuesta por los par�metros de entrada de la aplicaci�n para cada caso de estudio tales como: dimensi�n, nombre de la estructura mec�nica, cantidad de piezas, la MD correspondiente y el vector de herramientas en caso de que lo posea.
-	\begin{itemize}
-	\item rojo
-	\item blanco
-	\end{itemize}
-	}
-	\storyobservation{En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicaci�n. Si se introduce un archivo que contiene caracteres no v�lidos o falta alguno de los elementos necesarios para la ejecuci�n del m�dulo, este debe lanzar la excepci�n correspondiente.En caso de que el usuario no cargue un archivo, el sistema debe mostrar un mensaje de alerta con dicha explicaci�n. Si se introduce un archivo que contiene caracteres no v�lidos o falta alguno de los elementos necesarios para la ejecuci�n del m�dulo, este debe lanzar la excepci�n correspondiente.}
-	%\storyinterface{\includegraphics[scale=0.5]{Images/DSC00461}}
-\end{userstory}
+Dadas las limitaciones de conectividad del entorno nacional, la confiabilidad es el atributo de mayor
+prioridad del sistema. El módulo debe garantizar que ninguna interrupción, ya sea de red o energía,
+resulte en pérdida de progreso o datos para el usuario.
 
-Esta es referencia a una tabla de historia de usuario \ref{tb:prueba}
+\begin{longtable}[c]{|p{1.8cm}|p{3cm}|p{8cm}|}
+\caption{Requisitos de Confiabilidad}
+\label{tb:rnf_confiabilidad}\\
+\hline
+\multicolumn{3}{|l|}{\colorentry{\textbf{Confiabilidad}}} \\
+\hline
+\textbf{ID} & \textbf{Requisito} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{ID} & \textbf{Requisito} & \textbf{Descripción} \\
+\hline
+\endhead
+\multicolumn{3}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
 
-\begin{crccard}[tablacrc3]
-\crcclass{AlgoritmoGenetico}
-\crcresp
-{
-	\begin{itemize}
-	\item Crear el conjunto de genes necesarios para la creaci�n de un individuo
-	\item Realizar el proceso de mutaci�n y recombinaci�n
-	\item Crear el conjunto de genes necesarios para la creaci�n de un individuo
-	\item Realizar el proceso de mutaci�n y recombinaci�n
-	\end{itemize}
-}
-\crccolab
-{
-	Poblaci�n\\
-	OperadorProbabilidad\\
-	OperadorParejas\\
-	OperadorReproducion\\
-	Poblaci�n
-}
-\end{crccard}
+RnF-C1 & Persistencia ante interrupciones &
+El sistema debe guardar automáticamente el progreso de cada subida fragmentada ante cualquier
+interrupción de red o energía, tanto del lado del cliente como del servidor, garantizando la
+reanudación sin pérdida de datos. \\ \hline
 
-\begin{crccard}[tablacrc2]
-\crcclass{AlgoritmoGenetico}
-\crcresp
-{
-	\begin{itemize}
-	\item Crear el conjunto de genes necesarios para la creaci�n de un individuo
-	\item Realizar el proceso de mutaci�n y recombinaci�n
-	\item Crear el conjunto de genes necesarios para la creaci�n de un individuo
-	\item Realizar el proceso de mutaci�n y recombinaci�n
-	\end{itemize}
-}
-\crccolab
-{
-	Poblaci�n\\
-	OperadorProbabilidad\\
-	OperadorParejas\\
-	OperadorReproducion\\
-	Poblaci�n
-}
-\end{crccard}
+RnF-C2 & Manejo controlado de excepciones &
+Cualquier error o excepción generada durante la subida o el renderizado debe ser capturada, registrada
+internamente y comunicada al usuario con un mensaje descriptivo, evitando fallos silenciosos. \\ \hline
 
+\end{longtable}
 
-\begin{effortestimation}[tb:est1]
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.2}
-	\addentry[2]{Graficar secuencias de ensamble}{0.2} 
-	\addentry[4]{Graficar secuencias de ensamble}{0.1} 
-	\addentry[4]{Graficar ensamble}{0.1} 
-	\addentry[3]{Determinar Secuencia de Ensamble}{0.5} 
-	\addentry[1]{Cargar Archivo}{0.8} 
-	\addentry[1]{Determinar Secuencia de Ensamble}{0.2} 
-	\addentry[1]{Gestionar restricci�n cambios de herramienta}{0.5} 
-	\addentry[1]{Graficar secuencias de ensamble}{0.6} 
-\end{effortestimation}
+\subsection{Eficiencia}
 
-\begin{effortestimation}
-	\addentry[4]{Graficar secuencias de ensamble}{1.1}  
-	\addentry[3]{Determinar Secuencia de Ensamble}{2.5}  
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.3} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.2} 
-	\addentry[2]{Graficar secuencias de ensamble}{0.2} 
-	\addentry[1]{Cargar Fichero}{0.8} 
-	\addentry[1]{Determinar Secuencia de Ensamble}{0.2} 
-	\addentry[1]{Gestionar restricci�n cambios de herramienta}{0.5} 
-	\addentry[1]{Esta es la prueba para el tinguiri}{0.5} 
-\end{effortestimation}
+El sistema debe mantenerse dentro de umbrales de rendimiento que no degraden la experiencia de los
+creadores de contenido ni el desempeño general de la plataforma Picta.
 
-Esto es una prueba de Tabla \ref{tb:est1}
+\begin{longtable}[c]{|p{1.8cm}|p{3cm}|p{8cm}|}
+\caption{Requisitos de Eficiencia}
+\label{tb:rnf_eficiencia}\\
+\hline
+\multicolumn{3}{|l|}{\colorentry{\textbf{Eficiencia}}} \\
+\hline
+\textbf{ID} & \textbf{Requisito} & \textbf{Descripción} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{ID} & \textbf{Requisito} & \textbf{Descripción} \\
+\hline
+\endhead
+\multicolumn{3}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
 
-\begin{iterationplan}[tb:iterdurationtest]
-\setiterresult{1}{3} % in case an iteration takes a different time than the one calculated
+RnF-E1 & Tiempo de respuesta &
+El tiempo de ejecución de cada transacción API no debe superar 1 segundo bajo condiciones normales de
+operación de red. \\ \hline
 
-\end{iterationplan}
+RnF-E2 & Capacidad de procesamiento &
+El sistema debe ser capaz de gestionar hasta 500 solicitudes de inicio de subida fragmentada por
+segundo y soportar hasta 500 usuarios concurrentes sin degradación del rendimiento. \\ \hline
 
-%\geniterdurationplan[tb]{}
+\end{longtable}
 
-Esto es una prueba de Tabla \ref{tb:iterdurationtest}
+\subsection{Restricciones de Diseño e Implementación}
 
-\begin{engineeringtask}[tb:engtask]
-\engtaskuserstory{4}
-\engtaskname{Registrar usuario}
-\engtasktype{Registarse}
-\engtaskpointestimation{1}
-\engtaskstartdate{6}{5}{2014} % day, month, year
-\engtaskenddate{24}{10}{2014}
-\engtaskdescription{El usuario introduce sus datos para poder registrarse.}
-%\engtaskprogrammer{Alberto Medina Ram�rez}
-\end{engineeringtask}
+El módulo se desarrolla como una extensión del sistema existente de Picta, por lo que las decisiones
+tecnológicas están condicionadas por la arquitectura actual. A continuación, se consolidan todas las
+restricciones técnicas y de diseño que enmarcan el desarrollo.
 
-\begin{developmenttask}[tb:devtask1]
-\devtaskuserstory{4}
-\devtaskname{Registrar usuario}
-\devtasktype{Registarse}
-\devtaskpointestimation{1}
-\devtaskstartdate{6}{5}{2014} % day, month, year
-\devtaskenddate{24}{10}{2014}
-\devtaskdescription{El usuario introduce sus datos para poder registrarse.}
-\devtaskprogrammer{Alberto Medina Ram�rez}
-\end{developmenttask}
+\begin{longtable}[c]{|p{3cm}|p{10.3cm}|}
+\caption{Restricciones de Diseño e Implementación}
+\label{tb:restricciones}\\
+\hline
+\multicolumn{2}{|l|}{\colorentry{\textbf{Restricciones de Diseño e Implementación}}} \\
+\hline
+\textbf{Categoría} & \textbf{Especificación} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{Categoría} & \textbf{Especificación} \\
+\hline
+\endhead
+\multicolumn{2}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
 
-\begin{developmenttask}[tb:devtask2]
-\devtaskuserstory{4}
-\devtaskname{Registrar usuario}
-\devtasktype{Registarse}
-\devtaskpointestimation{1}
-\devtaskstartdate{6}{5}{2014} % day, month, year
-\devtaskenddate{24}{10}{2014}
-\devtaskdescription{El usuario introduce sus datos para poder registrarse.}
-%\devtaskprogrammer{Alberto Medina Ram�rez}
-\end{developmenttask}
+Almacenamiento &
+La gestión de objetos multimedia se realiza exclusivamente mediante MinIO (librería minio-py v7.2.18),
+compatible con la API de Amazon S3. \\ \hline
 
-\begin{engineeringtask}[tb:engtask1]
-\engtaskuserstory{4}
-\engtaskname{Registrar usuario}
-\engtasktype{Registarse}
-\engtaskpointestimation{1}
-\engtaskstartdate{6}{1}{2014} % day, month, year
-\engtaskenddate{24}{11}{2014}
-\engtaskdescription{El usuario introduce sus datos para poder registrarse.}
-\engtaskprogrammer{Alberto Medina Ram�rez}
-\end{engineeringtask}
+Base de datos &
+PostgreSQL 17 como gestor de base de datos relacional. Administración mediante Navicat Premium
+v17.1.10. \\ \hline
 
-Referencia \ref{tb:devtask1}
+Modelado &
+Visual Paradigm v17.0 para la generación de todos los artefactos UML del proyecto. \\ \hline
 
-\begin{acceptancetest}[tb:expresult]
-\testcasecode{HU2\_P1}
-\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
-\testcaseexeccond{
-El usuario debe estar previamente registrado.\\
-El usuario y contrase�a deben ser v�lidos.
-}
-\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
-v�lidos.}
-\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
-\testcasename{Autentificar usuario en el sistema.}
-\testcaseuserstory{2}
-\end{acceptancetest}
+Codificación &
+El código Python debe adherirse al estándar PEP 8. Se deben aplicar buenas prácticas de diseño ágil
+durante todo el desarrollo. \\ \hline
 
-\begin{acceptancetest}[tb:expresultaa]
-\testcasecode{HU2\_P1}
-\testcasedescription{Prueba para la funcionalidad autentificar usuario.}
-\testcaseexeccond{
-El usuario debe estar previamente registrado.\\
-El usuario y contrase�a deben ser v�lidos.
-}
-\testcaseexecstep{Se intenta autentificar un usuario en el sistema con los datos
-v�lidos.}
-\testcaseexpresult{El usuario se autentifica correctamente en el sistema.}
-\testcasename{Autentificar usuario en el sistema.}
-\testcaseuserstory{2}
-\end{acceptancetest}
+Interfaz &
+La interfaz de usuario debe integrarse de forma seamless con el diseño visual existente de la
+plataforma Picta, sin introducir inconsistencias estéticas. \\ \hline
 
-Prueba de link \ref{tb:expresult}
+Mantenimiento &
+El sistema debe recibir revisiones periódicas para corregir errores e inconsistencias detectadas
+durante su ciclo de vida en producción. \\ \hline
+
+\end{longtable}
+
+\section{Estimación de esfuerzo por historia de usuario y plan de iteraciones}
+
+\citep{noauthor_software_nodate-1} señala que cumplir con los plazos y mantener la calidad son
+fundamentales en el desarrollo de software, y que uno de los aspectos cruciales es la estimación del
+tiempo.
+
+En esta sección se presentan las estimaciones de esfuerzo de cada historia de usuario, así como un
+plan de iteraciones. Las estimaciones de esfuerzo se obtienen a partir de las historias de usuario y
+sirven para estimar la cantidad de tiempo que implementar una funcionalidad podría tomar. El plan de
+duración de las iteraciones suma las duraciones calculadas en la estimación de esfuerzo teniendo en
+cuenta factores como la posibilidad de varias personas trabajando en paralelo en diferentes
+funcionalidades. A continuación, se muestran las estimaciones realizadas para el proyecto.
+
+\begin{longtable}[c]{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1cm}|p{8cm}|>{\centering\arraybackslash}p{2.5cm}|}
+\caption{Estimación de esfuerzo por historia de usuario}
+\label{tb:esfuerzo}\\
+\hline
+\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Puntos estimados (semanas)} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Puntos estimados (semanas)} \\
+\hline
+\endhead
+\multicolumn{4}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+\multirow{3}{*}{\textbf{1}} & 1 & Iniciar proceso de subida fragmentada & 2.0 \\ \cline{2-4}
+                             & 2 & Pausar subida en curso               & 0.5 \\ \cline{2-4}
+                             & 3 & Reanudar subida pausada              & 0.8 \\ \hline
+
+\multirow{3}{*}{\textbf{2}} & 4 & Cancelar y persistir registro histórico      & 0.4 \\ \cline{2-4}
+                             & 5 & Gestionar panel de lista de subidas          & 0.6 \\ \cline{2-4}
+                             & 6 & Listar videos sin metadatos asociados        & 0.5 \\ \hline
+
+\multirow{2}{*}{\textbf{3}} & 7 & Procesar metadatos y disparar renderizado asíncrono & 1.2 \\ \cline{2-4}
+                             & 8 & Monitorear estado del proceso de renderizado        & 0.6 \\ \hline
+
+\multicolumn{3}{|r|}{\textbf{Total}} & \textbf{6.6} \\ \hline
+
+\end{longtable}
+
+\begin{longtable}[c]{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1cm}|p{8cm}|>{\centering\arraybackslash}p{2.5cm}|}
+\caption{Plan de duración de las iteraciones}
+\label{tb:duracion}\\
+\hline
+\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Duración (semanas)} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Duración (semanas)} \\
+\hline
+\endhead
+\multicolumn{4}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+\multirow{3}{*}{\textbf{1}} & 1 & Iniciar proceso de subida fragmentada & \multirow{3}{*}{4.0} \\ \cline{2-3}
+                             & 2 & Pausar subida en curso               & \\ \cline{2-3}
+                             & 3 & Reanudar subida pausada              & \\ \hline
+
+\multirow{3}{*}{\textbf{2}} & 4 & Cancelar y persistir registro histórico & \multirow{3}{*}{2.0} \\ \cline{2-3}
+                             & 5 & Gestionar panel de lista de subidas     & \\ \cline{2-3}
+                             & 6 & Listar videos sin metadatos asociados   & \\ \hline
+
+\multirow{2}{*}{\textbf{3}} & 7 & Procesar metadatos y disparar renderizado asíncrono & \multirow{2}{*}{2.2} \\ \cline{2-3}
+                             & 8 & Monitorear estado del proceso de renderizado        & \\ \hline
+
+\multicolumn{3}{|r|}{\textbf{Total}} & \textbf{8.2} \\ \hline
+
+\end{longtable}
+
+\section{Plan de Entrega}
+
+Con la información obtenida en los pasos anteriores se elabora un plan de entrega. Los planes de
+entrega son un conjunto de documentos elaborados y mantenidos por el equipo de entrega, y deben ser
+claros, visibles y de fácil acceso \citep{noauthor_delivery_nodate}. Este tiene como propósito
+ofrecerle al cliente una estimación del tiempo que tomará implementar las funcionalidades descritas en
+las historias de usuario. A continuación, se presenta el plan de entrega elaborado para el proyecto.
+
+\begin{longtable}[c]{|>{\centering\arraybackslash}p{1cm}|p{2.8cm}|p{2cm}|p{6.5cm}|}
+\caption{Plan de entrega del proyecto}
+\label{tb:plan_entrega}\\
+\hline
+\textbf{Sprint} & \textbf{Período} & \textbf{HUs} & \textbf{Entregable} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{Sprint} & \textbf{Período} & \textbf{HUs} & \textbf{Entregable} \\
+\hline
+\endhead
+\multicolumn{4}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+\textbf{1} & Dic 2025 -- Ene 2026 & HU-01, HU-02, HU-03 &
+Módulo de subida fragmentada funcional: inicio de proceso de subida, pausa manual/automática y
+reanudación con recuperación de progreso desde el servidor MinIO S3. \\ \hline
+
+\textbf{2} & Feb -- Mar 2026 & HU-04, HU-05, HU-06 &
+Panel de gestión de subidas: cancelación con historial persistente, vista centralizada de estados y
+listado de videos subidos sin metadatos pendientes de procesamiento. \\ \hline
+
+\textbf{3} & Abr -- May 2026 & HU-07, HU-08 &
+Arquitectura dirigida por eventos: procesamiento asíncrono de metadatos, desacoplamiento del
+renderizado y monitoreo de estado en tiempo real. Pruebas de rendimiento y validación final del
+sistema. \\ \hline
+
+\textbf{Total} & \textbf{Dic 2025 -- May 2026} & \textbf{8 HUs} &
+\textbf{Sistema de subida fragmentada con arquitectura dirigida por eventos integrado a la plataforma
+Picta.} \\ \hline
+
+\end{longtable}
+
+\section{Diagrama de Clases}
+
+El diagrama de clases constituye uno de los artefactos centrales del diseño orientado a objetos, ya
+que representa la estructura estática del sistema a través de las clases que lo componen, sus
+atributos, métodos y las relaciones que existen entre ellas. Para el presente módulo, el diagrama
+refleja tanto la capa de dominio del backend en Django como los componentes principales del frontend
+en Angular.
+
+\section{Patrones Arquitectónicos}
+
+Los patrones arquitectónicos constituyen soluciones de alto nivel reutilizables para problemas
+recurrentes en el diseño de sistemas de software. Definen la organización global del sistema, la
+distribución de responsabilidades entre sus componentes y los mecanismos de comunicación entre ellos.
+Para el presente módulo se adoptaron tres patrones que en conjunto resuelven los dos problemas
+principales identificados en el Capítulo I: la vulnerabilidad de la subida ante interrupciones de red
+y el acoplamiento entre la subida y el renderizado.
+
+\subsection{Arquitectura Dirigida por Eventos}
+
+Este patrón constituye el aporte arquitectónico central de la investigación. En el flujo monolítico
+original de Picta, la subida del video y su renderizado ocurrían de forma síncrona dentro de la misma
+transacción HTTP, lo que mantenía la conexión del cliente abierta durante todo el proceso de
+transcodificación, consumiendo recursos del servidor de forma continua y exponiéndose a timeouts ante
+conexiones inestables.
+
+La arquitectura dirigida por eventos desacopla estos dos procesos mediante la emisión de un evento de
+dominio al completarse la subida y la carga de metadatos. Este evento es consumido de forma asíncrona
+por un worker independiente que ejecuta el pipeline de renderizado y transcodificación sin ninguna
+dependencia del ciclo de vida de la conexión HTTP original. De esta forma, el servidor web queda
+liberado para atender nuevas solicitudes inmediatamente después de confirmar la recepción del evento,
+reduciendo sustancialmente la carga sostenida sobre los recursos del servidor.
+
+\section{Patrones de Diseño}
+
+Los patrones de diseño son soluciones recurrentes a problemas comunes en el diseño de software a
+escala de componente o clase. A diferencia de los patrones arquitectónicos, que organizan el sistema
+en su conjunto, los patrones de diseño actúan a nivel de la estructura interna de los módulos. A
+continuación, se describen los patrones aplicados en el desarrollo del módulo, clasificados según la
+taxonomía de Gamma \citep{noauthor_clasificacion_nodate}.
+
+\begin{enumerate}
+  \item \textbf{Strategy (Patrón de Comportamiento):} El patrón Strategy se aplica en el mecanismo de
+  cálculo y verificación de checksums del sistema. Dado que diferentes escenarios pueden requerir
+  distintos algoritmos de verificación de integridad (MD5 para validación rápida, SHA-256 para mayor
+  seguridad), se define una interfaz abstracta \texttt{ChecksumStrategy} con el método
+  \texttt{calcular(fragmento)}. Cada algoritmo concreto implementa esta interfaz, y el componente
+  \texttt{ChunkUploadService} recibe la estrategia a utilizar mediante inyección de dependencias,
+  permitiendo cambiar el algoritmo en tiempo de ejecución sin modificar el código del servicio.
+
+  \item \textbf{Observer (Patrón de Comportamiento):} El patrón Observer es la base del sistema de
+  actualización en tiempo real del estado de las subidas en el frontend Angular. El servicio
+  \texttt{UploadStateService} actúa como sujeto observable, manteniendo el estado actual de cada
+  sesión y notificando a todos los componentes suscritos cada vez que dicho estado cambia. Los
+  componentes \texttt{UploadItemComponent} y \texttt{UploadManagerComponent} implementan la interfaz
+  de observador y actualizan su representación visual de forma reactiva ante cada notificación, sin
+  necesidad de consultar activamente el estado. Este patrón se implementa en Angular mediante el uso
+  de \texttt{BehaviorSubject} del ecosistema RxJS.
+
+  \item \textbf{Singleton (Patrón Creacional):} La conexión al servidor MinIO S3 se gestiona mediante
+  el patrón Singleton, garantizando que exista una única instancia del cliente MinIO durante todo el
+  ciclo de vida de la aplicación Django. Dado que la creación del cliente implica el establecimiento y
+  verificación de la conexión con el servidor de almacenamiento, instanciarla una sola vez reduce la
+  latencia y el consumo de recursos asociados a la inicialización repetida. En Django, este
+  comportamiento se implementa a través del sistema de configuración de aplicaciones
+  (\texttt{AppConfig}), asegurando que la instancia sea creada en el arranque del servidor y
+  reutilizada en todas las solicitudes posteriores.
+\end{enumerate}

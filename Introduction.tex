@@ -1,4 +1,77 @@
 \introduction
 
-Escribir aqu�\footnote{Adverbio de lugar} la introducci�n\comment{Este es un comentario}.
-\lipsum[1-2]
+La infraestructura de telecomunicaciones es un pilar fundamental para el desarrollo y la prestación
+de servicios digitales en la era contemporánea. En el contexto nacional \citep{regalado_miranda_internet_1997},
+la red de Internet presenta insuficiencias en su infraestructura, lo que se traduce de manera tangible
+en bajas velocidades de conexión para los usuarios finales. Esta limitación del entorno tecnológico
+impacta directamente en la calidad y la eficiencia de los servicios en línea que operan en el país,
+generando desafíos técnicos que requieren soluciones innovadoras y adaptadas a estas condiciones
+particulares.
+
+Entre estos servicios se encuentra Picta \citep{noauthor_picta_nodate}, la principal plataforma de
+streaming nacional, la cual se ve significativamente afectada por esta problemática. Su operación
+depende de la capacidad de más de 700 canales activos para subir y publicar su contenido de video de
+forma fluida. Sin embargo, los procesos de subida y renderizado de videos, inherentemente intensivos
+en el consumo de ancho de banda y recursos computacionales del servidor, se ven severamente
+obstaculizados por las limitaciones de la red. Esto se manifiesta en tiempos de carga excesivamente
+largos, interrupciones y una alta demanda sostenida sobre los servidores de la plataforma. La
+consecuencia directa es una experiencia de usuario deficiente para los creadores de contenido y una
+barrera para la escalabilidad y confiabilidad del servicio de Picta, poniendo en riesgo su crecimiento
+sostenible.
+
+Partiendo de esta problemática, se formula el \textbf{problema científico}: ¿Cómo contribuir al
+proceso de subida y renderizado de videos en la plataforma Picta para mitigar los efectos de las
+limitaciones de la infraestructura de red nacional, garantizando una experiencia de usuario fluida y
+uso eficiente de los recursos del servidor? Para abordar este problema, se define como \textbf{objeto
+de estudio} el proceso de subida y renderizado de videos, y como \textbf{campo de acción} específico,
+este mismo proceso dentro del ecosistema de la plataforma Picta.
+
+El \textbf{objetivo general} de esta investigación es desarrollar un sistema de subida fragmentada e
+implementar una arquitectura dirigida por eventos para desacoplar la subida y renderización de videos
+en Picta. Esta solución tiene la finalidad de mejorar la eficiencia en el uso de recursos y la
+experiencia del usuario frente a las limitaciones de la infraestructura de red. Para alcanzar este
+propósito, se establecen los siguientes \textbf{objetivos específicos}:
+
+\begin{enumerate}
+  \item Caracterizar el flujo actual de subida y renderizado de videos en Picta para identificar
+  cuellos de botella y oportunidades de mejora.
+
+  \item Analizar aplicaciones con funcionalidades similares a las requeridas.
+
+  \item Diseñar un sistema de subida fragmentada que permita la persistencia del progreso y el
+  control del usuario durante la carga de videos.
+
+  \item Implementar un mecanismo de renderizado asíncrono que separe la subida del video de su
+  procesamiento final.
+
+  \item Evaluar el rendimiento del sistema implementado en términos de tiempo de subida, uso de
+  ancho de banda y experiencia del usuario.
+\end{enumerate}
+
+Este documento está organizado en tres capítulos, conclusiones generales y bibliografía. Los
+capítulos se estructuran de la siguiente forma:
+
+\begin{enumerate}
+  \item \textbf{Capítulo 1: Fundamentación teórica.} Este capítulo realiza un estudio de soluciones
+  homólogas, del flujo actual de subida y renderizado de videos en Picta para identificar cuellos de
+  botella y oportunidades de mejora. Para este propósito, además se definen herramientas, técnicas,
+  tecnologías y metodologías que se emplearán para alcanzar el objetivo general.
+
+  \item \textbf{Capítulo 2: Diseño de la aplicación.} Se realiza el proceso de ingeniería
+  correspondiente a la metodología escogida. Se definen los requisitos que debería cumplir el
+  programa en la forma de historias de usuario, se presentan los artefactos generados por la
+  metodología de desarrollo y se concluye mencionando los patrones arquitectónicos y de diseño que
+  sigue la aplicación.
+
+  \item \textbf{Capítulo 3: Implementación y pruebas.} Se definen tareas de ingeniería y se realiza
+  el proceso de pruebas de la aplicación. Se finaliza realizando una validación de la solución
+  propuesta.
+\end{enumerate}
+
+Como \textbf{resultados esperados}, se prevé una mejora tangible en la experiencia de los usuarios
+que suben contenido, otorgándoles un mayor control sobre el proceso; una reducción significativa en
+el consumo de ancho de banda durante la subida; y una optimización en la utilización de los recursos
+del servidor, lo que en conjunto contribuirá a una mayor robustez y escalabilidad de la plataforma
+Picta. La presente tesis se organiza para documentar de manera exhaustiva este proceso, desde el
+análisis inicial hasta la implementación y validación de la solución propuesta, con el fin de ofrecer
+una respuesta técnica viable a un problema de relevancia en el contexto digital nacional.

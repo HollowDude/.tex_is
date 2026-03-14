@@ -1,0 +1,31 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Lista de tareas pendientes}{\es@scroman {xiii}}{chapter*.12}%
+\contentsline {chapter}{Introducción}{1}{chapter*.14}%
+\contentsline {chapter}{\numberline {1}Fundamentación Teórica}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Conceptualización metodológica}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sistemas homólogos}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Caracterización del flujo actual}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Herramientas y Tecnologías}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Selección del lenguaje de programación}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Herramientas utilizadas}{6}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Bibliotecas y Frameworks utilizados}{6}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Selección de una metodología de desarrollo}{7}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Conclusiones Parciales}{8}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Propuesta de Solución}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Propuesta de solución}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Usuarios}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Posibles estados de una subida}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Historias de Usuario}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Requisitos No Funcionales}{19}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Confiabilidad}{19}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Eficiencia}{19}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Restricciones de Diseño e Implementación}{20}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Estimación de esfuerzo por historia de usuario y plan de iteraciones}{20}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Plan de Entrega}{21}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Diagrama de Clases}{22}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Patrones Arquitectónicos}{22}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Arquitectura Dirigida por Eventos}{23}{subsection.2.9.1}%
+\contentsline {section}{\numberline {2.10}Patrones de Diseño}{23}{section.2.10}%
+\contentsline {chapter}{Recomendaciones}{25}{chapter*.19}%
+\contentsline {chapter}{Referencias bibliográficas}{26}{chapter*.20}%

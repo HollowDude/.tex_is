@@ -1,49 +1,317 @@
-\chapter{Fundamentaci�n Te�rica}
+\chapter{Fundamentación Teórica}
 
-\label{chap:chapter1}
+A través del análisis sistemático y estructurado de los requerimientos, se busca garantizar que el
+producto final no solo cumpla con las expectativas funcionales, sino que también optimice el uso de
+recursos y proporcione una experiencia de usuario robusta. Este capítulo tiene como objetivo principal
+describir y analizar el sistema implementado actualmente en la plataforma Picta identificando sus
+principales características, funcionalidades, restricciones y deficiencias para poder elegir un camino
+adecuado para el desarrollo de una posible solución. Se establecen las principales herramientas a
+utilizar en el proyecto como lenguajes de programación, programas y bibliotecas. Además, se escoge
+una metodología para guiar el desarrollo de la propuesta.
 
-Escribir aqu� el cap�tulo 1. Ejemplo de acr�nimo es la \ac{UCI}. Esto es una cita de ejemplo \citep{Ou2013}. En la pr�xima oraci�n se muestra un ejemplo de un acr�nimo en ingl�s. Los sistemas de \ac{SCADA} son de gran importancia para la industria. 
+\section{Conceptualización metodológica}
 
-\section{Secci�n de prueba de la \glsentrytext{UCI}} % example on how tu use glossaries or acronym in sections or another moving argument
+\begin{description}
+\sloppy
+  \item[Checksum:] El checksum es un valor numérico calculado a partir de una secuencia de datos
+  \citep{noauthor_comprobar_nodate}.
 
+  \item[Protocolo SSH:] El protocolo SSH (también conocido como Secure Shell) es un método para el
+  inicio de sesión remoto seguro entre ordenadores. Ofrece diversas opciones para una autenticación
+  robusta y protege la seguridad e integridad de las comunicaciones mediante un cifrado robusto. Es
+  una alternativa segura a los protocolos de inicio de sesión no protegidos (como Telnet y Rlogin) y
+  a los métodos de transferencia de archivos inseguros (como FTP) \citep{noauthor_what_nodate}.
 
-Esto es una utilizaci�n de una palabra del glosario. El t�rmino \gls{Engine} es utilizado en \ul{este} ejemplo. Esta es una prueba de n�mero: $5.3$ donde se utiliza la coma autom�ticamente como separador.
+  \item[Amazon S3:] Amazon Simple Storage Service (Amazon S3) es un servicio de almacenamiento de
+  objetos que ofrece escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en el
+  sector. Millones de clientes de todos los tamaños y sectores pueden almacenar, administrar, analizar
+  y proteger cualquier cantidad de datos para prácticamente cualquier caso de uso, como los lagos de
+  datos, las aplicaciones nativas en la nube y las aplicaciones móviles
+  \citep{noauthor_amazon_nodate}.
 
-Esto es una cita de ejemplo \citep{Alfadhlani2011,Mathew2010}.
+  \item[Transcoding:] La transcodificación consiste en tomar un video codificado u otro contenido
+  digital, descomprimirlo, modificarlo y volver a comprimirlo. La transcodificación es una conversión
+  digital a digital de un tipo de datos codificados (video o audio) a otro, a menudo porque el
+  dispositivo de destino requiere un tamaño de archivo más pequeño \citep{noauthor_what_nodate-2}.
 
-\begin{figure}[!htb]
-\centering
-\captionbox{Vista del Arco de Moncloa\label{fig:DSC00461}}
-{\includegraphics[width=0.7\linewidth]{Images/DSC00461}}
-\end{figure}
+  \item[Integración seamless:] Integración total de los canales de manera que los usuarios puedan
+  utilizarlos indistintamente, en cualquier momento y lugar, proporcionándoles una experiencia única
+  \citep{noauthor_experiencias_nodate}.
 
-En la Tabla \ref{Prueba} se observa \dots\\
+  \item[API:] Las API son mecanismos que permiten a dos componentes de software comunicarse entre sí
+  mediante un conjunto de definiciones y protocolos \citep{noauthor_que_nodate-3}.
 
-\begin{table}[!h]
-\centering
-\captionbox{Caption de Prueba\label{Prueba}}
-{
-	\begin{tabular}{lllll}
-	\hline \textbf{No. 1} & \textbf{No. 2} & \textbf{No. 3} & \textbf{No. 4} & \textbf{No. 5}\\ \hline
-	12 & 12 & 56 & 56 &  56 \\ 
-	12 & 12 & 56 & 56 &  56 \\
-	\hline 
-	\end{tabular}
-}
-\end{table}
+  \item[Frontend y Backend:] Tanto el \textit{front end} como el \textit{back end} son aspectos
+  críticos de cualquier aplicación. El \textit{front end} es aquello que ven los usuarios e incluye
+  elementos visuales como botones, casillas de verificación, gráficos y mensajes de texto. El
+  \textit{back end} son los datos y la infraestructura que permiten que la aplicación funcione
+  \citep{noauthor_front_nodate}.
 
-\lipsum[1-50]
+  \item[Tarea ad hoc:] Una tarea ad hoc es una asignación no programada e improvisada que surge
+  durante el trabajo habitual o la rutina diaria \citep{noauthor_ad_nodate}.
+
+  \item[World Wide Web:] En informática, la \textit{World Wide Web} o red informática mundial es un
+  sistema que funciona a través de internet, por el cual se pueden transmitir diversos tipos de datos
+  a través del Protocolo de Transferencia de Hipertextos o HTTP \citep{noauthor_world_2025}.
+
+  \item[Framework:] Un \textit{framework} es un conjunto de reglas y convenciones que se usan para
+  desarrollar software de manera más eficiente y rápida, proporcionando una estructura básica como
+  punto de partida y ofreciendo soluciones a problemas comunes en el desarrollo
+  \citep{lucena_que_2023}.
+
+  \item[SDK:] Un kit de desarrollo de software (SDK) es un conjunto de herramientas de creación
+  específicas de plataformas para desarrolladores. Los SDK ponen todo lo que se necesita para
+  desarrollar y ejecutar software en un solo lugar \citep{noauthor_que_nodate-4}.
+\end{description}
+
+\section{Sistemas homólogos}
+
+Como parte de la investigación para el desarrollo de la aplicación se realizó un estudio de sistemas
+con características similares a las deseadas con el propósito de encontrar una opción que se ajuste a
+los requisitos de la tarea o, alternativamente, utilizar el conocimiento obtenido durante el proceso
+de investigación en el desarrollo de una solución especializada. A continuación, se muestran los
+resultados del estudio.
+
+\begin{description}
+\sloppy
+  \item[Rsync:] Es una aplicación de línea de comandos que permite la rápida transferencia de
+  archivos entre computadoras. Copia las diferencias entre los archivos por lo que en caso de error
+  en la transferencia es siempre posible reintentarla con una pérdida mínima de progreso. RSync
+  identifica estas diferencias dividiendo los archivos en bloques, generando un checksum para cada
+  uno de estos y comparando el resultado. También tiene una función de compresión lo que reduce la
+  carga de la red y permite una transferencia más rápida. Finalmente, las transferencias se realizan
+  a través del protocolo SSH ofreciendo un alto nivel de seguridad.
+
+  \item[MinIO Client:] MinIO es un sistema de almacenamiento de objetos de alto rendimiento liberado
+  bajo la licencia GNU Affero General Public License v3.0. Su API es compatible con el servicio
+  Amazon S3. Es capaz de trabajar con información no estructurada como fotos o vídeos. MinIO tiene
+  tres componentes: MinIO Server, MinIO Client y MinIO Client SDK. Minio Client es una aplicación de
+  línea de comandos que proporciona una alternativa moderna a comandos UNIX como ls, cat, cp, mirror
+  y diff. Soporta sistemas de archivos y servicios de almacenamiento en la nube compatibles con
+  Amazon S3.
+
+  \item[Filezilla:] Es una aplicación de código abierto liberada bajo la licencia GNU GPL que permite
+  interactuar con servidores FTP. Está dividida en Filezilla Client y Filezilla Server, ambos con
+  soporte para FTP y FTPS, mientras que el cliente soporta adicionalmente SFTP.
+\end{description}
+
+\begin{longtable}[c]{|>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2.5cm}|>{\centering\arraybackslash}p{2cm}|}
+\caption{Comparación de aplicaciones analizadas}
+\label{tb:homologos}\\
+
+\hline
+\textbf{Característica} & \textbf{Rsync} & \textbf{MinIO Client} & \textbf{Filezilla} \\
+\hline
+\endfirsthead
+
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{Característica} & \textbf{Rsync} & \textbf{MinIO Client} & \textbf{Filezilla} \\
+\hline
+\endhead
+
+\multicolumn{4}{r}{{Continúa en la próxima página}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+Interfaz Gráfica            & No & Sí & Sí \\ \hline
+Resistencia a Errores       & Sí & No & No \\ \hline
+Filtro de Contenido         & No & No & No \\ \hline
+Capacidad de autenticación  & Sí & Sí & Sí \\ \hline
+
+\end{longtable}
+
+\section{Caracterización del flujo actual}
+
+Actualmente, el proceso de publicación en Picta sigue un flujo monolítico y síncrono donde la subida
+del video y su posterior renderizado (procesamiento, transcoding y generación de calidades) ocurren de
+manera secuencial dentro de una misma transacción. Este esquema consume un ancho de banda y recursos
+del servidor significativos de forma continua, es vulnerable a interrupciones de red que obligan a
+reiniciar el proceso completo, y no proporciona retroalimentación en tiempo real al usuario sobre el
+estado de la publicación. Esto genera frustración en los creadores de contenido, ineficiencia en el
+uso de los recursos del servidor y limita la escalabilidad horizontal del servicio.
+
+Con una integración seamless en la interfaz existente de Picta, el sistema será utilizado por los
+creadores de contenido y los administradores de la plataforma, mejorando radicalmente la resiliencia
+del servicio, la satisfacción del usuario y la capacidad de la plataforma para crecer de forma
+sostenible.
+
+\section{Herramientas y Tecnologías}
+
+\subsection{Selección del lenguaje de programación}
+
+La selección del lenguaje para el nuevo módulo está condicionada por la integración con la plataforma
+existente. Si bien soluciones alternativas desarrolladas en lenguajes como Golang ofrecerían ventajas
+significativas en rendimiento y manejo de concurrencia, la decisión se ve constreñida por la
+arquitectura actual del sistema, la cual implementa la API en Python y el frontend en JavaScript,
+estableciendo dependencias técnicas que priorizan la cohesión de la plataforma sobre optimizaciones
+puntuales.
+
+La evaluación técnica conduce determinantemente hacia la selección de \textbf{Python} como lenguaje
+backend, un lenguaje de programación orientado a objetos de alto nivel y fácil de interpretar con una
+sintaxis fácil de leer. Ideal para la creación de prototipos y tareas ad hoc, Python tiene un amplio
+uso en computación científica, desarrollo web y automatización \citep{noauthor_que_nodate}.
+
+Paralelamente, para el frontend se mantiene la coherencia arquitectónica mediante la adopción de
+\textbf{JavaScript}, un lenguaje de programación que los desarrolladores utilizan para hacer páginas
+web interactivas. Como lenguaje de scripting del lado del servidor, se trata de una de las principales
+tecnologías de la World Wide Web \citep{noauthor_que_nodate-1}.
+
+\subsection{Herramientas utilizadas}
+
+A continuación, se muestra el grupo de herramientas utilizadas durante el desarrollo del módulo junto
+a una breve descripción.
+
+\begin{description}
+\sloppy
+  \item[Visual Studio Code v1.106.2:] Visual Studio Code (también llamado VS Code) es un editor de
+  código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web. Incluye soporte para la
+  depuración, control integrado de Git, resaltado de sintaxis, finalización inteligente de código,
+  fragmentos y refactorización de código. Es software gratuito y de código abierto
+  \citep{noauthor_visual_2025}.
+
+  \item[Navicat Premium v17.1.10:] Navicat es un software de gestión y administración de bases de
+  datos. Permite a los usuarios conectarse y administrar múltiples tipos de bases de datos, incluyendo
+  MySQL, MariaDB, SQL Server y Oracle, entre otros \citep{noauthor_software_nodate}.
+
+  \item[Postman v11.73.3:] Postman es una herramienta esencial para los desarrolladores que trabajan
+  con APIs. Gracias a su interfaz gráfica intuitiva, facilita el proceso de prueba, desarrollo y
+  documentación de servicios web, optimizando el flujo de trabajo y favoreciendo la colaboración entre
+  equipos \citep{noauthor_que_nodate-2}.
+
+  \item[S3 Browser v12.9.9:] S3 Browser es un cliente gratuito de Windows para Amazon S3 y Amazon
+  CloudFront. Permite almacenar y recuperar cualquier cantidad de datos, en cualquier momento y desde
+  cualquier lugar de la web \citep{noauthor_que_nodate-2}.
+
+  \item[Visual Paradigm v17.0:] Visual Paradigm es un proveedor líder y mundialmente reconocido de
+  soluciones de software para la Transformación de Negocio y TI. Sus productos cuentan con la
+  confianza de más de 320\,000 usuarios en empresas de todo el mundo \citep{noauthor_acerca_nodate}.
+\end{description}
+
+\subsection{Bibliotecas y Frameworks utilizados}
+
+En alineación con los criterios derivados del análisis arquitectónico del sistema vigente y con el
+objetivo de garantizar una integración totalmente compatible y sin impactos estructurales, se ha
+determinado la adopción de los mismos frameworks actualmente utilizados por la plataforma en sus
+componentes principales.
+
+\begin{description}
+\sloppy
+  \item[Django v3.2.2:] Django es un framework web Python de alto nivel que fomenta el desarrollo
+  rápido y un diseño limpio y pragmático. Desarrollado por desarrolladores experimentados, se encarga
+  de gran parte de las complicaciones del desarrollo web. Es gratuito y de código abierto
+  \citep{noauthor_django_nodate}.
+
+  \item[Angular v15.2.10:] Angular, gestionado por un equipo dedicado de Google, ofrece un amplio
+  conjunto de herramientas, API y bibliotecas para simplificar y optimizar el flujo de trabajo de
+  desarrollo. Ofrece una plataforma sólida para crear aplicaciones rápidas y fiables que escalan con
+  el tamaño del equipo y del código fuente \citep{noauthor_what_nodate-3}.
+\end{description}
+
+Con el fin de garantizar una interacción óptima con MinIO, reducir la complejidad operacional y
+estandarizar el flujo de integración, se seleccionaron las siguientes librerías especializadas como
+componentes primarios de interoperabilidad.
+
+\begin{description}
+\sloppy
+  \item[Django Rest Framework v3.12.4:] Django Rest Framework (DRF) es un conjunto de herramientas
+  potente y flexible para crear API web en Django. Simplifica el proceso de creación de API robustas
+  y escalables al proporcionar componentes y patrones reutilizables \citep{fahiz_understanding_2024}.
+
+  \item[Minio Library v7.2.18:] El SDK de cliente Python de MinIO proporciona API de alto nivel para
+  acceder a cualquier almacenamiento de objetos de MinIO u otro servicio compatible con Amazon S3
+  \citep{noauthor_miniominio-py_2025}.
+\end{description}
+
+\section{Selección de una metodología de desarrollo}
+
+Una metodología de desarrollo de software es un conjunto de prácticas, técnicas y herramientas
+utilizadas por los equipos de desarrollo de software para planificar, diseñar, construir, probar y
+entregar software de alta calidad de manera eficiente y efectiva \citep{valtx_metodologias_2023}.
+
+Las metodologías de desarrollo son divididas actualmente en dos enfoques generales: el tradicional y
+el ágil. Las metodologías tradicionales se caracterizan por fases predefinidas con un flujo del
+desarrollo unidireccional, pasando de la recolección de requisitos al diseño y del diseño al
+desarrollo, luego a las pruebas y el mantenimiento. En aproximaciones clásicas como el modelo de
+cascada, cada fase genera artefactos y documentación que han pasado por un extensivo proceso de
+revisión. Los métodos tradicionales son mejor utilizados en situaciones en las que los requisitos
+están bien definidos. En industrias que cambian rápidamente, como la del desarrollo de software, las
+metodologías tradicionales pueden fallar en alcanzar sus objetivos.
+
+\begin{longtable}[c]{|p{2.3cm}|p{5.5cm}|p{5.3cm}|}
+\caption{Resumen de metodologías}
+\label{tb:metodologias}\\
+
+\hline
+\textbf{Metodología} & \textbf{Ventajas} & \textbf{Desventajas} \\
+\hline
+\endfirsthead
+\caption[]{Continuación de la página anterior} \\
+\hline
+\textbf{Metodología} & \textbf{Ventajas} & \textbf{Desventajas} \\
+\hline
+\endhead
+\multicolumn{3}{r}{{Continúa en la próxima página}} \\
+\endfoot
+\hline
+\endlastfoot
+
+Tradicional &
+Estructura clara y secuencial. Amplia documentación. Adecuada cuando los requisitos son estables. &
+Poco flexible ante cambios. Ciclos largos antes de entregar valor. Riesgo de que el producto final
+no cumpla expectativas actuales. \\ \hline
+
+Ágil &
+Alta adaptabilidad a cambios. Entregas rápidas y continuas. Enfoque en el valor y colaboración con
+el usuario. &
+Requiere alta disciplina del equipo. Documentación menor si no se gestiona bien. Puede ser complejo
+para equipos sin experiencia. \\ \hline
+
+\end{longtable}
+
+Algunos ejemplos de metodologías ágiles son Scrum, Kanban, Extreme Programming (XP), RAD (Rapid
+Application Development) y DevOps. Para el desarrollo del proyecto fue escogido SCRUM.
+
+Scrum es un marco de trabajo para desarrollo ágil de software que se ha expandido a otras industrias
+\citep{noauthor_scrum_2025}. Es un proceso en el que se aplican de manera regular un conjunto de
+buenas prácticas para trabajar colaborativamente, en equipo y obtener el mejor resultado posible de
+proyectos, caracterizado por:
+
 \begin{itemize}
-\item Uno
-\item Dos
-\item Tres
-\item Cuatro
-\item Cinco
+  \item Adoptar una estrategia de desarrollo incremental, en lugar de la planificación y ejecución
+  completa del producto.
+
+  \item Basar la calidad del resultado más en el conocimiento tácito de las personas en equipos
+  autoorganizados, que en la calidad de los procesos empleados.
+
+  \item Solapar las diferentes fases del desarrollo, en lugar de realizar una tras otra en un ciclo
+  secuencial o en cascada.
 \end{itemize}
 
-\lipsum[1-50]
-\lipsum[1-50]
-\lipsum[1-50]
-\lipsum[1-50]
-\lipsum[1-50]
-\lipsum[1-50]
+Scrum es un marco de trabajo que resulta fácil de aprender, pero es difícil convertirse en un experto.
+Los cocreadores de \textit{Scrum}, Jeff Sutherland y Ken Schwaber, han explicado los conceptos
+subyacentes en \textit{The Scrum Guide}. La esencia de \textit{Scrum} es un equipo organizado por
+cuenta propia que aporta valor al cliente en un período limitado conocido como \textit{Sprint}
+\citep{noauthor_en_nodate}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Images/scrum}
+  \caption{Marco de Trabajo SCRUM \citep{ayala_espanol_2013}}
+  \label{fig:scrum}
+\end{figure}
+
+Entre las motivaciones detrás de la elección de SCRUM como metodología de desarrollo para este
+proyecto se encontraron el número reducido de integrantes del equipo de desarrollo, la alta
+disponibilidad y conocimiento técnico del cliente lo cual puede facilitar la aplicación de la
+metodología y la complejidad del proyecto encontrándose dentro de un rango que SCRUM puede manejar
+mejor.
+
+\section{Conclusiones Parciales}
+
+El estudio del flujo actual y herramientas de gestión de archivos remotos proporcionó información
+importante para el desarrollo del módulo final, así como mostró la necesidad del desarrollo de una
+solución especializada. En este capítulo también se definieron los lenguajes de programación, así
+como las herramientas, frameworks, librerías y metodología de desarrollo para el proyecto.

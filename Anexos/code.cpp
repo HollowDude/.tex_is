@@ -136,7 +136,7 @@ class TelgramRequestHandler(object):
       
       // Please take a look at +=
       window.addEventListener('mousedown', function(event) {
-        // German umlaut test: Ber�hrungspunkt ermitteln
+        // German umlaut test: BerÃ¼hrungspunkt ermitteln
         var x = event.touches[0].pageX;
         var y = event.touches[0].pageY;
         var lookAtThis += 1;

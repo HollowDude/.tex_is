@@ -1,0 +1,20 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Comparación de aplicaciones analizadas}}{5}{table.1.1}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Resumen de metodologías}}{8}{table.1.2}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces HU-01 Iniciar proceso de subida fragmentada de video}}{12}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces HU-02 Pausar subida de video en curso}}{13}{table.2.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces HU-03 Reanudar subida con estado pausada}}{14}{table.2.3}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces HU-04 Cancelar subida y persistir registro histórico}}{14}{table.2.4}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces HU-05 Gestionar panel de lista de subidas}}{15}{table.2.5}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces HU-06 Listar videos subidos sin metadatos asociados}}{16}{table.2.6}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces HU-07 Procesar metadatos y disparar renderizado asíncrono}}{17}{table.2.7}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces HU-08 Monitorear estado del proceso de renderizado}}{18}{table.2.8}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces Requisitos de Confiabilidad}}{19}{table.2.9}%
+\contentsline {table}{\numberline {2.10}{\ignorespaces Requisitos de Eficiencia}}{20}{table.2.10}%
+\contentsline {table}{\numberline {2.11}{\ignorespaces Restricciones de Diseño e Implementación}}{20}{table.2.11}%
+\contentsline {table}{\numberline {2.12}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{21}{table.2.12}%
+\contentsline {table}{\numberline {2.13}{\ignorespaces Plan de duración de las iteraciones}}{21}{table.2.13}%
+\contentsline {table}{\numberline {2.14}{\ignorespaces Plan de entrega del proyecto}}{22}{table.2.14}%

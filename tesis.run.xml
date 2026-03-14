@@ -44,43 +44,43 @@
   <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>example.bcf</file>
+      <file>tesis.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>example.bbl</file>
+      <file>tesis.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
       <file>blx-natbib.def</file>
-      <file>iso-authoryear.bbx</file>
-      <file>iso.bbx</file>
+      <file>standard.bbx</file>
+      <file>authoryear.bbx</file>
       <file>authoryear-ibid.cbx</file>
       <file>biblatex.cfg</file>
       <file>spanish.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>example</infile>
+      <infile>tesis</infile>
     </cmdline>
     <input>
-      <file>example.bcf</file>
+      <file>tesis.bcf</file>
     </input>
     <output>
-      <file>example.bbl</file>
+      <file>tesis.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>example.bbl</file>
+      <file>tesis.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>example.bcf</file>
+      <file>tesis.bcf</file>
     </requires>
     <requires type="editable">
-      <file>example.bib</file>
+      <file>tesis.bib</file>
     </requires>
   </external>
 </requests>
