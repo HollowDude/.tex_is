@@ -29,7 +29,7 @@
 
 ## 3. Clonar el repositorio
 
-Abre PowerShell y corre:
+1. Abre PowerShell y corre:
 
 ```powershell
 git clone https://github.com/HollowDude/.tex_is.git
@@ -38,11 +38,32 @@ cd .tex_is
 
 > Si no tienes Git: descárgalo desde **https://git-scm.com/download/win**
 
+2. Revisa que tengas todas las dependencias actualizadas de MiKTeX que usa el proyecto, ve a la carpeta (Como ADMIN) donde clonaste y escribe:
+
+```powershell
+miktex packages update
+```
+
+3. Luego puedes arrancar la version que va a estar en esta rama de mi tesis siempre con:
+
+```powershell
+<#Borras el cache antes de todo#>
+Remove-Item tesis.aux, tesis.bbl, tesis.bcf, tesis.blg, tesis.run.xml -ErrorAction SilentlyContinue
+<#Compilas#>
+pdflatex tesis
+<#Compilas las librerias#>
+biber --input-directory "." tesis
+<#Compilas con las librerias cargadas#>
+pdflatex tesis
+```
+
+4. Ahi al menos veras un resultado, luego modifica a tu gusto
+
 ---
 
-## 4. Instalar la plantilla (lo único realmente necesario)
+## 4. Instalar la plantilla (Si quieres meterle a esto desde 0 del todo)
 
-Los únicos archivos que necesitas para generar la plantilla son:
+1. Los únicos archivos que necesitas para generar la plantilla son:
 
 ```
 Redistribution/
@@ -50,16 +71,10 @@ Redistribution/
 └── thesis.ins   ← script de instalación
 ```
 
-Navega a esa carpeta:
+2. Navega a esa carpeta:
 
 ```powershell
 cd Redistribution
-```
-
-Saca hacia la ruta anterior esos dos archivos:
-
-```
-Move-Item * ..
 ```
 
 ### Paso 4.1 — Corregir el encoding (IMPORTANTE)
