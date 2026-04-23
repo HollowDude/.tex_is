@@ -118,7 +118,6 @@
 \RequirePackage{bigstrut}
 \RequirePackage{longtable}
 % === Parche compatibilidad LaTeX 2023+ ===
-\@ifundefined{insert@pcolumn}{\def\insert@pcolumn{}}{}
 \ExplSyntaxOn
 \AtBeginDocument{
   \cs_if_exist:NF \tbl_gdecr_row_count: {
@@ -128,7 +127,7 @@
     \cs_new_protected:Nn \tag_mc_end: {}
   }
   \cs_if_exist:NF \tag_mc_begin:n {
-    \cs_new_protected:Nn \tag_mc_begin:n ##1 {}
+    \cs_new_protected:Nn \tag_mc_begin:n { }  % <-- Quitamos el ##1
   }
   \cs_if_exist:NF \tag_stop: {
     \cs_new_protected:Nn \tag_stop: {}
