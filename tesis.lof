@@ -1,7 +1,18 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Marco de Trabajo SCRUM \citep {ayala_espanol_2013}}}{9}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Flujo monolítico y síncrono del proceso de publicación en Picta}}{8}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Marco de Trabajo SCRUM. Fuente: Adaptado de \citep {AnaDianaMets2013}}}{12}{figure.caption.16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Flujo de posibles estados de una subida}}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Flujo del proceso de subida de videos}}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flujo de posibles estados de una subida. Elaboración propia}}{16}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Flujo del proceso de subida de videos. Elaboración propia}}{16}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.3}Estereotipo de la HU-01: Interfaz del popup inicial de subida con barra de progreso en 0\% y botones Iniciar/Cancelar. Elaborado con Visual Paradigm como referencia visual.}{18}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}Estereotipo de la HU-02: Popup de subida en curso mostrando progreso en tiempo real y botones Pausar/Cancelar. Elaborado con Visual Paradigm como referencia visual.}{19}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}Estereotipo de la HU-03: Popup con subida pausada mostrando botones Reanudar/Cancelar. Elaborado con Visual Paradigm como referencia visual.}{20}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}Estereotipo de la HU-04: Popup reanudando una subida pausada desde el último fragmento confirmado. Elaborado con Visual Paradigm como referencia visual.}{21}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}Estereotipo de la HU-05: Confirmación de cancelación de subida en el popup. Elaborado con Visual Paradigm como referencia visual.}{23}{figure.2.7}%
+\contentsline {figure}{\numberline {2.8}Estereotipo de la HU-06: Página de gestión de subidas con lista agrupable, filtrable y columna de acciones contextuales. Elaborado con Visual Paradigm como referencia visual.}{24}{figure.2.8}%
+\contentsline {figure}{\numberline {2.9}Estereotipo de la HU-07: Lista de gestión mostrando videos completados en estado ``Sin Procesar'' con botón Procesar disponible. Elaborado con Visual Paradigm como referencia visual.}{26}{figure.2.9}%
+\contentsline {figure}{\numberline {2.10}Estereotipo de la HU-08: Lista de gestión mostrando videos en proceso de transcodificación con estados ``Procesando'', ``En cola'' o ``Fallida''. Elaborado con Visual Paradigm como referencia visual.}{27}{figure.2.10}%
+\contentsline {figure}{\numberline {2.11}Estereotipo de la HU-09: Lista de gestión mostrando videos procesados con botón ``Ver'' para navegar a la publicación. Elaborado con Visual Paradigm como referencia visual.}{28}{figure.2.11}%
+\contentsline {figure}{\numberline {2.12}Estereotipo de la HU-10: Lista de gestión con acción de eliminar disponible para subidas canceladas o sin procesar. Elaborado con Visual Paradigm como referencia visual.}{30}{figure.2.12}%

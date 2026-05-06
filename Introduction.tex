@@ -1,14 +1,14 @@
 \introduction
 
 La infraestructura de telecomunicaciones es un pilar fundamental para el desarrollo y la prestación
-de servicios digitales en la era contemporánea. En el contexto nacional \citep{regalado_miranda_internet_1997},
+de servicios digitales en la era contemporánea. En el contexto nacional \citep{Press2011, Hernandez2021},
 la red de Internet presenta insuficiencias en su infraestructura, lo que se traduce de manera tangible
 en bajas velocidades de conexión para los usuarios finales. Esta limitación del entorno tecnológico
 impacta directamente en la calidad y la eficiencia de los servicios en línea que operan en el país,
 generando desafíos técnicos que requieren soluciones innovadoras y adaptadas a estas condiciones
 particulares.
 
-Entre estos servicios se encuentra Picta \citep{noauthor_picta_nodate}, la principal plataforma de
+Entre estos servicios se encuentra Picta \citep{UCI2025}, la principal plataforma de
 streaming nacional, la cual se ve significativamente afectada por esta problemática. Su operación
 depende de la capacidad de más de 700 canales activos para subir y publicar su contenido de video de
 forma fluida. Sin embargo, los procesos de subida y renderizado de videos, inherentemente intensivos
@@ -19,18 +19,17 @@ consecuencia directa es una experiencia de usuario deficiente para los creadores
 barrera para la escalabilidad y confiabilidad del servicio de Picta, poniendo en riesgo su crecimiento
 sostenible.
 
-Partiendo de esta problemática, se formula el \textbf{problema científico}: ¿Cómo contribuir al
-proceso de subida y renderizado de videos en la plataforma Picta para mitigar los efectos de las
-limitaciones de la infraestructura de red nacional, garantizando una experiencia de usuario fluida y
-uso eficiente de los recursos del servidor? Para abordar este problema, se define como \textbf{objeto
-de estudio} el proceso de subida y renderizado de videos, y como \textbf{campo de acción} específico,
-este mismo proceso dentro del ecosistema de la plataforma Picta.
+Partiendo de esta problemática, se formula el \textbf{problema científico}: ¿Cómo contribuir al proceso 
+de subida y renderizado de videos en la plataforma Picta para mitigar los efectos de las limitaciones de 
+la infraestructura de red nacional, garantizando una experiencia de usuario fluida y uso eficiente de los 
+recursos del servidor? Para abordar este problema, se define como \textbf{objeto de estudio} el proceso 
+de subida y renderizado de videos, y como \textbf{campo de acción} específico, este mismo proceso dentro 
+del ecosistema de la plataforma Picta.
 
-El \textbf{objetivo general} de esta investigación es desarrollar un sistema de subida fragmentada e
-implementar una arquitectura dirigida por eventos para desacoplar la subida y renderización de videos
-en Picta. Esta solución tiene la finalidad de mejorar la eficiencia en el uso de recursos y la
-experiencia del usuario frente a las limitaciones de la infraestructura de red. Para alcanzar este
-propósito, se establecen los siguientes \textbf{objetivos específicos}:
+El \textbf{objetivo general} de esta investigación es desarrollar un sistema de subida fragmentada y 
+renderizado asíncrono de videos para la plataforma Picta que mejore la eficiencia en el uso de recursos 
+y la experiencia del usuario frente a las limitaciones de la infraestructura de red nacional. Para alcanzar 
+este propósito, se establecen los siguientes \textbf{objetivos específicos}:
 
 \begin{enumerate}
   \item Caracterizar el flujo actual de subida y renderizado de videos en Picta para identificar
@@ -47,6 +46,40 @@ propósito, se establecen los siguientes \textbf{objetivos específicos}:
   \item Evaluar el rendimiento del sistema implementado en términos de tiempo de subida, uso de
   ancho de banda y experiencia del usuario.
 \end{enumerate}
+
+Para alcanzar los objetivos propuestos, se emplean \textbf{métodos teóricos y empíricos} que 
+guían el proceso investigativo. Entre los \textbf{métodos teóricos} se aplican:
+
+\begin{itemize}
+  \item \textbf{Análisis-síntesis:} Permite descomponer el proceso de subida y renderizado en 
+  sus componentes fundamentales ---transferencia, validación, transcoding--- para identificar 
+  cuellos de botella específicos, y posteriormente sintetizar una solución integrada mediante la 
+  arquitectura dirigida por eventos.
+
+  \item \textbf{Histórico-lógico:} Posibilita estudiar la trayectoria histórica de los 
+  protocolos de transferencia de archivos y sistemas de almacenamiento, extrayendo los principios 
+  lógicos fundamentales que se aplican en el diseño de la solución propuesta.
+
+  \item \textbf{Modelación:} Facilita la representación abstracta del sistema mediante diagramas 
+  de flujo, patrones arquitectónicos y de diseño, permitiendo estructurar la solución antes de su 
+  implementación física.
+\end{itemize}
+
+En cuanto a los \textbf{métodos empíricos}, se emplean:
+
+\begin{itemize}
+  \item \textbf{Estudio comparativo:} Se realiza un análisis de sistemas homólogos con 
+  funcionalidades similares para identificar fortalezas y limitaciones que informan el diseño de 
+  la solución especializada para Picta.
+
+  \item \textbf{Observación:} Se aplica para caracterizar el flujo actual de subida y 
+  renderizado en la plataforma, identificando patrones de fallo y limitaciones derivadas de la 
+  infraestructura de red nacional.
+
+  \item \textbf{Experimentación:} Se ejecutan pruebas de rendimiento del sistema implementado 
+  para validar mejoras en tiempo de subida, uso de ancho de banda y experiencia del usuario, 
+  comparando métricas antes y después de la intervención.
+\end{itemize}
 
 Este documento está organizado en tres capítulos, conclusiones generales y bibliografía. Los
 capítulos se estructuran de la siguiente forma:
@@ -68,10 +101,29 @@ capítulos se estructuran de la siguiente forma:
   propuesta.
 \end{enumerate}
 
+La relevancia científica de esta propuesta radica en la transición hacia un modelo de procesamiento
+asíncrono y distribuido, rompiendo con el esquema tradicional de transferencias monolíticas que
+penalizan al usuario ante cualquier micro-corte de red. Al emplear una arquitectura dirigida por
+eventos, se busca transformar la infraestructura lógica de la plataforma para que sea capaz de
+gestionar cargas de trabajo de forma elástica y resiliente \citep{Richards2020}. Este enfoque
+permite que el sistema reaccione de manera dinámica ante la disponibilidad de recursos, asegurando
+que la etapa de renderización ---crítica por su consumo de CPU--- no comprometa la disponibilidad
+inmediata de la interfaz de usuario ni la integridad de los datos en tránsito.
+
+Desde una perspectiva práctica, este trabajo se inserta en el esfuerzo por fortalecer la soberanía
+tecnológica y mejorar la accesibilidad de los servicios digitales en el contexto nacional
+\citep{Fuentes2025}. Al optimizar el uso de la red mediante la fragmentación de paquetes, se
+democratiza la creación de contenido, permitiendo que usuarios con conexiones inestables o de bajo
+ancho de banda puedan contribuir de manera efectiva al ecosistema audiovisual de Picta. De este
+modo, la solución propuesta trasciende la optimización técnica de un módulo específico para
+convertirse en un habilitador de escalabilidad que garantiza la continuidad del servicio frente a
+una demanda creciente de tráfico y almacenamiento \citep{Avizienis2004}.
+
 Como \textbf{resultados esperados}, se prevé una mejora tangible en la experiencia de los usuarios
 que suben contenido, otorgándoles un mayor control sobre el proceso; una reducción significativa en
-el consumo de ancho de banda durante la subida; y una optimización en la utilización de los recursos
+el consumo de ancho de banda durante el proceso; y una optimización en la utilización de los recursos
 del servidor, lo que en conjunto contribuirá a una mayor robustez y escalabilidad de la plataforma
-Picta. La presente tesis se organiza para documentar de manera exhaustiva este proceso, desde el
-análisis inicial hasta la implementación y validación de la solución propuesta, con el fin de ofrecer
-una respuesta técnica viable a un problema de relevancia en el contexto digital nacional.
+Picta \citep{Pressman2021}. La presente tesis se organiza para documentar de manera exhaustiva este
+proceso, desde el análisis inicial hasta la implementación y validación de la solución propuesta,
+con el fin de ofrecer una respuesta técnica viable a un problema de relevancia en el contexto digital
+nacional.

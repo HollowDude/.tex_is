@@ -19,929 +19,1333 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{noauthor_en_nodate}{online}{}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{En qué consiste la preparación de los datos, cómo y por qué motivos los negocios utilizan Scrum y de qué manera se usa Scrum con {AWS}.}
-      \field{langid}{spanish}
-      \field{shorttitle}{¿En qué consiste Scrum?}
-      \field{title}{¿En qué consiste Scrum? - Explicación sobre la metodología Scrum - {AWS}}
-      \field{titleaddon}{Amazon Web Services, Inc.}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\C324ZHZA\\scrum.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://aws.amazon.com/es/what-is/scrum/
-      \endverb
-      \verb{url}
-      \verb https://aws.amazon.com/es/what-is/scrum/
-      \endverb
-    \endentry
-    \entry{noauthor_que_nodate-4}{online}{}{}
-      \field{sortinit}{Q}
-      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Qué es el {SDK}, cómo y por qué lo utilizan las empresas y cómo utilizarlo con {AWS}.}
-      \field{langid}{spanish}
-      \field{shorttitle}{¿Qué es el {SDK}?}
-      \field{title}{¿Qué es el {SDK}? - Explicación del {SDK} - {AWS}}
-      \field{titleaddon}{Amazon Web Services, Inc.}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\GF3H5IMP\\sdk.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://aws.amazon.com/es/what-is/sdk/
-      \endverb
-      \verb{url}
-      \verb https://aws.amazon.com/es/what-is/sdk/
-      \endverb
-    \endentry
-    \entry{noauthor_que_nodate-1}{online}{}{}
-      \field{sortinit}{Q}
-      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{title}{¿Qué es {JavaScript}? - Explicación de {JavaScript} ({JS}) - {AWS}}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb ¿Qué es JavaScript? - Explicación de JavaScript (JS) - AWS:C\:\\Users\\Hollow\\Zotero\\storage\\25EXP99G\\javascript.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://aws.amazon.com/es/what-is/javascript/
-      \endverb
-      \verb{url}
-      \verb https://aws.amazon.com/es/what-is/javascript/
-      \endverb
-    \endentry
-    \entry{noauthor_que_nodate-2}{online}{}{}
-      \field{sortinit}{Q}
-      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{abstract}{¿Qué es Postman y para qué sirve? Aprende cómo esta herramienta te permite probar y automatizar el desarrollo de servicios web de manera eficiente.}
-      \field{langid}{spanish}
-      \field{title}{¿Qué es Postman y para qué sirve?}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\VKDU4KVY\\que-es-postman-y-para-que-sirve.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://imaginaformacion.com/tutoriales/que-es-postman-y-para-que-sirve
-      \endverb
-      \verb{url}
-      \verb https://imaginaformacion.com/tutoriales/que-es-postman-y-para-que-sirve
-      \endverb
-    \endentry
-    \entry{noauthor_que_nodate}{online}{}{}
-      \field{sortinit}{Q}
-      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{title}{¿Qué es Python? {|} Oracle América Latina}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb ¿Qué es Python? | Oracle América Latina:C\:\\Users\\Hollow\\Zotero\\storage\\HBGPRHZL\\what-is-python-for-developers.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.oracle.com/latam/developer/what-is-python-for-developers/
-      \endverb
-      \verb{url}
-      \verb https://www.oracle.com/latam/developer/what-is-python-for-developers/
-      \endverb
-    \endentry
-    \entry{noauthor_que_nodate-3}{online}{}{}
-      \field{sortinit}{Q}
-      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{title}{¿Qué es una {API}? Explicación de qué es una interfaz de programación de aplicaciones. {AWS}}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb ¿Qué es una API? Explicación de qué es una interfaz de programación de aplicaciones. AWS:C\:\\Users\\Hollow\\Zotero\\storage\\W5ZKLDXJ\\api.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://aws.amazon.com/es/what-is/api/
-      \endverb
-      \verb{url}
-      \verb https://aws.amazon.com/es/what-is/api/
-      \endverb
-    \endentry
-    \entry{noauthor_acerca_nodate}{online}{}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{title}{Acerca de Visual Paradigm}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Acerca de Visual Paradigm:C\:\\Users\\Hollow\\Zotero\\storage\\IXJEGLGP\\about-us.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://online.visual-paradigm.com/es/about-us/
-      \endverb
-      \verb{url}
-      \verb https://online.visual-paradigm.com/es/about-us/
-      \endverb
-    \endentry
-    \entry{noauthor_ad_nodate}{online}{}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{title}{Ad hoc tasks: Insights and strategies – {TimeTrack} Blog}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.timetrackapp.com/en/blog/ad-hoc-tasks/
-      \endverb
-      \verb{url}
-      \verb https://www.timetrackapp.com/en/blog/ad-hoc-tasks/
-      \endverb
-    \endentry
-    \entry{noauthor_amazon_nodate}{online}{}{}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Amazon S3 es un almacenamiento de objetos en la nube con una escalabilidad, disponibilidad de datos, seguridad y rendimiento líderes en el sector. S3 es ideal para los lagos de datos, las aplicaciones móviles, las copias de seguridad y la restauración, el archivo, los dispositivos de {IoT}, el machine learning, la inteligencia artificial y el análisis.}
-      \field{langid}{spanish}
-      \field{title}{Amazon S3 - Almacenamiento de objetos en la nube - {AWS}}
-      \field{titleaddon}{Amazon Web Services, Inc.}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\25ACFHNP\\s3.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://aws.amazon.com/es/s3/
-      \endverb
-      \verb{url}
-      \verb https://aws.amazon.com/es/s3/
-      \endverb
-    \endentry
-    \entry{ayala_espanol_2013}{misc}{}{}
+    \entry{AWS2023}{report}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d64d813448544ff1505f46a679bba7e6}{%
-           family={Ayala},
+        {{un=0,uniquepart=base,hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {AWS}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Amazon S3 Technical Whitepaper: Scalability and Performance}
+      \field{type}{techreport}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/s3/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/s3/
+      \endverb
+    \endentry
+    \entry{AnaDianaMets2013}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c6cf71c82cfb7c545006d3773fb40325}{%
+           family={Ana\bibnamedelimb Celmira\bibnamedelima Gualteros},
+           familyi={A\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Diana\bibnamedelimb Paola\bibnamedelimb Orjuela\bibnamedelima Escobar},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{fullhash}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{fullhashraw}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{bibnamehash}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{authorbibnamehash}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{authornamehash}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{authorfullhash}{c6cf71c82cfb7c545006d3773fb40325}
+      \strng{authorfullhashraw}{c6cf71c82cfb7c545006d3773fb40325}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2344-8288}
+      \field{journaltitle}{Tecnología, Investigación y Academia (TIA)}
+      \field{number}{1}
+      \field{title}{ESTUDIO DE METODOLOGIAS ÁGILES PARA PROYECTOS DE SOFTWARE EN CORTO TIEMPO}
+      \field{volume}{2}
+      \field{year}{2013}
+      \field{pages}{155}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://revistas.udistrital.edu.co/index.php/tia/article/view/4589
+      \endverb
+      \verb{url}
+      \verb https://revistas.udistrital.edu.co/index.php/tia/article/view/4589
+      \endverb
+    \endentry
+    \entry{Avizienis2004}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=38fa98062590d37d4d14772d3d2466d4}{%
+           family={Avizienis},
            familyi={A\bibinitperiod},
-           given={Maxie},
+           given={Algirdas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88ac1497be18842438f286d0b41a2c06}{%
+           family={Laprie},
+           familyi={L\bibinitperiod},
+           given={Jean-Claude},
+           giveni={J\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76332c6371627eade995a45d9e642654}{%
+           family={Randell},
+           familyi={R\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{fullhash}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{fullhashraw}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{bibnamehash}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{authorbibnamehash}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{authornamehash}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{authorfullhash}{ed7e755e6947287fe3cf0de6e3a71075}
+      \strng{authorfullhashraw}{ed7e755e6947287fe3cf0de6e3a71075}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Dependable and Secure Computing}
+      \field{number}{1}
+      \field{title}{Basic concepts and taxonomy of dependable and secure computing}
+      \field{volume}{1}
+      \field{year}{2004}
+      \field{pages}{11\bibrangedash 33}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1109/TDSC.2004.2
+      \endverb
+    \endentry
+    \entry{BernersLee1992}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d469e0df304c98f67b55d087ea6187a1}{%
+           family={Berners-Lee},
+           familyi={B\bibinithyphendelim L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{282db63790560cddab64edb482ae1b3e}
+      \strng{fullhash}{282db63790560cddab64edb482ae1b3e}
+      \strng{fullhashraw}{282db63790560cddab64edb482ae1b3e}
+      \strng{bibnamehash}{282db63790560cddab64edb482ae1b3e}
+      \strng{authorbibnamehash}{282db63790560cddab64edb482ae1b3e}
+      \strng{authornamehash}{282db63790560cddab64edb482ae1b3e}
+      \strng{authorfullhash}{282db63790560cddab64edb482ae1b3e}
+      \strng{authorfullhashraw}{282db63790560cddab64edb482ae1b3e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronic Networking}
+      \field{title}{World-Wide Web: The Information Universe}
+      \field{year}{1992}
+    \endentry
+    \entry{Buschmann1996}{book}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=430c232492825b32cc28516567fba614}{%
+           family={Buschmann},
+           familyi={B\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4027a9a8e2d38c752c1297840076ff7}{%
+           family={Meunier},
+           familyi={M\bibinitperiod},
+           given={Regine},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8847e1d8f19241d08e773c0c52a91b0}{%
+           family={Rohnert},
+           familyi={R\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ada8f9113cbf791844f149d70b20c5e7}{%
+           family={Sommerlad},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae19aca7d140c27197c6cc8b4bcf8c3c}{%
+           family={Stal},
+           familyi={S\bibinitperiod},
+           given={Michael},
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{d64d813448544ff1505f46a679bba7e6}
-      \strng{fullhash}{d64d813448544ff1505f46a679bba7e6}
-      \strng{fullhashraw}{d64d813448544ff1505f46a679bba7e6}
-      \strng{bibnamehash}{d64d813448544ff1505f46a679bba7e6}
-      \strng{authorbibnamehash}{d64d813448544ff1505f46a679bba7e6}
-      \strng{authornamehash}{d64d813448544ff1505f46a679bba7e6}
-      \strng{authorfullhash}{d64d813448544ff1505f46a679bba7e6}
-      \strng{authorfullhashraw}{d64d813448544ff1505f46a679bba7e6}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \list{location}{1}{%
+        {Chichester, UK}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{bdf43703bbbbcb09d37d4a8ce98dd3ca}
+      \strng{fullhash}{6279fe502a51119abf4ec29a5c1d4257}
+      \strng{fullhashraw}{6279fe502a51119abf4ec29a5c1d4257}
+      \strng{bibnamehash}{bdf43703bbbbcb09d37d4a8ce98dd3ca}
+      \strng{authorbibnamehash}{bdf43703bbbbcb09d37d4a8ce98dd3ca}
+      \strng{authornamehash}{bdf43703bbbbcb09d37d4a8ce98dd3ca}
+      \strng{authorfullhash}{6279fe502a51119abf4ec29a5c1d4257}
+      \strng{authorfullhashraw}{6279fe502a51119abf4ec29a5c1d4257}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{day}{24}
-      \field{month}{1}
-      \field{shorttitle}{Español}
-      \field{title}{Español: Metodología {SCRUM}}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2013}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Wikimedia Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\EY48PCRL\\FileScrumm.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://commons.wikimedia.org/wiki/File:Scrumm.PNG
-      \endverb
-      \verb{url}
-      \verb https://commons.wikimedia.org/wiki/File:Scrumm.PNG
-      \endverb
+      \field{labeltitlesource}{title}
+      \field{title}{Pattern-Oriented Software Architecture, Volume 1: A System of Patterns}
+      \field{year}{1996}
     \endentry
-    \entry{noauthor_clasificacion_nodate}{online}{}{}
+    \entry{CeleryDocs2024}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
+           family={{Celery Project}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{fullhashraw}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
+      \strng{authorfullhashraw}{a1db27179aedb5c3ca1937ad8598f620}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Scribd es red social de lectura y publicación más importante del mundo.}
-      \field{langid}{spanish}
-      \field{title}{Clasificación de Patrones {GoF} en Diseño {|} {PDF} {|} Patrón de diseño de software {|} Objeto (informática)}
-      \field{titleaddon}{Scribd}
-      \field{urlday}{13}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\AE2ATY7S\\Patrones-GoF-docx.html:text/html
-      \endverb
+      \field{note}{Documentación oficial del sistema de colas distribuidas para Python}
+      \field{title}{Celery: Distributed Task Queue}
+      \field{year}{2024}
       \verb{urlraw}
-      \verb https://es.scribd.com/document/443499646/Patrones-GoF-docx
+      \verb https://docs.celeryq.dev/
       \endverb
       \verb{url}
-      \verb https://es.scribd.com/document/443499646/Patrones-GoF-docx
+      \verb https://docs.celeryq.dev/
       \endverb
     \endentry
-    \entry{noauthor_comprobar_nodate}{online}{}{}
+    \entry{Christie2024}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e73069a89f32799b054c4852f92acd55}{%
+           family={Christie},
+           familyi={C\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{fullhash}{e73069a89f32799b054c4852f92acd55}
+      \strng{fullhashraw}{e73069a89f32799b054c4852f92acd55}
+      \strng{bibnamehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authorbibnamehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authornamehash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authorfullhash}{e73069a89f32799b054c4852f92acd55}
+      \strng{authorfullhashraw}{e73069a89f32799b054c4852f92acd55}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{El checksum es un valor numérico calculado a partir de una secuencia de datos. Se usa en las aplicac...}
-      \field{langid}{spanish}
-      \field{title}{Comprobar Checksum {|} Wikicrática}
-      \field{urlday}{29}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\YQG2Z5DC\\comprobar-checksum.html:text/html
-      \endverb
+      \field{title}{Django REST Framework Documentation: Serializers and Views}
+      \field{year}{2024}
       \verb{urlraw}
-      \verb https://tecnocratica.net/wikicratica/books/linux/page/comprobar-checksum
+      \verb https://www.django-rest-framework.org/
       \endverb
       \verb{url}
-      \verb https://tecnocratica.net/wikicratica/books/linux/page/comprobar-checksum
+      \verb https://www.django-rest-framework.org/
       \endverb
     \endentry
-    \entry{noauthor_delivery_nodate}{online}{}{}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+    \entry{Cohn2004}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{fullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{fullhashraw}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{bibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorbibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authornamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorfullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorfullhashraw}{d33712bcde2d63bad054a832b61d01e8}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Delivery Planning - Platform Development Playbook}
-      \field{urlday}{13}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Delivery Planning - Platform Development Playbook:C\:\\Users\\Hollow\\Zotero\\storage\\7PNJNJJS\\Delivery-Planning.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://playbook.platformdev.amdigital.co.uk/Ways-of-Working/Governance/Delivery-Governance/Delivery-Planning/
-      \endverb
-      \verb{url}
-      \verb https://playbook.platformdev.amdigital.co.uk/Ways-of-Working/Governance/Delivery-Governance/Delivery-Planning/
-      \endverb
+      \field{title}{User Stories Applied: For Agile Software Development}
+      \field{year}{2004}
     \endentry
-    \entry{noauthor_django_nodate}{online}{}{}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+    \entry{Cohn2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall Professional}%
+      }
+      \strng{namehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{fullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{fullhashraw}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{bibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorbibnamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authornamehash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorfullhash}{d33712bcde2d63bad054a832b61d01e8}
+      \strng{authorfullhashraw}{d33712bcde2d63bad054a832b61d01e8}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The web framework for perfectionists with deadlines.}
-      \field{langid}{english}
-      \field{title}{Django}
-      \field{titleaddon}{Django Project}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\Z7INFSGB\\www.djangoproject.com.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.djangoproject.com/
-      \endverb
-      \verb{url}
-      \verb https://www.djangoproject.com/
-      \endverb
+      \field{title}{Agile Estimating and Planning}
+      \field{year}{2005}
     \endentry
-    \entry{noauthor_experiencias_nodate}{online}{}{}
+    \entry{Ecma2023}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=41c46722588c33c49d98fefc48f47fc6}{%
+           family={{Ecma International}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{fullhash}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{fullhashraw}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{bibnamehash}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{authorbibnamehash}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{authornamehash}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{authorfullhash}{41c46722588c33c49d98fefc48f47fc6}
+      \strng{authorfullhashraw}{41c46722588c33c49d98fefc48f47fc6}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{La consistencia, la libertad de elección y la sincronización de canales son clave para que la experiencia de compra del cliente sea única y seamless (sin “fisuras“, “costuras“). Este es el resultado de un experimento realizado por un equipo de profesoras que ganó el Primer Premio en la modalidad de Publicidad y Marketing en el Premio Estudios Financieros 2020 con la investigación titulada ‘Be seamless, my firm! Cómo gestionar la experiencia de interacción omnicanal con los consumidores’. Por Rocío González}
-      \field{langid}{spanish}
-      \field{title}{Experiencias únicas en la era del seamless {|} {CEF}}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\7RWRHRQD\\experiencias-unicas-era-seamless.html:text/html
-      \endverb
+      \field{title}{ECMAScript 2023 Language Specification}
+      \field{year}{2023}
       \verb{urlraw}
-      \verb https://www.cef.com/noticias/experiencias-unicas-era-seamless
+      \verb https://www.ecma-international.org/
       \endverb
       \verb{url}
-      \verb https://www.cef.com/noticias/experiencias-unicas-era-seamless
+      \verb https://www.ecma-international.org/
       \endverb
     \endentry
-    \entry{fahiz_understanding_2024}{online}{}{}
+    \entry{Fielding2000}{thesis}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=042d7cbe98b3929c01ee29240bc2be51}{%
-           family={Fahiz},
-           familyi={F\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=87dbbd44b3977c28b71d826a931add3e}{%
+           family={Fielding},
+           familyi={F\bibinitperiod},
+           given={Roy\bibnamedelima Thomas},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{fullhash}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{fullhashraw}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{bibnamehash}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{authorbibnamehash}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{authornamehash}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{authorfullhash}{042d7cbe98b3929c01ee29240bc2be51}
-      \strng{authorfullhashraw}{042d7cbe98b3929c01ee29240bc2be51}
+      \list{institution}{1}{%
+        {University of California, Irvine}%
+      }
+      \strng{namehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{fullhash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{fullhashraw}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{bibnamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorbibnamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authornamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorfullhash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorfullhashraw}{87dbbd44b3977c28b71d826a931add3e}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Introduction}
-      \field{day}{11}
-      \field{langid}{english}
-      \field{month}{9}
-      \field{shorttitle}{Understanding Django Rest Framework ({DRF})}
-      \field{title}{Understanding Django Rest Framework ({DRF}): A Comprehensive Guide}
-      \field{titleaddon}{Medium}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\C5E4QK6C\\understanding-django-rest-framework-drf-a-comprehensive-guide-f47463f85965.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://fahizkp.medium.com/understanding-django-rest-framework-drf-a-comprehensive-guide-f47463f85965
-      \endverb
-      \verb{url}
-      \verb https://fahizkp.medium.com/understanding-django-rest-framework-drf-a-comprehensive-guide-f47463f85965
-      \endverb
+      \field{labeltitlesource}{title}
+      \field{title}{Architectural Styles and the Design of Network-based Software Architectures}
+      \field{type}{phdthesis}
+      \field{year}{2000}
     \endentry
-    \entry{noauthor_front_nodate}{online}{}{}
+    \entry{Fuentes2025}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ff5b7e73f6406ccbdb92210366610a06}{%
+           family={Fuentes},
+           familyi={F\bibinitperiod},
+           given={Allan\bibnamedelima Pierra},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{29163b252aacf60751a20fcecec2b870}
+      \strng{fullhash}{29163b252aacf60751a20fcecec2b870}
+      \strng{fullhashraw}{29163b252aacf60751a20fcecec2b870}
+      \strng{bibnamehash}{29163b252aacf60751a20fcecec2b870}
+      \strng{authorbibnamehash}{29163b252aacf60751a20fcecec2b870}
+      \strng{authornamehash}{29163b252aacf60751a20fcecec2b870}
+      \strng{authorfullhash}{29163b252aacf60751a20fcecec2b870}
+      \strng{authorfullhashraw}{29163b252aacf60751a20fcecec2b870}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{¿Cuál es la diferencia entre front-end y back-end? Cómo utilizar el front-end y el back-end con {AWS}.}
-      \field{langid}{spanish}
-      \field{shorttitle}{Front End frente a back-end}
-      \field{title}{Front End frente a back-end: diferencia entre el desarrollo de aplicaciones - {AWS}}
-      \field{titleaddon}{Amazon Web Services, Inc.}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\43M6NAU8\\the-difference-between-frontend-and-backend.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://aws.amazon.com/es/compare/the-difference-between-frontend-and-backend/
-      \endverb
-      \verb{url}
-      \verb https://aws.amazon.com/es/compare/the-difference-between-frontend-and-backend/
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Congreso Universidad}
+      \field{title}{Relación universidad-empresa: experiencias en Cuba}
+      \field{volume}{11}
+      \field{year}{2025}
+    \endentry
+    \entry{Gadban2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5a57ffc5edf6bd77dd66abf4f0ddaabf}{%
+           family={Gadban},
+           familyi={G\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=585536a36e8fdbd9c0aeb43b9e7084c7}{%
+           family={Kunkel},
+           familyi={K\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{fullhash}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{fullhashraw}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{bibnamehash}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{authorbibnamehash}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{authornamehash}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{authorfullhash}{7c3745a7af0374c7570a81923776bbf9}
+      \strng{authorfullhashraw}{7c3745a7af0374c7570a81923776bbf9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{18}
+      \field{title}{Analyzing the Performance of the S3 Object Storage API for HPC Workloads}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{8540}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/app11188540
       \endverb
     \endentry
-    \entry{noauthor_importancia_nodate}{online}{}{}
+    \entry{Gamma1994}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=abd927bf30d6566be0ac66a66e893fdd}{%
+           family={Gamma},
+           familyi={G\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=233f891813bda0f3920985f97a4a7554}{%
+           family={Helm},
+           familyi={H\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd79e5e249b219ff553fc2d811104d78}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e032589f0b9a38804483ab7cf5ccad7f}{%
+           family={Vlissides},
+           familyi={V\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{4d2492409a24d4ed208ae6670cb91945}
+      \strng{fullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
+      \strng{fullhashraw}{5cb4a6d7baf30d11bae6682eca698b4f}
+      \strng{bibnamehash}{4d2492409a24d4ed208ae6670cb91945}
+      \strng{authorbibnamehash}{4d2492409a24d4ed208ae6670cb91945}
+      \strng{authornamehash}{4d2492409a24d4ed208ae6670cb91945}
+      \strng{authorfullhash}{5cb4a6d7baf30d11bae6682eca698b4f}
+      \strng{authorfullhashraw}{5cb4a6d7baf30d11bae6682eca698b4f}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design Patterns: Elements of Reusable Object-Oriented Software}
+      \field{year}{1994}
+    \endentry
+    \entry{Grandhe2026}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d2d252040e3f10426de20ce6c14ff815}{%
+           family={Grandhe},
+           familyi={G\bibinitperiod},
+           given={Ram\bibnamedelimb Charan\bibnamedelima Tej},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{fullhash}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{fullhashraw}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{bibnamehash}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{authorbibnamehash}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{authornamehash}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{authorfullhash}{d2d252040e3f10426de20ce6c14ff815}
+      \strng{authorfullhashraw}{d2d252040e3f10426de20ce6c14ff815}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advanced Computing Techniques in Engineering}
+      \field{title}{Comparative Analysis of Object Storage Clients: AWS vs. MinIO}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.1007/978-3-031-95540-2_7
+      \endverb
+    \endentry
+    \entry{Hernandez2021}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8e43bdce14312cf6fd597f16c3da3826}{%
+           family={Hernández},
+           familyi={H\bibinitperiod},
+           given={Yudivián},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{fullhash}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{fullhashraw}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{bibnamehash}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{authorbibnamehash}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{authornamehash}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{authorfullhash}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \strng{authorfullhashraw}{f31b0e3523b1aac4e8a133aadae6fa63}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Cubana de Ciencias Informáticas}
+      \field{title}{Evolución de las telecomunicaciones y la conectividad en Cuba: Retos y perspectivas}
+      \field{volume}{15}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://rcci.uci.cu/
+      \endverb
+      \verb{url}
+      \verb https://rcci.uci.cu/
+      \endverb
+    \endentry
+    \entry{Hernandez2018}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=14430b76cb0a2926c90bb6f77b8e3cb3}{%
+           family={Hernández-Sampieri},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{fullhash}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{fullhashraw}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{bibnamehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{authorbibnamehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{authornamehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{authorfullhash}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \strng{authorfullhashraw}{14430b76cb0a2926c90bb6f77b8e3cb3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metodología de la investigación}
+      \field{year}{2018}
+    \endentry
+    \entry{Hohpe2003}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2ed2f5feceafdf9a03a27134da39d3d0}{%
+           family={Hohpe},
+           familyi={H\bibinitperiod},
+           given={Gregor},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ea1767d5a1edce116c79b82a83c54da}{%
+           family={Woolf},
+           familyi={W\bibinitperiod},
+           given={Bobby},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{fullhash}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{fullhashraw}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{bibnamehash}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{authorbibnamehash}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{authornamehash}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{authorfullhash}{ddf3be6dfde807c1811cbd3352154f04}
+      \strng{authorfullhashraw}{ddf3be6dfde807c1811cbd3352154f04}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Referencia fundamental sobre patrones de mensajería empresarial}
+      \field{title}{Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions}
+      \field{year}{2003}
+    \endentry
+    \entry{ISO2016}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0828a8408614177181026ea908d5594a}{%
+           family={ISO/IEC},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{0828a8408614177181026ea908d5594a}
+      \strng{fullhash}{0828a8408614177181026ea908d5594a}
+      \strng{fullhashraw}{0828a8408614177181026ea908d5594a}
+      \strng{bibnamehash}{0828a8408614177181026ea908d5594a}
+      \strng{authorbibnamehash}{0828a8408614177181026ea908d5594a}
+      \strng{authornamehash}{0828a8408614177181026ea908d5594a}
+      \strng{authorfullhash}{0828a8408614177181026ea908d5594a}
+      \strng{authorfullhashraw}{0828a8408614177181026ea908d5594a}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{abstract}{La fundamentación teórica es una parte esencial de la tesis que se desarrolla a lo largo del tiempo mediante la búsqueda, análisis y síntesis de información teórica. Sus funciones principales son sustentar bibliográficamente la investigación y garantizar que se base en el conocimiento previo. Las bases teóricas contienen los fundamentos bibliográficos para comprender a profundidad el tema e investigación.}
-      \field{langid}{spanish}
-      \field{title}{Importancia de la Fundamentación Teórica {|} {PDF} {|} Teoría {|} Conocimiento}
-      \field{titleaddon}{Scribd}
-      \field{urlday}{13}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\VIVECY3G\\La-Fundamentacion-Teorica-Es.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://es.scribd.com/document/396194604/La-Fundamentacion-Teorica-Es
-      \endverb
-      \verb{url}
-      \verb https://es.scribd.com/document/396194604/La-Fundamentacion-Teorica-Es
-      \endverb
-    \endentry
-    \entry{jain_que_2025}{online}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=238f43ce9bbd0aef6e3e9028bb4c1386}{%
-           family={Jain},
-           familyi={J\bibinitperiod},
-           given={Anushtha},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=21d257bf09444379d2e4904544a4d34c}{%
-           family={Solutions},
-           familyi={S\bibinitperiod},
-           given={Visure},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{fullhash}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{fullhashraw}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{bibnamehash}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{authorbibnamehash}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{authornamehash}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{authorfullhash}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \strng{authorfullhashraw}{4484c0b831ca59f7a5847ffcbba0c91d}
-      \field{sortinit}{J}
-      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Optimice la gestión de sus requisitos no funcionales. Comience su prueba gratuita de 30 días y agilice su proceso de gestión de requisitos con Visure Solutions.}
-      \field{day}{7}
-      \field{langid}{spanish}
-      \field{month}{5}
-      \field{shorttitle}{¿Qué son los requisitos no funcionales?}
-      \field{title}{¿Qué son los requisitos no funcionales? Tipos, ejemplos y enfoques}
-      \field{titleaddon}{Visure Solutions}
-      \field{urlday}{13}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\9PS9QR9L\\requerimientos-no-funcionales.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://visuresolutions.com/es/gu%C3%ADa-de-limosna/requerimientos-no-funcionales/
-      \endverb
-      \verb{url}
-      \verb https://visuresolutions.com/es/gu%C3%ADa-de-limosna/requerimientos-no-funcionales/
-      \endverb
+      \field{labeltitlesource}{title}
+      \field{title}{Information technology -- Data integrity (ISO/IEC 10118)}
+      \field{type}{techreport}
+      \field{year}{2016}
     \endentry
-    \entry{lucena_que_2023}{online}{}{}
+    \entry{Lutz2013}{book}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e8d0e1b7aa15c3802b0fabbaaf3c386c}{%
-           family={Lucena},
+        {{un=0,uniquepart=base,hash=f9b161dc8eaf25ea05f8bac50ac9596d}{%
+           family={Lutz},
            familyi={L\bibinitperiod},
-           given={Paola},
-           giveni={P\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{fullhash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{fullhashraw}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{bibnamehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{authorbibnamehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{authornamehash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{authorfullhash}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
-      \strng{authorfullhashraw}{e8d0e1b7aa15c3802b0fabbaaf3c386c}
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{fullhash}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{fullhashraw}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{bibnamehash}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{authorbibnamehash}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{authornamehash}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{authorfullhash}{f9b161dc8eaf25ea05f8bac50ac9596d}
+      \strng{authorfullhashraw}{f9b161dc8eaf25ea05f8bac50ac9596d}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{El framework es una herramienta para los desarrolladores a la hora de crear sitios web o aplicaciones. Continúa leyendo para saber más.}
-      \field{day}{6}
-      \field{langid}{spanish}
-      \field{month}{5}
-      \field{shorttitle}{¿Qué es el framework?}
-      \field{title}{¿Qué es el framework? {|} 2025}
-      \field{titleaddon}{Maestrías y {MBA}}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.cesuma.mx/blog/que-es-el-framework.html
-      \endverb
-      \verb{url}
-      \verb https://www.cesuma.mx/blog/que-es-el-framework.html
-      \endverb
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{title}{Learning Python}
+      \field{year}{2013}
     \endentry
-    \entry{noauthor_miniominio-py_2025}{software}{}{}
-      \list{publisher}{1}{%
-        {MinIO}%
+    \entry{Messerschmitt2003}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=196ca299b6f5f955c6b04b8571af2b73}{%
+           family={Messerschmitt},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b888dabd874dce1a9c3942201f04eb6}{%
+           family={Szyperski},
+           familyi={S\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
       }
-      \field{sortinit}{m}
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{fullhash}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{fullhashraw}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{bibnamehash}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{authorbibnamehash}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{authornamehash}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{authorfullhash}{68ebec0ab47ed039040c1e4903b704cf}
+      \strng{authorfullhashraw}{68ebec0ab47ed039040c1e4903b704cf}
+      \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{{MinIO} Client {SDK} for Python}
-      \field{day}{27}
-      \field{month}{11}
-      \field{note}{original-date: 2015-06-17T03:51:15Z}
-      \field{title}{minio/minio-py}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
+      \field{title}{Software Ecosystem: Understanding Platforms}
+      \field{year}{2003}
+    \endentry
+    \entry{Miles2006}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b4d4cb33293a234be8791fb12481a160}{%
+           family={Miles},
+           familyi={M\bibinitperiod},
+           given={Russ},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18066810c1ee5e24c42cbac80fd40b14}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Kim},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{fullhash}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{fullhashraw}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{bibnamehash}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{authorbibnamehash}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{authornamehash}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{authorfullhash}{2a57f037140cae8f6d959776a67dfaeb}
+      \strng{authorfullhashraw}{2a57f037140cae8f6d959776a67dfaeb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning UML 2.0}
+      \field{year}{2006}
+    \endentry
+    \entry{MinIO2024}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc89288f8510e92ae3d392bdb1574fa4}{%
+           family={{MinIO Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{fullhash}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{fullhashraw}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{bibnamehash}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{authorbibnamehash}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{authornamehash}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{authorfullhash}{fc89288f8510e92ae3d392bdb1574fa4}
+      \strng{authorfullhashraw}{fc89288f8510e92ae3d392bdb1574fa4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MinIO Python SDK Reference Technical Manual}
+      \field{year}{2024}
       \verb{urlraw}
-      \verb https://github.com/minio/minio-py
+      \verb https://min.io/docs/minio/linux/developers/python/API.html
       \endverb
       \verb{url}
-      \verb https://github.com/minio/minio-py
+      \verb https://min.io/docs/minio/linux/developers/python/API.html
       \endverb
-      \keyw{aws-s3,minio,minio-client,s3-bucket,sdk}
     \endentry
-    \entry{noauthor_picta_nodate}{online}{}{}
+    \entry{Pierra2022}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1f55e42e1294881ee431fa824af6fa81}{%
+           family={Pierra\bibnamedelima Fuentes},
+           familyi={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{fullhash}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{fullhashraw}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{bibnamehash}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{authorbibnamehash}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{authornamehash}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{authorfullhash}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
+      \strng{authorfullhashraw}{6847971bdb7ca4aac2d8dfcb3a2dc1f1}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Picta {|} Dale Play!}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Picta | Dale Play!:C\:\\Users\\Hollow\\Zotero\\storage\\38BGLTC2\\about.html:text/html
+      \field{journaltitle}{Revista Cubana de Ciencias Informáticas}
+      \field{title}{Adopción de una cultura Ágil en Cuba}
+      \field{volume}{16}
+      \field{year}{2022}
+    \endentry
+    \entry{Press2011}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=01d37f49eb2526f7409c770013edc0fd}{%
+           family={Press},
+           familyi={P\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{fullhash}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{fullhashraw}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{bibnamehash}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{authorbibnamehash}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{authornamehash}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{authorfullhash}{01d37f49eb2526f7409c770013edc0fd}
+      \strng{authorfullhashraw}{01d37f49eb2526f7409c770013edc0fd}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{First Monday}
+      \field{month}{03}
+      \field{number}{3}
+      \field{title}{The Internet in Cuba: A Case Study}
+      \field{volume}{16}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.5210/fm.v16i3.3377
       \endverb
       \verb{urlraw}
-      \verb https://www.picta.cu/about
+      \verb https://firstmonday.org/ojs/index.php/fm/article/view/3377
       \endverb
       \verb{url}
-      \verb https://www.picta.cu/about
+      \verb https://firstmonday.org/ojs/index.php/fm/article/view/3377
       \endverb
     \endentry
-    \entry{regalado_miranda_internet_1997}{article}{}{}
+    \entry{Pressman2014}{book}{}{}
       \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=2f957a5947b407523a0b9e64b91af628}{%
-           family={Regalado\bibnamedelima Miranda},
-           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Ester\bibnamedelima María},
-           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=49cb5e9062654d7408ab1746b2e4503d}{%
-           family={Regalado\bibnamedelima Miranda},
-           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Elsa},
-           giveni={E\bibinitperiod},
-           givenun=1}}%
+        {{un=0,uniquepart=base,hash=4d3f81788d99cf425c4b6e0a454baab0}{%
+           family={Pressman},
+           familyi={P\bibinitperiod},
+           given={Roger\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13b3d71ce7fd3614b4e2e9ce804597f3}{%
+           family={Maxim},
+           familyi={M\bibinitperiod},
+           given={Bruce\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
       }
       \list{publisher}{1}{%
-        {Los autores conservan todos los derechos sobre sus obras, las cuales pueden reproducir y distribuir siempre y cuando citen la fuente primaria de publicación y lo hagan con fines no comerciales.}%
+        {McGraw-Hill Education}%
       }
-      \strng{namehash}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{fullhash}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{fullhashraw}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{bibnamehash}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{authorbibnamehash}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{authornamehash}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{authorfullhash}{1e3f206fe8de93f902e036bd8b493edb}
-      \strng{authorfullhashraw}{1e3f206fe8de93f902e036bd8b493edb}
+      \strng{namehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{fullhash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{fullhashraw}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{bibnamehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authorbibnamehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authornamehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authorfullhash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authorfullhashraw}{da6ec91488daec8c3c9eddf18c78dad8}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8th}
+      \field{title}{Software Engineering: A Practitioner's Approach}
+      \field{year}{2014}
+    \endentry
+    \entry{Pressman2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=4d3f81788d99cf425c4b6e0a454baab0}{%
+           family={Pressman},
+           familyi={P\bibinitperiod},
+           given={Roger\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13b3d71ce7fd3614b4e2e9ce804597f3}{%
+           family={Maxim},
+           familyi={M\bibinitperiod},
+           given={Bruce\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{fullhash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{fullhashraw}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{bibnamehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authorbibnamehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authornamehash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authorfullhash}{da6ec91488daec8c3c9eddf18c78dad8}
+      \strng{authorfullhashraw}{da6ec91488daec8c3c9eddf18c78dad8}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{9th}
+      \field{title}{Software Engineering: A Practitioner's Approach}
+      \field{year}{2021}
+    \endentry
+    \entry{Redis2024}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5931ee9e163586335d0830f3e4a0df39}{%
+           family={{Redis Ltd.}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{fullhash}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{fullhashraw}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{bibnamehash}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{authorbibnamehash}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{authornamehash}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{authorfullhash}{5931ee9e163586335d0830f3e4a0df39}
+      \strng{authorfullhashraw}{5931ee9e163586335d0830f3e4a0df39}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{issn}{0864-2141}
-      \field{journaltitle}{Educación Médica Superior}
-      \field{month}{6}
-      \field{number}{1}
-      \field{shorttitle}{Internet}
-      \field{title}{Internet: la red de redes en Cuba}
-      \field{urlday}{14}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{volume}{11}
-      \field{year}{1997}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{39\bibrangedash 46}
-      \range{pages}{8}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\WYLJYH27\\scielo.html:text/html
-      \endverb
+      \field{labeltitlesource}{title}
+      \field{note}{Base de datos en memoria utilizada como broker de mensajes y caché}
+      \field{title}{Redis Documentation: An In-Memory Data Structure Store}
+      \field{year}{2024}
       \verb{urlraw}
-      \verb http://scielo.sld.cu/scielo.php?script=sci_abstract&pid=S0864-21411997000100006&lng=es&nrm=iso&tlng=pt
+      \verb https://redis.io/docs/
       \endverb
       \verb{url}
-      \verb http://scielo.sld.cu/scielo.php?script=sci_abstract&pid=S0864-21411997000100006&lng=es&nrm=iso&tlng=pt
+      \verb https://redis.io/docs/
       \endverb
     \endentry
-    \entry{noauthor_scrum_2025}{inreference}{}{}
+    \entry{Richards2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8e3c0b09130cc7c13c7cda6ef28a7d48}{%
+           family={Richards},
+           familyi={R\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ffeeeb533dfcb3c39bada5fdcf44fc0}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Neal},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media}%
+      }
+      \strng{namehash}{755202f5a26937dce6816860584aac24}
+      \strng{fullhash}{755202f5a26937dce6816860584aac24}
+      \strng{fullhashraw}{755202f5a26937dce6816860584aac24}
+      \strng{bibnamehash}{755202f5a26937dce6816860584aac24}
+      \strng{authorbibnamehash}{755202f5a26937dce6816860584aac24}
+      \strng{authornamehash}{755202f5a26937dce6816860584aac24}
+      \strng{authorfullhash}{755202f5a26937dce6816860584aac24}
+      \strng{authorfullhashraw}{755202f5a26937dce6816860584aac24}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of Software Architecture: An Engineering Approach}
+      \field{year}{2020}
+    \endentry
+    \entry{Richardson2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ae8eff41307018d950f00d2fe157263a}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Iain\bibnamedelima E.},
+           giveni={I\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{fullhash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{fullhashraw}{ae8eff41307018d950f00d2fe157263a}
+      \strng{bibnamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorbibnamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authornamehash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorfullhash}{ae8eff41307018d950f00d2fe157263a}
+      \strng{authorfullhashraw}{ae8eff41307018d950f00d2fe157263a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{H.264 and MPEG-4 Video Compression}
+      \field{year}{2003}
+    \endentry
+    \entry{Schwaber2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ee6f08fcba839e09471a0bc69152b6a5}{%
+           family={Schwaber},
+           familyi={S\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e3f26f6f816a26c6ab36bc7a899bcde}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Scrum.org}%
+      }
+      \strng{namehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{fullhash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{fullhashraw}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{bibnamehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authorbibnamehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authornamehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authorfullhash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authorfullhashraw}{303ea1dc92fd8c772eac56316b2074ef}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Scrum es un marco de trabajo para desarrollo ágil de software que se ha expandido a otras industrias. Es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo y obtener el mejor resultado posible de proyectos, caracterizado por:​ Adoptar una estrategia de desarrollo incremental, en lugar de la planificación y ejecución completa del producto. Basar la calidad del resultado más en el conocimiento tácito de las personas en equipos autoorganizados, que en la calidad de los procesos empleados. Solapar las diferentes fases del desarrollo, en lugar de realizar una tras otra en un ciclo secuencial o en cascada. Las metodologías ágiles, en que se basa scrum, son aquellas que permiten adaptar la forma de trabajo a las condiciones del proyecto, consiguiendo flexibilidad e inmediatez en la respuesta para amoldar el proyecto y su desarrollo a las circunstancias específicas del entorno.​}
-      \field{booktitle}{Wikipedia, la enciclopedia libre}
-      \field{day}{20}
-      \field{langid}{spanish}
-      \field{month}{10}
-      \field{note}{Page Version {ID}: 170075837}
-      \field{title}{Scrum (desarrollo de software)}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\WVQBSUS4\\index.html:text/html
-      \endverb
+      \field{title}{The Scrum Guide: The Definitive Guide to Scrum: The Rules of the Game}
+      \field{year}{2020}
       \verb{urlraw}
-      \verb https://es.wikipedia.org/w/index.php?title=Scrum_(desarrollo_de_software)&oldid=170075837
+      \verb https://scrumguides.org/
       \endverb
       \verb{url}
-      \verb https://es.wikipedia.org/w/index.php?title=Scrum_(desarrollo_de_software)&oldid=170075837
+      \verb https://scrumguides.org/
       \endverb
     \endentry
-    \entry{noauthor_software_nodate-1}{online}{}{}
+    \entry{Sommerville2015}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=70341b3bfcce7026902f4eb1e4111b58}{%
+           family={Sommerville},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{bibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorbibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authornamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Your All-in-One Learning Portal: {GeeksforGeeks} is a comprehensive educational platform that empowers learners across domains-spanning computer science and programming, school education, upskilling, commerce, software tools, competitive exams, and more.}
-      \field{langid}{english}
-      \field{note}{Section: Software Engineering}
-      \field{title}{Software development effort estimation}
-      \field{titleaddon}{{GeeksforGeeks}}
-      \field{urlday}{13}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\EMNRDKNV\\software-development-effort-estimation.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.geeksforgeeks.org/software-engineering/software-development-effort-estimation/
-      \endverb
-      \verb{url}
-      \verb https://www.geeksforgeeks.org/software-engineering/software-development-effort-estimation/
-      \endverb
+      \field{edition}{10th}
+      \field{title}{Software Engineering}
+      \field{year}{2015}
     \endentry
-    \entry{noauthor_software_nodate}{online}{}{}
+    \entry{Stallings2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0599c551bf066f66e0e9c44815384cb4}{%
+           family={Stallings},
+           familyi={S\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{fullhash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{fullhashraw}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{bibnamehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authorbibnamehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authornamehash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authorfullhash}{0599c551bf066f66e0e9c44815384cb4}
+      \strng{authorfullhashraw}{0599c551bf066f66e0e9c44815384cb4}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Navicat es un software de gestión y administración de bases de datos. Permite a los usuarios conectarse y administrar múltiples tipos de bases de datos, incluyendo {MySQL}, {MariaDB}, {SQL} Server y Oracle, entre otros.}
-      \field{langid}{spanish}
-      \field{title}{Software Shop}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\47SDHCW4\\navicat.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://software-shop.com/producto/navicat
-      \endverb
-      \verb{url}
-      \verb https://software-shop.com/producto/navicat
-      \endverb
+      \field{edition}{7th}
+      \field{title}{Cryptography and Network Security: Principles and Practice}
+      \field{year}{2017}
     \endentry
-    \entry{noauthor_user_2023}{online}{}{}
+    \entry{Sutherland2014}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6e3f26f6f816a26c6ab36bc7a899bcde}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Crown Business}%
+      }
+      \strng{namehash}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{fullhash}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{fullhashraw}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{bibnamehash}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{authorbibnamehash}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{authornamehash}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{authorfullhash}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \strng{authorfullhashraw}{6e3f26f6f816a26c6ab36bc7a899bcde}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Scrum: The Art of Doing Twice the Work in Half the Time}
+      \field{year}{2014}
+    \endentry
+    \entry{UCI2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0e9999073557ade7bbeb28f3194b8980}{%
+           family={{UCI}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{fullhash}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{fullhashraw}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{bibnamehash}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{authorbibnamehash}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{authornamehash}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{authorfullhash}{0e9999073557ade7bbeb28f3194b8980}
+      \strng{authorfullhashraw}{0e9999073557ade7bbeb28f3194b8980}
       \field{sortinit}{U}
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{User stories are very high-level definitions of a requirement, containing just enough information so that the developers can produce a reasonable estimate.}
-      \field{day}{21}
-      \field{langid}{american}
-      \field{month}{4}
-      \field{shorttitle}{User Stories}
-      \field{title}{User Stories: An Agile Introduction}
-      \field{urlday}{13}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Plataforma Picta: Acerca de}
+      \field{year}{2025}
       \verb{urlraw}
-      \verb https://agilemodeling.com/artifacts/userstory.htm
+      \verb https://www.picta.cu/about
       \endverb
       \verb{url}
-      \verb https://agilemodeling.com/artifacts/userstory.htm
+      \verb https://www.picta.cu/about
       \endverb
     \endentry
-    \entry{valtx_metodologias_2023}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=84930f0ce36b48eb28260c361d515274}{%
-           family={Valtx},
-           familyi={V\bibinitperiod}}}%
+    \entry{Wiegers2013}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c9a5f449a4bf4835507e684e957ed400}{%
+           family={Wiegers},
+           familyi={W\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e9bf730dff65f7d0a80b17e1e86137a}{%
+           family={Beatty},
+           familyi={B\bibinitperiod},
+           given={Joy},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{84930f0ce36b48eb28260c361d515274}
-      \strng{fullhash}{84930f0ce36b48eb28260c361d515274}
-      \strng{fullhashraw}{84930f0ce36b48eb28260c361d515274}
-      \strng{bibnamehash}{84930f0ce36b48eb28260c361d515274}
-      \strng{authorbibnamehash}{84930f0ce36b48eb28260c361d515274}
-      \strng{authornamehash}{84930f0ce36b48eb28260c361d515274}
-      \strng{authorfullhash}{84930f0ce36b48eb28260c361d515274}
-      \strng{authorfullhashraw}{84930f0ce36b48eb28260c361d515274}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \list{publisher}{1}{%
+        {Microsoft Press}%
+      }
+      \strng{namehash}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{fullhash}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{fullhashraw}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{bibnamehash}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{authorbibnamehash}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{authornamehash}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{authorfullhash}{8f70e5b5e9247bf084cf4db4848e225e}
+      \strng{authorfullhashraw}{8f70e5b5e9247bf084cf4db4848e225e}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Descubre los tipos de metodologías de desarrollo de software existen y cuáles son sus principales características.}
-      \field{day}{19}
-      \field{langid}{spanish}
-      \field{month}{4}
-      \field{note}{Section: Software Factory}
-      \field{shorttitle}{Metodologías de desarrollo de software}
-      \field{title}{Metodologías de desarrollo de software: ¿Qué son y para qué sirven?}
-      \field{titleaddon}{Valtx}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\6BCDNR5W\\metodologias-para-el-desarrollo-de-software-que-son-y-para-que-sirven.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.valtx.pe/blog/metodologias-para-el-desarrollo-de-software-que-son-y-para-que-sirven
-      \endverb
-      \verb{url}
-      \verb https://www.valtx.pe/blog/metodologias-para-el-desarrollo-de-software-que-son-y-para-que-sirven
-      \endverb
-    \endentry
-    \entry{noauthor_visual_2025}{inreference}{}{}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labeltitlesource}{title}
-      \field{abstract}{Visual Studio Code (también llamado {VS} Code) es un editor de código fuente desarrollado por Microsoft para Windows, Linux, {macOS} y Web. Incluye soporte para la depuración, control integrado de Git, resaltado de sintaxis, finalización inteligente de código, fragmentos y refactorización de código. También es personalizable, por lo que los usuarios pueden cambiar el tema del editor, los atajos de teclado y las preferencias. Es software gratuito y de código abierto,​​ aunque la descarga oficial está bajo software privativo e incluye características personalizadas por Microsoft.​ Visual Studio Code se basa en Electron, un framework que se utiliza para implementar Chromium y Node.js como aplicaciones para escritorio, que se ejecuta en el motor de diseño Blink. Aunque utiliza el framework Electron, el software no usa Atom y en su lugar emplea el mismo componente editor (Monaco) utilizado en Visual Studio Team Services (anteriormente llamado Visual Studio Online).​}
-      \field{booktitle}{Wikipedia, la enciclopedia libre}
-      \field{day}{18}
-      \field{langid}{spanish}
-      \field{month}{11}
-      \field{note}{Page Version {ID}: 170554736}
-      \field{title}{Visual Studio Code}
-      \field{urlday}{27}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\6AM8HPCU\\index.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://es.wikipedia.org/w/index.php?title=Visual_Studio_Code&oldid=170554736
-      \endverb
-      \verb{url}
-      \verb https://es.wikipedia.org/w/index.php?title=Visual_Studio_Code&oldid=170554736
-      \endverb
+      \field{title}{Software Requirements}
+      \field{year}{2013}
     \endentry
-    \entry{noauthor_what_nodate-3}{online}{}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{title}
-      \field{title}{What is Angular? • Angular}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb What is Angular? • Angular:C\:\\Users\\Hollow\\Zotero\\storage\\IJIU22Y9\\overview.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://angular.dev/overview
-      \endverb
-      \verb{url}
-      \verb https://angular.dev/overview
-      \endverb
-    \endentry
-    \entry{noauthor_what_nodate}{online}{}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{The {SSH} protocol (also referred to as Secure Shell) is a method for secure remote login from one computer to another.}
-      \field{langid}{english}
-      \field{shorttitle}{What is the Secure Shell ({SSH}) Protocol?}
-      \field{title}{What is the Secure Shell ({SSH}) Protocol? {|} {SSH} Academy}
-      \field{urlday}{29}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\KV4VXXDJ\\protocol.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.ssh.com/academy/ssh/protocol
-      \endverb
-      \verb{url}
-      \verb https://www.ssh.com/academy/ssh/protocol
-      \endverb
-    \endentry
-    \entry{noauthor_what_nodate-2}{online}{}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{What is transcoding? In this post, we’ll explain why it’s a must for video streaming strategies for the web and mobile devices.}
-      \field{langid}{spanish}
-      \field{shorttitle}{What is Transcoding?}
-      \field{title}{What is Transcoding? And Why is it Important for Video Streaming?}
-      \field{titleaddon}{Kaltura}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\L2D3WEXQ\\what-is-transcoding.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://corp.kaltura.com/blog/what-is-transcoding/
-      \endverb
-      \verb{url}
-      \verb https://corp.kaltura.com/blog/what-is-transcoding/
-      \endverb
-    \endentry
-    \entry{noauthor_world_2025}{inreference}{}{}
+    \entry{Wysocki2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7bc3383ca54b0c60d7bb599c26062763}{%
+           family={Wysocki},
+           familyi={W\bibinitperiod},
+           given={Robert\bibnamedelima K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{fullhash}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{fullhashraw}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{bibnamehash}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{authorbibnamehash}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{authornamehash}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{authorfullhash}{7bc3383ca54b0c60d7bb599c26062763}
+      \strng{authorfullhashraw}{7bc3383ca54b0c60d7bb599c26062763}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{En informática, la World Wide Web (La Web/{WWW}) o red informática mundial​ es un sistema que funciona a través de internet, por el cual se pueden transmitir diversos tipos de datos a través del Protocolo de Transferencia de Hipertextos o {HTTP}, que son los enlaces de la página web. Es un sistema a través del cual se gestiona información que será compartida por internet; es necesario tener conexión a internet a través de alguna aplicación para poder utilizar la web, por ejemplo, Chrome, Mozilla, Safari y otros navegadores web, que son herramientas de internet que nos permiten acceder a un gran número de contenidos que a su vez nos direccionan a otras páginas y así sucesivamente; para su creación se emplea lenguaje informático {HTML} (Hypertext Markup Language), lenguaje de marcas que permite crear documentos para compartir a través de internet; emplea el sistema de Localización Uniforme de Recursos o {URL}, que es la dirección concreta que determina cada uno de los recursos que se encuentran en la red, es decir, es un identificador propio para cada página, documento, archivo, entre otros, que se encuentran en la web. La Web se desarrolló entre marzo y diciembre de 1989​​ por el inglés Tim Berners-Lee con la ayuda del belga Robert Cailliau mientras trabajaban en el {CERN} en Ginebra, Suiza, y se publicó como una propuesta formal en 1991. Desde entonces, Berners-Lee ha jugado un papel activo guiando el desarrollo de estándares Web (como los lenguajes de marcado con los que se crean las páginas web), y en los últimos años ha abogado por su visión de una Web semántica. Utilizando los conceptos de sus anteriores sistemas de hipertexto como {ENQUIRE}, el físico británico Tim Berners-Lee, un científico de la computación y en ese tiempo uno de los empleados del {CERN}, ahora director del World Wide Web Consortium (W3C), escribió una propuesta en marzo de 1989 con lo que se convertiría en la World Wide Web.​ La propuesta de 1989 fue destinada a un sistema de comunicación {CERN} pero Berners-Lee finalmente se dio cuenta de que el concepto podría aplicarse en todo el mundo.​ En la {CERN}, la organización europea de investigación cerca de Ginebra, en la frontera entre Francia y Suiza,​ Berners-Lee y el científico de la computación belga Robert Cailliau propusieron en 1990 utilizar el hipertexto «para vincular y acceder a información de diversos tipos como una red de nodos en los que el usuario puede navegar a voluntad»,​ y Berners-Lee terminó el primer sitio web en diciembre de ese año.​ Berners-Lee publicó el proyecto en el grupo de noticias alt.hypertext el 6 de agosto de 1991.​​}
-      \field{booktitle}{Wikipedia, la enciclopedia libre}
-      \field{day}{28}
-      \field{langid}{spanish}
-      \field{month}{11}
-      \field{note}{Page Version {ID}: 170703008}
-      \field{title}{World Wide Web}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb Snapshot:C\:\\Users\\Hollow\\Zotero\\storage\\I9UKCT4S\\index.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb https://es.wikipedia.org/w/index.php?title=World_Wide_Web&oldid=170703008
-      \endverb
-      \verb{url}
-      \verb https://es.wikipedia.org/w/index.php?title=World_Wide_Web&oldid=170703008
-      \endverb
+      \field{title}{Effective Project Management: Traditional, Agile, Extreme, Hybrid}
+      \field{year}{2019}
+    \endentry
+    \entry{Ylonen2006}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=32fb26e7a1c012e7cf9d415edb983688}{%
+           family={Ylonen},
+           familyi={Y\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bedb9d2b17abb45b3777cc4b7c4359d9}{%
+           family={Lonvick},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{f9674933015c2731c835d75b412dc1e3}
+      \strng{fullhash}{f9674933015c2731c835d75b412dc1e3}
+      \strng{fullhashraw}{f9674933015c2731c835d75b412dc1e3}
+      \strng{bibnamehash}{f9674933015c2731c835d75b412dc1e3}
+      \strng{authorbibnamehash}{f9674933015c2731c835d75b412dc1e3}
+      \strng{authornamehash}{f9674933015c2731c835d75b412dc1e3}
+      \strng{authorfullhash}{f9674933015c2731c835d75b412dc1e3}
+      \strng{authorfullhashraw}{f9674933015c2731c835d75b412dc1e3}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{4251}
+      \field{title}{The Secure Shell (SSH) Protocol Architecture}
+      \field{type}{RFC}
+      \field{year}{2006}
+    \endentry
+    \entry{Zhuk2004}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a84a31dbc913344c6a7588ddfd121bbd}{%
+           family={Zhuk},
+           familyi={Z\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{fullhash}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{fullhashraw}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{bibnamehash}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{authorbibnamehash}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{authornamehash}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{authorfullhash}{a84a31dbc913344c6a7588ddfd121bbd}
+      \strng{authorfullhashraw}{a84a31dbc913344c6a7588ddfd121bbd}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Integration-Ready Architecture and Design}
+      \field{year}{2004}
     \endentry
   \enddatalist
 \endrefsection

@@ -61,6 +61,11 @@
 {
 \PassOptionsToPackage{margin=\marginspace, includefoot, onecolumn}{geometry}
 }{}
+\DeclareOption{spanish}
+{%
+\PassOptionsToPackage{spanish, es-tabla}{babel}%
+\def\lang{}
+}
 \ProcessOptions\relax
 \RequirePackage{geometry}
 
@@ -93,11 +98,6 @@
 \def\@onetutorheadingname{Supervisor}
 \def\@oneauthorheadingname{Author}
 \city{Havana}
-\DeclareOption{spanish}
-{%
-\PassOptionsToPackage{spanish, es-tabla}{babel}%
-\def\lang{}
-}
 \ProcessOptions\relax
 \RequirePackage[\lang]{babel}[2014/09/25]
 

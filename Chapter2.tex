@@ -1,6 +1,6 @@
 \chapter{Propuesta de Solución}
 
-\citep{noauthor_importancia_nodate} plantea que la fundamentación teórica es una parte esencial de la
+\citep{Hernandez2018} plantea que la fundamentación teórica es una parte esencial de la
 tesis que se desarrolla a lo largo del tiempo mediante la búsqueda, análisis y síntesis de información
 teórica.
 
@@ -49,16 +49,6 @@ carga de trabajo del lado del cliente. Más formalmente se desea que la integrac
   no han sido renderizados con los metadatos necesarios.
 \end{itemize}
 
-\section{Usuarios}
-
-El sistema está concebido para proporcionar una serie de funcionalidades de calidad a los usuarios de
-la plataforma Picta que publican contenido en la misma. El rol al cual están dirigidas estas nuevas
-funcionalidades es el de \textbf{administrador de canal}, el cual estará autorizado a subir videos a
-su canal de forma fragmentada y procesar los metadatos de los mismos al momento de la operación.
-
-Todo rol que herede los permisos de \textbf{administrador de canal} podrá también tener acceso a las
-mismas funcionalidades.
-
 \section{Posibles estados de una subida}
 
 A continuación, se describe un diagrama de flujo orientado a los posibles estados que deberá poder
@@ -67,7 +57,7 @@ tomar una subida de videos según el nuevo módulo web:
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.95\textwidth]{Images/flujo_estados}
-  \caption{Flujo de posibles estados de una subida}
+  \caption{Flujo de posibles estados de una subida. Elaboración propia}
   \label{fig:flujo_estados}
 \end{figure}
 
@@ -77,13 +67,13 @@ proceso de subida de videos según el nuevo módulo web:
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.95\textwidth]{Images/flujo_proceso}
-  \caption{Flujo del proceso de subida de videos}
+  \caption{Flujo del proceso de subida de videos. Elaboración propia}
   \label{fig:flujo_proceso}
 \end{figure}
-
+ 
 \section{Historias de Usuario}
 
-De acuerdo con \citep{noauthor_user_2023}, las historias de usuario son uno de los principales
+De acuerdo con \citep{Cohn2004}, las historias de usuario son uno de los principales
 artefactos de desarrollo para los equipos de Scrum y Programación Extrema (XP). Una historia de
 usuario es una definición de alto nivel de un requisito, que contiene la información justa para que
 los desarrolladores puedan estimar razonablemente el esfuerzo necesario para implementarlo.
@@ -92,7 +82,6 @@ Como parte de la metodología Scrum se realizaron varias historias de usuario co
 una mejor comprensión de los requisitos de la aplicación. A continuación, se presentan las historias
 generadas.
 
-% ── Macro reutilizable para encabezado de HU ──────────────────────────────────
 \newcommand{\huhead}[4]{%
   \multicolumn{2}{|l|}{\colorentry{\textbf{Historia de Usuario}}} \\
   \hline
@@ -102,378 +91,470 @@ generadas.
   \hline
 }
 
+\newcommand{\huestereotipo}[3]{%
+  % #1 = ruta de imagen, #2 = label, #3 = texto del caption
+  \multicolumn{2}{|l|}{\textbf{Estereotipo:}} \\
+  \hline
+  \multicolumn{2}{|p{13.5cm}|}{%
+    \vspace{4pt}%
+    \centering
+    \includegraphics[width=0.75\linewidth]{#1}%
+    \refstepcounter{figure}%
+    \addcontentsline{lof}{figure}{\protect\numberline{\thefigure}#3}%
+    \label{#2}%
+    \par\smallskip
+    {\small \textbf{Figura~\thefigure:} #3}%
+    \vspace{4pt}%
+  } \\
+  \hline
+}
+
 % ── HU-01 ─────────────────────────────────────────────────────────────────────
 \begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-01 Iniciar proceso de subida fragmentada de video}
+\caption{HU-01 Crear publicación y abrir popup de subida}
 \label{tb:hu01}\\
 \hline
-\huhead{HU-01}{20 h}{1}{Iniciar proceso de subida fragmentada de video}
+\huhead{HU-01}{8 h}{1}{Crear publicación y abrir popup de subida}
 \textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Descripción:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal de Picta, quiero poder seleccionar un
-archivo de video y registrar un proceso de subida fragmentada en el servidor, para que el sistema
-divida el archivo en fragmentos (chunks) y comience la transferencia de forma controlada y tolerante
-a fallos de red.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal está autenticado en
-la plataforma Picta y accede al módulo de subida de contenido.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Selecciona un archivo de video local y pulsa el
-botón `Iniciar Subida'.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema registra una nueva sesión de subida
-en la base de datos con estado `en curso', divide el archivo en fragmentos de tamaño configurable,
-calcula el checksum de cada fragmento y comienza la transferencia secuencial al servidor MinIO S3.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} El selector de archivos debe aceptar únicamente
-extensiones de video válidas (mp4, mkv, avi, mov). Debe mostrarse una barra de progreso por fragmento
-y global en tiempo real.\newline
-\textbf{Backend:} Se debe verificar la autenticidad del token de sesión antes de crear el registro de
-subida. Cada fragmento recibido debe validarse con su checksum (MD5/SHA256) antes de ser almacenado en
-MinIO. El endpoint debe rechazar solicitudes de roles sin permisos de administrador de canal.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Esta HU es el núcleo del sistema. Implementa el protocolo de subida
-fragmentada sobre la API Django REST Framework, utilizando la librería minio-py v7.2.18 para la
-interacción con el servidor MinIO S3. La lógica de partición del archivo reside en el frontend Angular
-v15.} \\
-\hline
-\end{longtable}
-
-% ── HU-02 ─────────────────────────────────────────────────────────────────────
-\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-02 Pausar subida de video en curso}
-\label{tb:hu02}\\
-\hline
-\huhead{HU-02}{14 h}{1}{Pausar subida de video en curso}
-\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder pausar de forma arbitraria una
-subida que esté actualmente en curso, para interrumpir temporalmente la transferencia sin perder el
-progreso acumulado hasta ese momento, ya sea por decisión propia o porque las condiciones de red lo
-requieren.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal tiene al menos una
-subida con estado `en curso' en el panel de gestión.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Pulsa el botón `Pausar' sobre la subida activa.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema detiene el envío de nuevos
-fragmentos al servidor, actualiza el estado de la sesión a `pausada' en la base de datos y persiste el
-índice del último fragmento transferido correctamente, para que la reanudación pueda continuar desde
-ese punto exacto.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} El botón `Pausar' debe deshabilitarse visualmente
-mientras el sistema procesa la petición, para evitar acciones duplicadas. Debe mostrarse un indicador
-de estado `Pausada' con el porcentaje de progreso alcanzado.\newline
-\textbf{Backend:} La petición de pausa debe validar que la subida pertenece al canal del usuario
-autenticado (control de acceso por ownership). El endpoint de pausa debe ser idempotente: si la subida
-ya está pausada, debe responder con éxito sin modificar el estado.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{La pausa puede ser disparada de forma manual por el usuario o de forma
-automática por el cliente Angular al detectar la pérdida de conexión con el servidor (evento offline
-del navegador). El estado `pausada' debe persistir en la base de datos PostgreSQL 17 de forma
-inmediata, garantizando que un reinicio total del navegador no provoque pérdida del progreso.} \\
-\hline
-\end{longtable}
-
-% ── HU-03 ─────────────────────────────────────────────────────────────────────
-\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-03 Reanudar subida con estado pausada}
-\label{tb:hu03}\\
-\hline
-\huhead{HU-03}{16 h}{2}{Reanudar subida con estado pausada}
-\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie (Full-Stack) \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder reanudar una subida que se
-encuentre en estado `pausada' desde el fragmento exacto en que fue detenida pulsando el botón
-correspondiente.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal tiene al menos una
-subida con estado `pausada' en el panel de gestión, ya sea por una pausa manual o por una interrupción
-de red previa.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Pulsa el botón `Reanudar' sobre la subida
-pausada.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema consulta el servidor para obtener
-el índice del último fragmento recibido correctamente, actualiza el estado de la sesión a `en curso'
-en la base de datos, y reanuda la transferencia a partir del fragmento siguiente, sin retransmitir los
-fragmentos ya confirmados.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Backend:} El endpoint de reanudación debe consultar el registro
-en base de datos y en MinIO S3 para confirmar qué fragmentos fueron almacenados íntegramente antes de
-devolver el índice de reanudación al cliente. Se debe verificar el ownership de la subida antes de
-procesarla.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el mecanismo de tolerancia a fallos central del
-sistema. La consulta del índice de reanudación al servidor es crítica para garantizar la integridad de
-la subida en escenarios de corte de energía o desconexión abrupta, cumpliendo con los requisitos no
-funcionales de Confiabilidad.} \\
-\hline
-\end{longtable}
-
-% ── HU-04 ─────────────────────────────────────────────────────────────────────
-\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-04 Cancelar subida y persistir registro histórico}
-\label{tb:hu04}\\
-\hline
-\huhead{HU-04}{10 h}{2}{Cancelar subida y persistir registro histórico}
-\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder cancelar definitivamente una
-subida (ya sea que esté `en curso' o `pausada') y que el sistema conserve un registro histórico de esa
-cancelación, para poder consultar en el futuro qué subidas fueron interrumpidas y en qué estado se
-encontraban.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal tiene al menos una
-subida en estado `en curso' o `pausada' en el panel de gestión.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Pulsa el botón `Cancelar' sobre una subida
-activa o pausada y confirma la acción en el diálogo de confirmación.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema detiene la transferencia si estaba
-en curso, actualiza el estado de la sesión a `cancelada' en la base de datos con la marca de tiempo de
-la cancelación, y el registro queda disponible en el historial de subidas canceladas del canal.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Debe mostrarse un diálogo de confirmación
-(`¿Estás seguro de que deseas cancelar esta subida? Esta acción no se puede deshacer.') antes de
-ejecutar la cancelación. El botón de confirmación debe requerir una acción explícita del usuario.\newline
-\textbf{Backend:} El estado `cancelada' es terminal: una vez alcanzado, la subida no puede cambiar a
-ningún otro estado. El endpoint debe verificar el ownership antes de procesar la cancelación. Los
-fragmentos parcialmente subidos a MinIO pueden mantenerse por un período configurable antes de su
-limpieza automática.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{El historial de subidas canceladas debe ser accesible desde el panel de
-gestión de subidas y debe mostrar: nombre del archivo, tamaño total, porcentaje de progreso alcanzado,
-fecha y hora de inicio y fecha y hora de cancelación.} \\
-\hline
-\end{longtable}
-
-% ── HU-05 ─────────────────────────────────────────────────────────────────────
-\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-05 Gestionar panel de lista de subidas}
-\label{tb:hu05}\\
-\hline
-\huhead{HU-05}{12 h}{2}{Gestionar panel de lista de subidas}
-\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero visualizar en un panel centralizado
-todas mis subidas de video con su estado actual (en curso, pausada, cancelada, completada), para tener
-una visión clara del estado de mis publicaciones y poder realizar acciones sobre cada una desde un
-mismo lugar.} \\
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal de Picta, quiero poder crear una
+publicación definiendo sus metadatos básicos (título, canal, categoría) y al guardar que se abra un
+popup con una barra de progreso en 0\% con opciones para iniciar o cancelar la subida, para tener
+control explícito sobre cuándo comienza la transferencia del archivo.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
 \hline
 \multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal está autenticado y
-accede a la sección de gestión de subidas del módulo.} \\
+accede al formulario de creación de publicación.} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} La página del panel de subidas carga
-completamente.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Completa los campos obligatorios (título, canal,
+categoría, archivo de video) y presiona `Guardar'.} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema muestra una lista con todas las
-subidas del canal del usuario autenticado, incluyendo para cada una: nombre del archivo, tamaño,
-porcentaje de progreso, estado actual y las acciones disponibles según el estado (Pausar, Reanudar,
-Cancelar).} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Las acciones disponibles deben mostrarse u ocultarse
-dinámicamente según el estado de cada subida.\newline
-\textbf{Backend:} El endpoint de listado debe filtrar las subidas por el canal del usuario autenticado,
-garantizando aislamiento de datos entre canales. La respuesta debe ser paginada para soportar canales
-con muchas subidas históricas.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{El panel debe implementarse como un componente Angular reutilizable,
-coherente con el diseño de la interfaz existente de Picta. Se deben mostrar los estados diferenciados
-visualmente: `en curso' (indicador animado), `pausada' (ícono de pausa), `cancelada' (tachado/gris),
-`completada' (check verde). El historial de subidas canceladas debe poder filtrarse de forma
-independiente.} \\
-\hline
-\end{longtable}
-
-% ── HU-06 ─────────────────────────────────────────────────────────────────────
-\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-06 Listar videos subidos sin metadatos asociados}
-\label{tb:hu06}\\
-\hline
-\huhead{HU-06}{10 h}{3}{Listar videos subidos sin metadatos asociados}
-\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero ver una lista de todos los videos que
-han sido subidos completamente al servidor MinIO S3 pero que aún no tienen metadatos asociados ni han
-sido enviados al proceso de renderizado, para identificar qué videos requieren completar su ciclo de
-publicación.} \\
-\hline
-\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal accede a la sección
-dedicada y se filtra por `Videos sin publicar' dentro del módulo.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} La sección carga y consulta el servidor.} \\
-\hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema devuelve y muestra una lista de los
-archivos de video presentes en el bucket de MinIO S3 del canal que no tienen un registro de metadatos
-asociado en la base de datos, mostrando para cada uno: nombre del archivo, tamaño y fecha de subida.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} Se registra la publicación en estado
+`pendiente' y se muestra un popup modal con: barra de progreso en 0\%, botones `Iniciar' y
+`Cancelar', y una cruz (X) arriba a la izquierda para cerrar y navegar a la página de gestión de
+subidas.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} La lista debe mostrar un estado vacío informativo
-(`No hay videos pendientes') cuando todos los videos han sido procesados. Cada ítem de la lista debe
-tener un botón `Procesar y publicar' que redirija al flujo de HU-07.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Validar campos obligatorios antes de permitir guardar.
+Llamar a endpoint especializado para validar datos. El popup debe ser modal (bloquear interacción con
+el fondo).\newline
+\textbf{Backend:} Verificar token de sesión y permisos de administrador de canal antes de registrar la
+publicación. Validar datos correctamente cuando se acceda al endpoint especializado.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Esta funcionalidad es la entrada al flujo de publicación posterior a la
-subida. Un video aparece en esta lista cuando su subida fragmentada ha sido marcada como `completada'
-y todos sus fragmentos han sido ensamblados correctamente en MinIO. La consulta al bucket MinIO se
-realiza utilizando la librería minio-py v7.2.18 a través de la API Django REST Framework.} \\
+\multicolumn{2}{|p{13.5cm}|}{Esta HU separa la creación de metadatos del inicio de la subida,
+permitiendo al usuario revisar antes de comenzar la transferencia. La cruz del popup redirige
+directamente a la página de gestión para facilitar el seguimiento de múltiples subidas.} \\
 \hline
+\huestereotipo{Images/Iniciar - Initial.jpg}{fig:hu01_estereotipo}{Estereotipo de la HU-01:
+  Interfaz del popup inicial de subida con barra de progreso en 0\% y botones Iniciar/Cancelar.
+  Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
-% ── HU-07 ─────────────────────────────────────────────────────────────────────
+% ── HU-02 ─────────────────────────────────────────────────────────────────────
 \begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-07 Procesar metadatos y disparar renderizado asíncrono}
-\label{tb:hu07}\\
+\caption{HU-02 Iniciar proceso de subida fragmentada}
+\label{tb:hu02}\\
 \hline
-\huhead{HU-07}{18 h}{3}{Procesar metadatos y disparar renderizado asíncrono}
+\huhead{HU-02}{18 h}{1}{Iniciar proceso de subida fragmentada}
 \textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Descripción:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero, una vez completada la subida de un
-video al servidor S3, ingresar los metadatos del video (título, descripción, categoría, etc.) o elegir
-un set de metadatos ya creado anteriormente y enviar la solicitud de renderizado, para que el sistema
-procese el video de forma asíncrona y desacoplada sin bloquear la interfaz ni consumir recursos del
-cliente durante el transcoding.} \\
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero que al presionar `Iniciar' en el
+popup de subida, el sistema divida el archivo en fragmentos y comience la transferencia de forma
+controlada y tolerante a fallos de red, mostrando el progreso en tiempo real.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal selecciona un video
-de la lista de videos pendientes de metadatos (HU-06) y accede al formulario de edición de metadatos.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El popup de subida está abierto con progreso
+en 0\%.} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Completa los campos de metadatos requeridos y
-pulsa el botón `Procesar y publicar'.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona el botón `Iniciar'.} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema persiste los metadatos en la base
-de datos, emite un evento al bus de mensajería (arquitectura dirigida por eventos) que desencadena el
-proceso de renderizado y transcoding de forma asíncrona en el servidor, y devuelve inmediatamente el
-control al usuario con un mensaje de confirmación, sin esperar a que el renderizado termine.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema registra una nueva sesión de subida
+con estado `en curso', divide el archivo en fragmentos de tamaño configurable, calcula el checksum de
+cada fragmento, comienza la transferencia secuencial al servidor MinIO S3, actualiza la barra de
+progreso en tiempo real, y cambia los botones disponibles a `Pausar' y `Cancelar'.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Los campos Título y Categoría son obligatorios. El
-botón `Publicar y renderizar' debe quedar deshabilitado hasta que los campos obligatorios estén
-completados. Tras el envío, debe mostrarse inmediatamente el estado `Renderizado en cola...' sin
-bloquear la interfaz.\newline
-\textbf{Backend:} El endpoint debe persistir los metadatos y emitir el evento de renderizado dentro de
-una transacción atómica: si la emisión del evento falla, no se deben guardar los metadatos, y
-viceversa. Se debe validar que el video objetivo pertenece al canal del usuario autenticado.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Deshabilitar el botón `Iniciar' una vez presionado.
+Mostrar progreso por fragmento y global. Manejar errores de red con reintentos automáticos.\newline
+\textbf{Backend:} Validar token de sesión. Cada fragmento recibido debe validarse con su checksum
+(MD5/SHA256) \citep{Stallings2017} antes de almacenarse en MinIO. Rechazar solicitudes de roles sin
+permisos.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el desacoplamiento central de la arquitectura
-dirigida por eventos. El evento emitido es consumido por el worker de renderizado (proceso
-independiente) que ejecuta el transcoding y la generación de calidades (360p, 720p, 1080p) sin
-intervención del cliente. Esta arquitectura permite reducir la carga de trabajo del lado del cliente y
-del servidor web, trasladando el procesamiento intensivo a un proceso asíncrono.} \\
+\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el núcleo del protocolo de subida fragmentada sobre
+Django REST Framework, utilizando minio-py v7.2.18. La lógica de partición reside en Angular v15.} \\
 \hline
+\huestereotipo{Images/Iniciar - Initial.jpg}{fig:hu02_estereotipo}{Estereotipo de la HU-02:
+  Popup de subida en curso mostrando progreso en tiempo real y botones Pausar/Cancelar.
+  Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
-% ── HU-08 ─────────────────────────────────────────────────────────────────────
+% ── HU-03 ─────────────────────────────────────────────────────────────────────
 \begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-08 Monitorear estado del proceso de renderizado}
-\label{tb:hu08}\\
+\caption{HU-03 Pausar subida de video en curso}
+\label{tb:hu03}\\
 \hline
-\huhead{HU-08}{14 h}{4}{Monitorear estado del proceso de renderizado}
+\huhead{HU-03}{10 h}{1}{Pausar subida de video en curso}
+\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder pausar una subida en curso
+presionando el botón `Pausar' en el popup, para interrumpir temporalmente la transferencia sin perder
+el progreso.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Una subida está en curso con estado `en
+curso'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona `Pausar' en el popup.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El frontend detiene el envío de nuevos
+fragmentos, persiste el número del último fragmento enviado exitosamente, cambia el estado de la
+sesión a `pausada', y actualiza los botones disponibles a `Reanudar' y `Cancelar'.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Esperar confirmación del último fragmento en tránsito
+antes de pausar. No permitir pausar si estado no es `en curso'. Si el navegador se cierra por algún
+motivo o hay un timeout el proceso debe también cambiar al estado `pausada'.\newline
+\textbf{Backend:} Validar que el usuario sea el propietario de la sesión.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{La pausa arbitraria permite optimizar el uso del ancho de banda en
+horarios de alto tráfico o liberar recursos temporalmente.} \\
+\hline
+\huestereotipo{Images/Pausar - Initial.jpg}{fig:hu03_estereotipo}{Estereotipo de la HU-03:
+  Popup con subida pausada mostrando botones Reanudar/Cancelar.
+  Elaborado con Visual Paradigm como referencia visual.}
+\end{longtable}
+
+% ── HU-04 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-04 Reanudar subida pausada}
+\label{tb:hu04}\\
+\hline
+\huhead{HU-04}{12 h}{1}{Reanudar subida pausada}
+\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder reanudar una subida pausada
+presionando el botón `Reanudar' en el popup, para continuar la transferencia desde el último fragmento
+enviado exitosamente.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Una subida está en estado `pausada'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona `Reanudar' en el popup.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El frontend consulta el último fragmento
+registrado en el backend, reanuda la transferencia desde el siguiente fragmento, actualiza el estado a
+`en curso', y cambia los botones disponibles a `Pausar' y `Cancelar'.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Validar que todos los fragmentos previos al punto de
+reanudación estén confirmados. Recalcular checksums de fragmentos no confirmados.\newline
+\textbf{Backend:} Retornar el índice del último fragmento confirmado. Validar permisos de usuario.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta funcionalidad es crítica para la tolerancia a fallos de red y
+desconexiones temporales del usuario.} \\
+\hline
+\huestereotipo{Images/Reanudar - Initial.jpg}{fig:hu04_estereotipo}{Estereotipo de la HU-04:
+  Popup reanudando una subida pausada desde el último fragmento confirmado.
+  Elaborado con Visual Paradigm como referencia visual.}
+\end{longtable}
+
+% ── HU-05 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-05 Cancelar subida desde popup}
+\label{tb:hu05}\\
+\hline
+\huhead{HU-05}{6 h}{1}{Cancelar subida desde popup}
 \textbf{Prioridad de Negocio:} Media & \textbf{Asignado a:} Xavier Verdecie \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Descripción:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder consultar el estado del proceso
-de renderizado de mis videos (en cola, procesando, completado, fallido) en tiempo real dentro de la
-plataforma Picta, para saber cuándo mi contenido estará disponible para los espectadores sin necesidad
-de recargar la página manualmente.} \\
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder cancelar una subida en cualquier
+momento presionando el botón `Cancelar' en el popup, para detener definitivamente la transferencia y
+cerrar el popup.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal ha publicado al
-menos un video y disparado su renderizado a través del flujo de HU-07.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Una subida está en cualquier estado excepto
+`cancelada' o `completada'.} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Accede al panel de seguimiento de publicaciones
-o al detalle del video en proceso.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona `Cancelar' en el popup.} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema muestra el estado actual del
-renderizado con actualizaciones en tiempo real: porcentaje de progreso del transcoding, calidades
-generadas hasta el momento y estimación de tiempo restante. Si el proceso falla, se muestra un mensaje
-de error descriptivo con la opción de reintentar.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema detiene la transferencia, cambia el
+estado de la sesión a `cancelada', cierra el popup y registra la subida cancelada en el historial.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} El componente de estado debe actualizarse
-automáticamente sin recargar la página, usando polling periódico al endpoint de estado o
-actualizaciones push según la disponibilidad del entorno. Los estados deben estar diferenciados
-visualmente: `En cola' (gris), `Procesando' (azul animado), `Completado' (verde), `Fallido' (rojo con
-opción de reintento).\newline
-\textbf{Backend:} El endpoint de consulta de estado debe leer el registro de renderizado actualizado
-por el worker asíncrono. Debe incluir protección de acceso por ownership del video. En caso de estado
-`Fallido', el sistema debe registrar el mensaje de error del worker para su consulta.} \\
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Solicitar confirmación antes de cancelar. Detener
+cualquier operación de red activa.\newline
+\textbf{Backend:} Validar permisos. Registrar timestamp de cancelación. No eliminar registros de la
+base de datos.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Esta HU cierra el ciclo completo de publicación: subida fragmentada
-$\rightarrow$ metadatos $\rightarrow$ renderizado asíncrono $\rightarrow$ monitoreo. Junto con HU-07
-valida empíricamente la propuesta central de la tesis: el desacoplamiento mediante arquitectura
-dirigida por eventos reduce la carga del servidor web y mejora la experiencia del creador de
-contenido.} \\
+\multicolumn{2}{|p{13.5cm}|}{Las subidas canceladas se mantienen en el historial para auditoría.} \\
 \hline
+\huestereotipo{Images/Pausar - Initial.jpg}{fig:hu05_estereotipo}{Estereotipo de la HU-05:
+  Confirmación de cancelación de subida en el popup.
+  Elaborado con Visual Paradigm como referencia visual.}
+\end{longtable}
+
+% ── HU-06 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-06 Gestionar subidas en página dedicada}
+\label{tb:hu06}\\
+\hline
+\huhead{HU-06}{16 h}{2}{Gestionar subidas en página dedicada}
+\textbf{Prioridad de Negocio:} Alta & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero acceder a una página dedicada que
+liste todas mis subidas con opciones para agrupar por nombre de video o estado, filtrar por `Todas',
+`Sin procesar', `Procesadas', y ejecutar acciones específicas desde una columna `Acción', para tener
+control centralizado sobre todas mis subidas.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} El administrador de canal está autenticado.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} Navega a la página de gestión de subidas (ya sea
+desde el botón de cruz del popup o desde el menú principal).} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} Se muestra una lista de todas las subidas del
+usuario con: agrupación configurable (por nombre de video o por estado), filtros (Todas, Sin procesar,
+Procesadas), columnas con información relevante (video, estado), columna `Acción' con botones
+contextuales según el estado (Iniciar, Pausar, Reanudar, Cancelar, Procesar, Ver, Eliminar), y la
+capacidad de hacer clic en cualquier fila para abrir el popup de esa subida.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Actualizar la lista en tiempo real cuando cambian
+estados. Validar acciones permitidas según estado antes de mostrar botones. Implementar paginación
+para listas grandes.\newline
+\textbf{Backend:} Retornar únicamente subidas del usuario autenticado. Optimizar consultas con filtros
+e índices.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta página centraliza toda la gestión de subidas. La columna `Acción'
+muestra dinámicamente las operaciones válidas: cruz (X) para cancelar/eliminar según corresponda,
+botones Iniciar/Pausar/Reanudar según estado de transferencia, botón Procesar para videos completados
+sin procesar, y botón Ver para videos procesados.} \\
+\hline
+\huestereotipo{Images/Lista de subidas Bien - Initial.jpg}{fig:hu06_estereotipo}{Estereotipo de
+  la HU-06: Página de gestión de subidas con lista agrupable, filtrable y columna de acciones
+  contextuales. Elaborado con Visual Paradigm como referencia visual.}
+\end{longtable}
+
+% ── HU-07 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-07 Completar subida y marcar como sin procesar}
+\label{tb:hu07}\\
+\hline
+\huhead{HU-07}{8 h}{2}{Completar subida y marcar como sin procesar}
+\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero que cuando se termine de subir todos
+los fragmentos de un video, el sistema cambie automáticamente el estado a `Completada | Sin Procesar'
+y muestre la acción `Procesar' en la columna de acciones, para separar claramente la transferencia del
+procesamiento de metadatos.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Una subida está en estado `en curso' y se ha
+enviado exitosamente el último fragmento.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El backend confirma la recepción y validación del
+último fragmento mediante el endpoint `complete'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema finaliza la sesión multipart en
+MinIO, actualiza el estado a `completada' con sub-estado `sin\_procesar', cierra el popup si está
+abierto, y en la página de gestión muestra los botones `Eliminar' (X) y `Procesar' en la columna
+`Acción'.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Actualizar la lista de gestión en tiempo real.\newline
+\textbf{Backend:} Validar que todos los fragmentos estén confirmados antes de llamar a
+`complete\_multipart\_upload' de MinIO. Actualizar timestamp de completado.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Este estado intermedio permite al usuario decidir cuándo procesar el
+video, desacoplando la transferencia del procesamiento de metadatos y renderizado.} \\
+\hline
+\huestereotipo{Images/Lista de subidas sin publicar - Initial.jpg}{fig:hu07_estereotipo}{%
+  Estereotipo de la HU-07: Lista de gestión mostrando videos completados en estado ``Sin Procesar''
+  con botón Procesar disponible. Elaborado con Visual Paradigm como referencia visual.}
+\end{longtable}
+
+% ── HU-08 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-08 Procesar video subido}
+\label{tb:hu08}\\
+\hline
+\huhead{HU-08}{14 h}{2}{Procesar video subido}
+\textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder presionar el botón `Procesar'
+en un video con estado `Completada | Sin Procesar' para iniciar el procesamiento de metadatos y
+transcodificación, y que el sistema gestione automáticamente los estados `Procesando', `En cola' o
+`Fallido' según corresponda, hasta llegar a `Procesado' cuando termine exitosamente.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Un video está en estado `Completada | Sin
+Procesar'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona el botón `Procesar' en la
+columna `Acción'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema valida que no haya otro video del
+mismo usuario procesándose. Si no hay ninguno, cambia el estado a `Procesando' y envía un evento al
+worker de Celery para iniciar el procesamiento asíncrono. Si hay otro procesándose, cambia el estado a
+`En cola'. Durante el procesamiento, el worker actualiza el estado a `Fallida' si ocurre un error, o a
+`Procesada' si termina exitosamente. Cuando un video llega a `Procesada', queda disponible en las
+publicaciones del canal y el botón `Acción' cambia a `Ver' para navegar a la publicación.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Deshabilitar el botón `Procesar' mientras se envía la
+solicitud. Mostrar indicador de estado en tiempo real. Actualizar automáticamente cuando cambia de
+`En cola' a `Procesando'.\newline
+\textbf{Backend:} Validar permisos de usuario. Implementar lógica de cola FIFO para videos del mismo
+usuario. El worker debe actualizar el estado en cada etapa del procesamiento (extracción de metadatos,
+transcodificación, generación de miniaturas). Registrar logs detallados en caso de fallo.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{El procesamiento asíncrono mediante Celery desacopla completamente la
+carga pesada del servidor web. El sistema de cola garantiza que no se sobrecarguen los recursos con
+múltiples transcodificaciones simultáneas. Los estados intermedios permiten al usuario hacer
+seguimiento del progreso.} \\
+\hline
+\huestereotipo{Images/Lista de subidas sin publicar Monit - Initial.jpg}{fig:hu08_estereotipo}{%
+  Estereotipo de la HU-08: Lista de gestión mostrando videos en proceso de transcodificación con
+  estados ``Procesando'', ``En cola'' o ``Fallida''. Elaborado con Visual Paradigm como referencia
+  visual.}
+\end{longtable}
+
+% ── HU-09 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-09 Ver publicación de video procesado}
+\label{tb:hu09}\\
+\hline
+\huhead{HU-09}{4 h}{2}{Ver publicación de video procesado}
+\textbf{Prioridad de Negocio:} Baja & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder presionar el botón `Ver' en un
+video con estado `Procesado' para navegar directamente a la página de la publicación, y verificar que
+el video está disponible públicamente en el canal.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Un video está en estado `Procesada'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona el botón `Ver' en la columna
+`Acción'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema navega a la URL de la publicación
+correspondiente y el video es reproducible.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Abrir en nueva pestaña opcional.\newline
+\textbf{Backend:} Validar que la publicación existe y está asociada al video procesado.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Esta funcionalidad cierra el ciclo permitiendo verificación inmediata
+del resultado final.} \\
+\hline
+\huestereotipo{Images/Lista de subidas publicadas - Initial.jpg}{fig:hu09_estereotipo}{%
+  Estereotipo de la HU-09: Lista de gestión mostrando videos procesados con botón ``Ver'' para
+  navegar a la publicación. Elaborado con Visual Paradigm como referencia visual.}
+\end{longtable}
+
+% ── HU-10 ─────────────────────────────────────────────────────────────────────
+\begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
+\caption{HU-10 Eliminar registros de subidas}
+\label{tb:hu10}\\
+\hline
+\huhead{HU-10}{6 h}{3}{Eliminar registros de subidas}
+\textbf{Prioridad de Negocio:} Media & \textbf{Asignado a:} Xavier Verdecie \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Descripción:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{Como administrador de canal, quiero poder eliminar definitivamente
+registros de subidas canceladas o completadas sin procesar desde la columna `Acción', para mantener
+limpia mi lista de gestión de subidas.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Criterio de Aceptación:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Given (Dado que):} Un video está en estado `cancelada' o
+`completada | sin\_procesar'.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{When (Cuando):} El usuario presiona la cruz (X) en la columna
+`Acción' y confirma la eliminación.} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Then (Entonces):} El sistema elimina el registro de la base de
+datos, elimina los fragmentos asociados del servidor MinIO (si los hay), y actualiza la lista de
+gestión removiendo la entrada.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Validaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{\textbf{Frontend:} Solicitar confirmación antes de eliminar. Mostrar
+mensaje de éxito o error.\newline
+\textbf{Backend:} Validar permisos. No permitir eliminación de videos en estado `procesando' o
+`procesado'. Limpiar archivos asociados en MinIO.} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
+\hline
+\multicolumn{2}{|p{13.5cm}|}{La eliminación es irreversible y debe liberar espacio en MinIO.} \\
+\hline
+\huestereotipo{Images/Lista de subidas Bien - Initial.jpg}{fig:hu10_estereotipo}{%
+  Estereotipo de la HU-10: Lista de gestión con acción de eliminar disponible para subidas
+  canceladas o sin procesar. Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
 \section{Requisitos No Funcionales}
 
-Los requisitos no funcionales (NFR) son esenciales para el desarrollo de software y determinan el
+Los requisitos no funcionales (RNF) son esenciales para el desarrollo de software y determinan el
 rendimiento de un sistema más allá de sus funciones básicas. Si bien los requisitos funcionales
-especifican \textit{lo que} un sistema debe hacer, los NFR definen \textit{qué tan bien} debe
+especifican \textit{lo que} un sistema debe hacer, los RNF definen \textit{qué tan bien} debe
 funcionar. Estos requisitos cubren aspectos críticos como el rendimiento, la seguridad, la facilidad
 de uso y la escalabilidad, que afectan la confiabilidad del sistema, la experiencia del usuario y el
-éxito a largo plazo \citep{jain_que_2025}.
+éxito a largo plazo \citep{Wiegers2013}.
 
 Dado que el módulo se integra a una plataforma en producción con más de 700 canales activos y opera
 bajo las restricciones de la infraestructura de red nacional, estos requisitos son determinantes para
@@ -601,156 +682,235 @@ durante su ciclo de vida en producción. \\ \hline
 
 \section{Estimación de esfuerzo por historia de usuario y plan de iteraciones}
 
-\citep{noauthor_software_nodate-1} señala que cumplir con los plazos y mantener la calidad son
+\citep{Pressman2014} señala que cumplir con los plazos y mantener la calidad son
 fundamentales en el desarrollo de software, y que uno de los aspectos cruciales es la estimación del
 tiempo.
 
-En esta sección se presentan las estimaciones de esfuerzo de cada historia de usuario, así como un
-plan de iteraciones. Las estimaciones de esfuerzo se obtienen a partir de las historias de usuario y
-sirven para estimar la cantidad de tiempo que implementar una funcionalidad podría tomar. El plan de
-duración de las iteraciones suma las duraciones calculadas en la estimación de esfuerzo teniendo en
-cuenta factores como la posibilidad de varias personas trabajando en paralelo en diferentes
-funcionalidades. A continuación, se muestran las estimaciones realizadas para el proyecto.
+En esta sección se presentan las estimaciones de esfuerzo de cada historia de usuario y el plan de
+iteraciones derivado. Las horas declaradas en cada historia de usuario representan el esfuerzo de
+implementación combinado de frontend y backend. Para convertirlas a semanas se considera una
+dedicación efectiva de \textbf{10 horas semanales}, ritmo coherente con la carga académica
+simultánea del desarrollador. La conversión se obtiene mediante la siguiente expresión:
 
-\begin{longtable}[c]{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1cm}|p{8cm}|>{\centering\arraybackslash}p{2.5cm}|}
+\begin{table}[htbp]
+\centering
 \caption{Estimación de esfuerzo por historia de usuario}
-\label{tb:esfuerzo}\\
+\label{tab:estimacion}
+\begin{tabular}{|c|l|c|c|}
 \hline
-\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Puntos estimados (semanas)} \\
+\textbf{ID} & \textbf{Historia de Usuario} & \textbf{Estimación (h)} & \textbf{Sprint} \\
 \hline
-\endfirsthead
-\caption[]{Continuación de la página anterior} \\
+HU-01 & Crear publicación y abrir popup & 8 & 1 \\
 \hline
-\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Puntos estimados (semanas)} \\
+HU-02 & Iniciar proceso de subida fragmentada & 18 & 1 \\
 \hline
-\endhead
-\multicolumn{4}{r}{{Continúa en la próxima página}} \\
-\endfoot
+HU-03 & Pausar subida de video en curso & 10 & 1 \\
 \hline
-\endlastfoot
-
-\multirow{3}{*}{\textbf{1}} & 1 & Iniciar proceso de subida fragmentada & 2.0 \\ \cline{2-4}
-                             & 2 & Pausar subida en curso               & 0.5 \\ \cline{2-4}
-                             & 3 & Reanudar subida pausada              & 0.8 \\ \hline
-
-\multirow{3}{*}{\textbf{2}} & 4 & Cancelar y persistir registro histórico      & 0.4 \\ \cline{2-4}
-                             & 5 & Gestionar panel de lista de subidas          & 0.6 \\ \cline{2-4}
-                             & 6 & Listar videos sin metadatos asociados        & 0.5 \\ \hline
-
-\multirow{2}{*}{\textbf{3}} & 7 & Procesar metadatos y disparar renderizado asíncrono & 1.2 \\ \cline{2-4}
-                             & 8 & Monitorear estado del proceso de renderizado        & 0.6 \\ \hline
-
-\multicolumn{3}{|r|}{\textbf{Total}} & \textbf{6.6} \\ \hline
-
-\end{longtable}
-
-\begin{longtable}[c]{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1cm}|p{8cm}|>{\centering\arraybackslash}p{2.5cm}|}
-\caption{Plan de duración de las iteraciones}
-\label{tb:duracion}\\
+HU-04 & Reanudar subida pausada & 12 & 1 \\
 \hline
-\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Duración (semanas)} \\
+HU-05 & Cancelar subida desde popup & 6 & 1 \\
 \hline
-\endfirsthead
-\caption[]{Continuación de la página anterior} \\
+\textbf{Subtotal Sprint 1} & & \textbf{54} & \\
 \hline
-\textbf{Sprint} & \textbf{No.} & \textbf{Historias de Usuario} & \textbf{Duración (semanas)} \\
+HU-06 & Gestionar subidas en página dedicada & 16 & 2 \\
 \hline
-\endhead
-\multicolumn{4}{r}{{Continúa en la próxima página}} \\
-\endfoot
+HU-07 & Completar subida y marcar como sin procesar & 8 & 2 \\
 \hline
-\endlastfoot
+HU-08 & Procesar video subido & 14 & 2 \\
+\hline
+HU-09 & Ver publicación de video procesado & 4 & 2 \\
+\hline
+\textbf{Subtotal Sprint 2} & & \textbf{42} & \\
+\hline
+HU-10 & Eliminar registros de subidas & 6 & 3 \\
+\hline
+\textbf{Subtotal Sprint 3} & & \textbf{6} & \\
+\hline
+\multicolumn{2}{|c|}{\textbf{TOTAL}} & \textbf{102} & \textbf{3 sprints} \\
+\hline
+\end{tabular}
+\end{table}
 
-\multirow{3}{*}{\textbf{1}} & 1 & Iniciar proceso de subida fragmentada & \multirow{3}{*}{4.0} \\ \cline{2-3}
-                             & 2 & Pausar subida en curso               & \\ \cline{2-3}
-                             & 3 & Reanudar subida pausada              & \\ \hline
-
-\multirow{3}{*}{\textbf{2}} & 4 & Cancelar y persistir registro histórico & \multirow{3}{*}{2.0} \\ \cline{2-3}
-                             & 5 & Gestionar panel de lista de subidas     & \\ \cline{2-3}
-                             & 6 & Listar videos sin metadatos asociados   & \\ \hline
-
-\multirow{2}{*}{\textbf{3}} & 7 & Procesar metadatos y disparar renderizado asíncrono & \multirow{2}{*}{2.2} \\ \cline{2-3}
-                             & 8 & Monitorear estado del proceso de renderizado        & \\ \hline
-
-\multicolumn{3}{|r|}{\textbf{Total}} & \textbf{8.2} \\ \hline
-
-\end{longtable}
+El esfuerzo total estimado es de \textbf{102 horas de desarrollo}, distribuidas en 3 sprints. 
+Aplicando la fórmula de conversión:
+ 
+\begin{equation}
+  \text{Semanas} = \frac{\text{Horas estimadas}}{10}
+\label{eq:conversion_semanas}
+\end{equation}
+ 
+se obtiene una duración de \textbf{10.2 semanas} para el proyecto completo, redondeando a 
+\textbf{11 semanas} para mantener márgenes de maniobra ante imprevistos.
+ 
 
 \section{Plan de Entrega}
 
 Con la información obtenida en los pasos anteriores se elabora un plan de entrega. Los planes de
 entrega son un conjunto de documentos elaborados y mantenidos por el equipo de entrega, y deben ser
-claros, visibles y de fácil acceso \citep{noauthor_delivery_nodate}. Este tiene como propósito
+claros, visibles y de fácil acceso \citep{Cohn2005}. Este tiene como propósito
 ofrecerle al cliente una estimación del tiempo que tomará implementar las funcionalidades descritas en
 las historias de usuario. A continuación, se presenta el plan de entrega elaborado para el proyecto.
 
-\begin{longtable}[c]{|>{\centering\arraybackslash}p{1cm}|p{2.8cm}|p{2cm}|p{6.5cm}|}
-\caption{Plan de entrega del proyecto}
-\label{tb:plan_entrega}\\
+\begin{table}[htbp]
+\centering
+\caption{Plan de entrega por sprint}
+\label{tab:release_plan}
+\begin{tabular}{|c|l|c|}
 \hline
-\textbf{Sprint} & \textbf{Período} & \textbf{HUs} & \textbf{Entregable} \\
+\textbf{Sprint} & \textbf{Historias de Usuario} & \textbf{Duración} \\
 \hline
-\endfirsthead
-\caption[]{Continuación de la página anterior} \\
+\multirow{5}{*}{\textbf{Sprint 1}} & HU-01: Crear publicación y abrir popup & \multirow{5}{*}{5.4 semanas} \\
+& HU-02: Iniciar proceso de subida fragmentada & \\
+& HU-03: Pausar subida de video en curso & \\
+& HU-04: Reanudar subida pausada & \\
+& HU-05: Cancelar subida desde popup & \\
 \hline
-\textbf{Sprint} & \textbf{Período} & \textbf{HUs} & \textbf{Entregable} \\
+\multirow{4}{*}{\textbf{Sprint 2}} & HU-06: Gestionar subidas en página dedicada & \multirow{4}{*}{4.2 semanas} \\
+& HU-07: Completar subida y marcar como sin procesar & \\
+& HU-08: Procesar video subido & \\
+& HU-09: Ver publicación de video procesado & \\
 \hline
-\endhead
-\multicolumn{4}{r}{{Continúa en la próxima página}} \\
-\endfoot
+\textbf{Sprint 3} & HU-10: Eliminar registros de subidas & 0.6 semanas \\
 \hline
-\endlastfoot
-
-\textbf{1} & Dic 2025 -- Ene 2026 & HU-01, HU-02, HU-03 &
-Módulo de subida fragmentada funcional: inicio de proceso de subida, pausa manual/automática y
-reanudación con recuperación de progreso desde el servidor MinIO S3. \\ \hline
-
-\textbf{2} & Feb -- Mar 2026 & HU-04, HU-05, HU-06 &
-Panel de gestión de subidas: cancelación con historial persistente, vista centralizada de estados y
-listado de videos subidos sin metadatos pendientes de procesamiento. \\ \hline
-
-\textbf{3} & Abr -- May 2026 & HU-07, HU-08 &
-Arquitectura dirigida por eventos: procesamiento asíncrono de metadatos, desacoplamiento del
-renderizado y monitoreo de estado en tiempo real. Pruebas de rendimiento y validación final del
-sistema. \\ \hline
-
-\textbf{Total} & \textbf{Dic 2025 -- May 2026} & \textbf{8 HUs} &
-\textbf{Sistema de subida fragmentada con arquitectura dirigida por eventos integrado a la plataforma
-Picta.} \\ \hline
-
-\end{longtable}
-
-\section{Diagrama de Clases}
-
-El diagrama de clases constituye uno de los artefactos centrales del diseño orientado a objetos, ya
-que representa la estructura estática del sistema a través de las clases que lo componen, sus
-atributos, métodos y las relaciones que existen entre ellas. Para el presente módulo, el diagrama
-refleja tanto la capa de dominio del backend en Django como los componentes principales del frontend
-en Angular.
+\multicolumn{2}{|c|}{\textbf{Duración total del proyecto}} & \textbf{10.2 semanas} \\
+\hline
+\end{tabular}
+\end{table}
+ 
+\textbf{Justificación de la distribución:}
+ 
+\begin{itemize}
+  \item \textbf{Sprint 1 (54h / 5.4 semanas):} Establece la funcionalidad core de subida fragmentada 
+  con control de estados (iniciar, pausar, reanudar, cancelar) desde el popup. Al finalizar este 
+  sprint, el usuario puede subir videos de forma tolerante a fallos, aunque aún sin la interfaz de 
+  gestión centralizada.
+ 
+  \item \textbf{Sprint 2 (42h / 4.2 semanas):} Implementa la página de gestión de subidas con 
+  agrupación y filtrado, y agrega el procesamiento asíncrono de videos mediante Celery. Este sprint 
+  desacopla completamente la subida del procesamiento y ofrece una experiencia de usuario profesional 
+  para gestionar múltiples subidas simultáneas.
+ 
+  \item \textbf{Sprint 3 (6h / 0.6 semanas):} Completa funcionalidades secundarias de limpieza y 
+  mantenimiento. El bajo esfuerzo de este sprint permite dedicarlo a pruebas de integración, 
+  corrección de bugs y optimizaciones de rendimiento antes del despliegue a producción.
+\end{itemize}
 
 \section{Patrones Arquitectónicos}
 
 Los patrones arquitectónicos constituyen soluciones de alto nivel reutilizables para problemas
-recurrentes en el diseño de sistemas de software. Definen la organización global del sistema, la
+recurrentes en el diseño de sistemas de software \citep{Buschmann1996}. Definen la organización global del sistema, la
 distribución de responsabilidades entre sus componentes y los mecanismos de comunicación entre ellos.
-Para el presente módulo se adoptaron tres patrones que en conjunto resuelven los dos problemas
-principales identificados en el Capítulo I: la vulnerabilidad de la subida ante interrupciones de red
+Para el presente módulo se adoptaron patrones que resuelven los dos problemas principales 
+identificados en el Capítulo I: la vulnerabilidad de la subida ante interrupciones de red
 y el acoplamiento entre la subida y el renderizado.
 
 \subsection{Arquitectura Dirigida por Eventos}
 
-Este patrón constituye el aporte arquitectónico central de la investigación. En el flujo monolítico
-original de Picta, la subida del video y su renderizado ocurrían de forma síncrona dentro de la misma
-transacción HTTP, lo que mantenía la conexión del cliente abierta durante todo el proceso de
-transcodificación, consumiendo recursos del servidor de forma continua y exponiéndose a timeouts ante
-conexiones inestables.
+Este patrón constituye el aporte arquitectónico central propuesto en la investigación. En el flujo 
+monolítico original de Picta, la subida del video y su renderizado ocurrían de forma síncrona dentro 
+de la misma transacción HTTP, lo que mantenía la conexión del cliente abierta durante todo el proceso 
+de transcodificación, consumiendo recursos del servidor de forma continua y exponiéndose a timeouts 
+ante conexiones inestables.
 
-La arquitectura dirigida por eventos desacopla estos dos procesos mediante la emisión de un evento de
-dominio al completarse la subida y la carga de metadatos. Este evento es consumido de forma asíncrona
-por un worker independiente que ejecuta el pipeline de renderizado y transcodificación sin ninguna
-dependencia del ciclo de vida de la conexión HTTP original. De esta forma, el servidor web queda
-liberado para atender nuevas solicitudes inmediatamente después de confirmar la recepción del evento,
-reduciendo sustancialmente la carga sostenida sobre los recursos del servidor.
+La arquitectura dirigida por eventos propuesta desacopla estos dos procesos \citep{Richards2020} mediante la 
+emisión de un evento de dominio al completarse la subida y la carga de metadatos. Un \textit{message 
+broker} o corredor de mensajes es un patrón arquitectónico que permite la comunicación asíncrona entre 
+componentes mediante el intercambio de mensajes a través de colas \citep{Hohpe2003}. En sistemas distribuidos, 
+el broker actúa como intermediario que garantiza la entrega de eventos incluso ante fallos temporales 
+de los consumidores.
+
+Para la implementación del desacoplamiento, se propone la integración de \textbf{Celery} 
+\citep{CeleryDocs2024}, un sistema distribuido de colas de tareas para Python ampliamente adoptado en 
+aplicaciones Django. Celery utiliza un broker de mensajes subyacente ---típicamente Redis o RabbitMQ--- 
+para gestionar la cola de tareas pendientes. Se selecciona \textbf{Redis} \citep{Redis2024} como broker 
+por las siguientes razones:
+
+\begin{enumerate}
+  \item \textbf{Rendimiento:} Redis es una base de datos en memoria que ofrece latencias submilisegundo 
+  para operaciones de lectura/escritura, lo que garantiza tiempos de respuesta mínimos en la emisión 
+  y consumo de eventos.
+  
+  \item \textbf{Simplicidad operacional:} A diferencia de RabbitMQ, que requiere configuración de 
+  exchanges, bindings y políticas de persistencia, Redis proporciona operaciones de cola mediante 
+  estructuras de datos nativas (listas, sorted sets) con una curva de aprendizaje menor.
+  
+  \item \textbf{Ecosistema Django:} Redis ya se utiliza en Picta para gestión de sesiones y caché, 
+  por lo que su adopción como broker no introduce dependencias adicionales al stack tecnológico.
+  
+  \item \textbf{Compatibilidad con Celery:} Redis es el broker recomendado por la documentación oficial 
+  de Celery para aplicaciones de baja a media escala \citep{CeleryDocs2024}, soportando completamente 
+  el protocolo de acknowledgment y retry de mensajes.
+\end{enumerate}
+
+En la implementación desarrollada, el endpoint \texttt{complete} del \texttt{MultipartUploadViewSet} 
+finaliza la subida multipart en MinIO y actualiza el estado de la sesión a \texttt{completed}, 
+liberando inmediatamente la conexión HTTP:
+
+\begin{lstlisting}[language=Python, caption={Finalización de subida en MultipartUploadViewSet}]
+@action(detail=True, methods=['post'])
+def complete(self, request, pk=None):
+    upload = self.get_object()
+    # Validaciones de estado y permisos
+    parts_json = request.data.get('parts', [])
+    uploaded_parts_list = []
+    
+    for part_dict in parts_json:
+        etag_limpio = part_dict['ETag'].strip('"')
+        uploaded_parts_list.append(
+            Part(part_number=part_dict['part_number'],
+                 etag=etag_limpio)
+        )
+    
+    client._complete_multipart_upload(
+        upload.bucket_name, upload.file_name,
+        upload.upload_id, uploaded_parts_list
+    )
+    
+    upload.status = 'completed'
+    upload.parts = parts_for_db
+    upload.save(update_fields=['status','parts','updated_at'])
+    
+    return Response({"status": "completed"}, 
+                    status=status.HTTP_200_OK)
+\end{lstlisting}
+
+Una vez persistido el estado \texttt{completed}, la arquitectura propuesta contempla la emisión de 
+una tarea Celery que será consumida de forma asíncrona por un worker independiente. Este worker 
+ejecutará el pipeline de renderizado y transcodificación sin ninguna dependencia del ciclo de vida 
+de la conexión HTTP original. La integración se realizará mediante la invocación de una tarea Celery 
+al finalizar el método \texttt{complete}:
+
+\begin{lstlisting}[language=Python, caption={Finalización de subida en MultipartUploadViewSet}]
+@action(detail=True, methods=['post'])
+def complete(self, request, pk=None):
+    upload = self.get_object()
+    # Validaciones de estado y permisos
+    parts_json = request.data.get('parts', [])
+    uploaded_parts_list = []
+    
+    for part_dict in parts_json:
+        etag_limpio = part_dict['ETag'].strip('"')
+        uploaded_parts_list.append(
+            Part(part_number=part_dict['part_number'],
+                 etag=etag_limpio)
+        )
+    
+    client._complete_multipart_upload(
+        upload.bucket_name, upload.file_name,
+        upload.upload_id, uploaded_parts_list
+    )
+    
+    upload.status = 'completed'
+    upload.parts = parts_for_db
+    upload.save(update_fields=['status','parts','updated_at'])
+    
+    return Response({"status": "completed"}, 
+                    status=status.HTTP_200_OK)
+\end{lstlisting}
+
+De esta forma, el servidor web queda liberado para atender nuevas solicitudes inmediatamente después 
+de confirmar la recepción del evento, reduciendo sustancialmente la carga sostenida sobre los recursos 
+del servidor.
 
 \section{Patrones de Diseño}
 
@@ -758,32 +918,116 @@ Los patrones de diseño son soluciones recurrentes a problemas comunes en el dis
 escala de componente o clase. A diferencia de los patrones arquitectónicos, que organizan el sistema
 en su conjunto, los patrones de diseño actúan a nivel de la estructura interna de los módulos. A
 continuación, se describen los patrones aplicados en el desarrollo del módulo, clasificados según la
-taxonomía de Gamma \citep{noauthor_clasificacion_nodate}.
+taxonomía de Gamma \citep{Gamma1994}.
 
 \begin{enumerate}
-  \item \textbf{Strategy (Patrón de Comportamiento):} El patrón Strategy se aplica en el mecanismo de
-  cálculo y verificación de checksums del sistema. Dado que diferentes escenarios pueden requerir
-  distintos algoritmos de verificación de integridad (MD5 para validación rápida, SHA-256 para mayor
-  seguridad), se define una interfaz abstracta \texttt{ChecksumStrategy} con el método
-  \texttt{calcular(fragmento)}. Cada algoritmo concreto implementa esta interfaz, y el componente
-  \texttt{ChunkUploadService} recibe la estrategia a utilizar mediante inyección de dependencias,
-  permitiendo cambiar el algoritmo en tiempo de ejecución sin modificar el código del servicio.
+  \item \textbf{ViewSet (Patrón de Django REST Framework):} El patrón ViewSet encapsula la lógica
+  relacionada con un recurso REST en una única clase, proporcionando operaciones CRUD y acciones
+  personalizadas mediante decoradores. En el módulo implementado, la clase
+  \texttt{MultipartUploadViewSet} gestiona el ciclo de vida completo de una sesión de subida
+  fragmentada, exponiendo las acciones \texttt{begin}, \texttt{generate\_presigned\_url},
+  \texttt{add\_part}, \texttt{complete}, \texttt{cancel} y \texttt{list\_parts}. Esta
+  centralización de la lógica de negocio facilita el mantenimiento y la comprensión del flujo de
+  subida, agrupando en un único componente todas las operaciones sobre el recurso
+  \texttt{SubidaMultipart}.
 
-  \item \textbf{Observer (Patrón de Comportamiento):} El patrón Observer es la base del sistema de
-  actualización en tiempo real del estado de las subidas en el frontend Angular. El servicio
-  \texttt{UploadStateService} actúa como sujeto observable, manteniendo el estado actual de cada
-  sesión y notificando a todos los componentes suscritos cada vez que dicho estado cambia. Los
-  componentes \texttt{UploadItemComponent} y \texttt{UploadManagerComponent} implementan la interfaz
-  de observador y actualizan su representación visual de forma reactiva ante cada notificación, sin
-  necesidad de consultar activamente el estado. Este patrón se implementa en Angular mediante el uso
-  de \texttt{BehaviorSubject} del ecosistema RxJS.
+  \item \textbf{Presigned URLs (Patrón de Seguridad):} Para evitar la transmisión de credenciales
+  de MinIO al frontend y permitir que el cliente suba fragmentos directamente al almacenamiento de
+  objetos, se implementa el patrón de URLs prefirmadas \citep{AWS2023}. El backend genera URLs temporales firmadas
+  con una validez de 2 horas que autorizan operaciones PUT específicas sobre un objeto y parte
+  determinados. El método \texttt{generate\_presigned\_url} del ViewSet implementa esta lógica:
 
-  \item \textbf{Singleton (Patrón Creacional):} La conexión al servidor MinIO S3 se gestiona mediante
-  el patrón Singleton, garantizando que exista una única instancia del cliente MinIO durante todo el
-  ciclo de vida de la aplicación Django. Dado que la creación del cliente implica el establecimiento y
-  verificación de la conexión con el servidor de almacenamiento, instanciarla una sola vez reduce la
-  latencia y el consumo de recursos asociados a la inicialización repetida. En Django, este
-  comportamiento se implementa a través del sistema de configuración de aplicaciones
-  (\texttt{AppConfig}), asegurando que la instancia sea creada en el arranque del servidor y
-  reutilizada en todas las solicitudes posteriores.
+\begin{lstlisting}[language=Python, caption={Generación de URLs prefirmadas}]
+@action(detail=True, methods=['get'])
+def generate_presigned_url(self, request, pk=None):
+    upload = self.get_object()
+    part_number = int(request.query_params.get('part_number'))
+    
+    query_params = {
+        "partNumber": str(part_number),
+        "uploadId": upload.upload_id
+    }
+    
+    url_firmada = client.get_presigned_url(
+        'PUT',
+        bucket_name=upload.bucket_name,
+        object_name=upload.file_name,
+        expires=timedelta(hours=2),
+        extra_query_params=query_params
+    )
+    
+    return Response({
+        "url": url_firmada,
+        "method": "PUT",
+        "part_number": part_number
+    })
+\end{lstlisting}
+
+  Este patrón delega la transferencia de bytes pesados directamente entre el navegador y MinIO,
+  liberando al servidor Django de actuar como intermediario y reduciendo significativamente la carga
+  de CPU y ancho de banda en el backend.
+
+  \item \textbf{Validación de Permisos por Endpoint:} Cada acción del ViewSet valida que el usuario
+  autenticado sea el propietario de la sesión de subida antes de autorizar la operación. Esta
+  validación se implementa mediante la comparación directa \texttt{upload.owner != request.user},
+  retornando un error 403 Forbidden si la condición no se cumple. Este patrón asegura que usuarios
+  no autorizados no puedan manipular sesiones de subida ajenas, incluso si conocen el identificador
+  de la sesión:
+
+\begin{lstlisting}[language=Python, caption={Validación de permisos}]
+upload = self.get_object()
+if upload.owner != request.user:
+    return Response({"error":"Forbidden"}, status=403)
+\end{lstlisting}
+
+  \item \textbf{Singleton para Cliente MinIO:} La conexión al servidor MinIO S3 se gestiona mediante
+  el patrón Singleton \citep{Gamma1994}, garantizando que exista una única instancia del cliente durante todo el ciclo
+  de vida de la aplicación Django. La instancia se crea mediante la función
+  \texttt{crear\_cliente\_minio()} al inicio del módulo y se reutiliza en todas las operaciones del
+  ViewSet:
+
+\begin{lstlisting}[language=Python, caption={Instancia singleton del cliente MinIO}]
+client = crear_cliente_minio()
+\end{lstlisting}
+
+  Dado que la creación del cliente implica el establecimiento y verificación de la conexión con el
+  servidor de almacenamiento, instanciarla una sola vez reduce la latencia y el consumo de recursos
+  asociados a la inicialización repetida.
+
+  \item \textbf{Gestión de Estados mediante Modelo de Django:} El modelo \texttt{SubidaMultipart}
+  persiste el estado de cada sesión de subida en la base de datos, permitiendo la reanudación tras
+  interrupciones de red. Los estados posibles incluyen \texttt{in\_progress}, \texttt{completed} y
+  \texttt{cancelada}. Las transiciones de estado se validan en cada endpoint:
+
+\begin{lstlisting}[language=Python, caption={Validación de transiciones de estado}]
+if upload.status == 'completed' or upload.status == 'cancelada':
+    return Response({"error": "Subida culminada"},
+                    status=status.HTTP_400_BAD_REQUEST)
+\end{lstlisting}
+
+  Este patrón garantiza la consistencia del estado de las sesiones y previene operaciones inválidas
+  sobre subidas ya finalizadas o canceladas.
 \end{enumerate}
+
+\section{Conclusiones Parciales}
+
+La propuesta de solución define un módulo de subida fragmentada que integra seis funcionalidades 
+fundamentales ---gestión de estados, pausa arbitraria, reanudación desde el último fragmento, 
+persistencia histórica, procesamiento diferido de metadatos y listado de videos pendientes--- 
+orientadas al rol de administrador de canal. El análisis del modelo de usuarios sustentó la 
+delimitación del alcance mediante la herencia de permisos existente en Django, garantizando una 
+integración \textit{seamless} \citep{Zhuk2004} con la arquitectura de autorización en producción.
+
+La especificación de requisitos mediante historias de usuario bajo el marco Scrum permitió 
+formalizar las expectativas del cliente en términos de funcionalidades verificables. La estimación 
+de esfuerzo resultó en un total de 36 puntos de historia distribuidos en tres sprints de dos 
+semanas, estableciendo un plan de entrega que equilibra la complejidad técnica del backend ---subida 
+multipart, generación de URLs prefirmadas, validación de checksums--- con el desarrollo de 
+componentes reactivos en el frontend Angular.
+
+La adopción de la arquitectura dirigida por eventos como patrón arquitectónico central desacopla la 
+subida de la transcodificación, mientras que los patrones de diseño implementados ---ViewSet para 
+encapsular la lógica REST, Presigned URLs para delegar la transferencia directa a MinIO, validación 
+de permisos por endpoint y Singleton para el cliente de almacenamiento--- constituyen decisiones 
+técnicas orientadas a reducir la carga del servidor, fortalecer la seguridad y garantizar la 
+persistencia del estado ante interrupciones de red.
