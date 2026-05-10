@@ -21,14 +21,26 @@ posteriores. A continuación, se describen los conceptos clave:
 
 \begin{description}
 \sloppy
+  \item[Fragmentación:] se refiere a la descomposición de un objeto de datos (como un archivo de video de gran tamaño) 
+  en unidades menores e independientes, denominadas fragmentos o chunks, para facilitar su transmisión y procesamiento 
+  en entornos distribuidos.
+
   \item[Checksum:] El checksum es un valor numérico calculado a partir de una secuencia de datos,
   empleado para verificar la integridad de la información durante su transmisión o almacenamiento.
   Su uso permite detectar alteraciones o corrupciones producidas por fallos de red o de hardware
   \citep{ISO2016}. Es utilizado para validar la integridad
-  de cada fragmento de video durante el proceso de subida fragmentada a servicios de almacenamiento de datos.
+  de cada fragmento de video durante el proceso de carga fragmentada a servicios de almacenamiento de datos.
   Cada trozo recibido debe validarse con su checksum antes de ser almacenado,
   garantizando que no se produjo corrupción de datos durante la transferencia bajo condiciones de
   red inestable.
+
+  \item[Renderizado:] Es el proceso final del ciclo de vida de una petición, donde los datos estructurados (metadatos) 
+  pasan de ser objetos internos del servidor a una representación externa legible por el cliente (generalmente JSON o XML).
+
+  \item[Desacoplamiento:] Se refiere al grado de independencia entre los componentes de un sistema. En ingeniería de software, 
+  un sistema altamente desacoplado es aquel en el que los módulos pueden realizar su función, evolucionar y escalar sin que un 
+  cambio o fallo en uno afecte directamente al funcionamiento interno del otro. Gracias al uso de S3 Event Notifications y Celery, 
+  el proceso de subida no está atado al procesamiento de metadatos.
 
   \item[Protocolo SSH:] El protocolo SSH (\textit{Secure Shell}) define la arquitectura para el
   inicio de sesión remoto seguro entre computadoras. Provee mecanismos de autenticación robusta y
@@ -77,11 +89,6 @@ posteriores. A continuación, se describen los conceptos clave:
   cliente. Estas tareas se incorporan al \textit{Product Backlog} y se priorizan en función de su
   impacto en el objetivo del sprint, sin comprometer la entrega del incremento funcional al cierre de
   la iteración.
-
-  \item[World Wide Web:] Sistema de información distribuida que opera sobre Internet mediante el
-  protocolo HTTP, permitiendo la transmisión de documentos de hipertexto e hipermedia. Fue
-  concebido originalmente por Tim Berners-Lee en el CERN en 1989
-  \citep{BernersLee1992}.
 
   \item[Framework:] Estructura reutilizable de software que provee un conjunto de abstracciones,
   bibliotecas y convenciones sobre las cuales los desarrolladores construyen aplicaciones. Define
@@ -193,7 +200,7 @@ fallo y las ineficiencias del modelo actual.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{Images/flujo_actual.pdf}
-  \caption{Flujo monolítico y síncrono del proceso de publicación en Picta}
+  \caption{Flujo monolítico y síncrono del proceso de publicación en Picta. Elaboración Propia}
   \label{fig:flujo_actual}
 \end{figure}
 
@@ -212,6 +219,13 @@ criterio de compatibilidad arquitectónica con la plataforma Picta existente, pr
 del ecosistema tecnológico sobre la adopción de alternativas externas. A continuación, se describen 
 el lenguaje de programación, las herramientas de desarrollo y las bibliotecas y \textit{frameworks} 
 seleccionados, justificando en cada caso su pertinencia para los objetivos del proyecto.
+
+Asimismo, la elección tecnológica se fundamenta en la capacidad de los componentes seleccionados para 
+soportar flujos de trabajo asíncronos y arquitecturas desacopladas, requisitos indispensables para la 
+gestión eficiente de grandes volúmenes de datos mediante subidas fragmentadas. Se busca no solo garantizar 
+la operatividad técnica inmediata, sino también facilitar la escalabilidad futura y el mantenimiento evolutivo 
+del sistema dentro del entorno de producción de la plataforma, asegurando una integración fluida con los servicios 
+de infraestructura y almacenamiento de objetos ya desplegados.
 
 \subsection{Selección del lenguaje de programación}
 
@@ -235,7 +249,7 @@ del cliente predominante en la Web, y su especificación define el modelo de eje
 de datos y los mecanismos de concurrencia basados en eventos que se utilizarán en el componente
 Angular del módulo \citep{Ecma2023}.
 
-\subsection{Herramientas utilizadas}
+\subsection{Herramientas}
 
 Las siguientes herramientas fueron empleadas directamente durante el ciclo de desarrollo del módulo,
 cubriendo las etapas de codificación, gestión de base de datos, prueba de interfaces y modelado.
@@ -267,7 +281,7 @@ cubriendo las etapas de codificación, gestión de base de datos, prueba de inte
   secuencia del proyecto.
 \end{description}
 
-\subsection{Bibliotecas y Frameworks utilizados}
+\subsection{Bibliotecas y Frameworks}
 
 En alineación con los criterios derivados del análisis arquitectónico del sistema vigente y con el
 objetivo de garantizar una integración totalmente compatible y sin impactos estructurales, se ha
@@ -438,7 +452,7 @@ con sus fortalezas estructurales. En primer lugar, el equipo de desarrollo está
 más pesadas--- sea una ventaja directa. En segundo lugar, el cliente de la plataforma Picta dispone
 de alta disponibilidad técnica y conocimiento del dominio, lo que facilita la validación de los
 incrementos al cierre de cada sprint. En tercer lugar, la complejidad del proyecto ---integración
-de subida fragmentada con arquitectura dirigida por eventos sobre una plataforma en producción---
+de carga fragmentada con arquitectura dirigida por eventos sobre una plataforma en producción---
 se ubica dentro del rango de complejidad media-alta que Scrum gestiona con mayor eficacia que un
 flujo continuo como Kanban \citep{Schwaber2020}.
 

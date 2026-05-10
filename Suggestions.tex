@@ -1,6 +1,27 @@
 \suggestions
-
-
-
-Escribe aquí las recomendaciones de tu trabajo.
-
+ 
+A partir de los resultados obtenidos y las limitaciones identificadas durante el desarrollo, se
+formulan las siguientes recomendaciones para trabajos futuros:
+ 
+\begin{enumerate}
+ 
+  \item \textbf{Incorporar soporte para subida paralela de fragmentos.} La implementación actual
+  transfiere los fragmentos de forma secuencial para simplificar la gestión del estado y la
+  detección de errores por fragmento. Una evolución natural del módulo consistiría en habilitar la
+  transferencia concurrente de múltiples fragmentos mediante un pool de promesas controlado,
+  reduciendo el tiempo total de subida en conexiones de alta capacidad sin comprometer la
+  consistencia del estado persistido. Esta mejora requeriría ajustar la lógica de reconciliación
+  del progreso tanto en el cliente como en el endpoint \texttt{complete} del backend.
+ 
+  \item \textbf{Sustituir el mecanismo de \textit{polling} por notificaciones en tiempo real
+  mediante WebSockets.} El módulo implementado consulta periódicamente el endpoint
+  \texttt{/verificar\_cola/} cada tres segundos para conocer el estado del procesamiento, lo que
+  introduce latencia artificial en la actualización de la interfaz y genera tráfico HTTP innecesario
+  durante períodos de espera prolongados. Se recomienda reemplazar este mecanismo por un canal
+  WebSocket ---integrable en el ecosistema Django mediante Django Channels--- que permita al
+  \textit{worker} de Celery notificar al cliente de forma inmediata al completar el procesamiento.
+  Esta mejora eliminaría el retardo perceptible entre la finalización real de la tarea y su
+  reflejo en la interfaz, y reduciría la carga de solicitudes sobre el servidor en escenarios con
+  múltiples usuarios procesando contenido de forma simultánea.
+ 
+\end{enumerate}

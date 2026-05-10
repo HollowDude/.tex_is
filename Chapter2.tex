@@ -1,14 +1,12 @@
 \chapter{Propuesta de Solución}
 
-\citep{Hernandez2018} plantea que la fundamentación teórica es una parte esencial de la
-tesis que se desarrolla a lo largo del tiempo mediante la búsqueda, análisis y síntesis de información
-teórica.
-
-Con una fundamentación teórica bien estructurada y una idea concisa de las deficiencias actuales de la
-plataforma Picta, en este capítulo se presentan las consideraciones de diseño del proyecto, se definen
-formalmente los requisitos funcionales a través de historias de usuario, se definen los requisitos no
-funcionales y se realiza una estimación de esfuerzo a partir de la que se obtiene un plan de entrega.
-Finalmente se discuten los patrones arquitectónicos y de diseño utilizados.
+El diagnóstico de las limitaciones actuales en la gestión de medios de la plataforma Picta establece el punto 
+de partida para la concepción de una solución técnica integral. La transición hacia una arquitectura dirigida 
+por eventos demanda la formalización de especificaciones y el modelado de requisitos mediante historias de usuario, 
+permitiendo traducir las necesidades detectadas en funcionalidades concretas. Asimismo, la estructuración de un plan 
+de entrega sustentado en estimaciones de esfuerzo objetivas, en conjunto con la selección estratégica de patrones arquitectónicos, 
+garantiza que la propuesta sea no solo viable desde el punto de vista técnico, sino también plenamente integrable y escalable dentro 
+del ecosistema tecnológico existente.
 
 \section{Propuesta de solución}
 
@@ -93,7 +91,7 @@ generadas.
 
 \newcommand{\huestereotipo}[3]{%
   % #1 = ruta de imagen, #2 = label, #3 = texto del caption
-  \multicolumn{2}{|l|}{\textbf{Estereotipo:}} \\
+  \multicolumn{2}{|l|}{\textbf{Prototipo:}} \\
   \hline
   \multicolumn{2}{|p{13.5cm}|}{%
     \vspace{4pt}%
@@ -151,17 +149,17 @@ publicación. Validar datos correctamente cuando se acceda al endpoint especiali
 permitiendo al usuario revisar antes de comenzar la transferencia. La cruz del popup redirige
 directamente a la página de gestión para facilitar el seguimiento de múltiples subidas.} \\
 \hline
-\huestereotipo{Images/Iniciar - Initial.jpg}{fig:hu01_estereotipo}{Estereotipo de la HU-01:
+\huestereotipo{Images/Iniciar - Initial.jpg}{fig:hu01_estereotipo}{Prototipo de la HU-01:
   Interfaz del popup inicial de subida con barra de progreso en 0\% y botones Iniciar/Cancelar.
   Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
 % ── HU-02 ─────────────────────────────────────────────────────────────────────
 \begin{longtable}[c]{|p{3.5cm}|p{10cm}|}
-\caption{HU-02 Iniciar proceso de subida fragmentada}
+\caption{HU-02 Iniciar proceso de carga fragmentada}
 \label{tb:hu02}\\
 \hline
-\huhead{HU-02}{18 h}{1}{Iniciar proceso de subida fragmentada}
+\huhead{HU-02}{18 h}{1}{Iniciar proceso de carga fragmentada}
 \textbf{Prioridad de Negocio:} Crítica & \textbf{Asignado a:} Xavier Verdecie \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Descripción:}} \\
@@ -192,10 +190,10 @@ permisos.} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Observaciones:}} \\
 \hline
-\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el núcleo del protocolo de subida fragmentada sobre
+\multicolumn{2}{|p{13.5cm}|}{Esta HU implementa el núcleo del protocolo de carga fragmentada sobre
 Django REST Framework, utilizando minio-py v7.2.18. La lógica de partición reside en Angular v15.} \\
 \hline
-\huestereotipo{Images/Iniciar - Initial.jpg}{fig:hu02_estereotipo}{Estereotipo de la HU-02:
+\huestereotipo{Images/Iniciar - Initial.jpg}{fig:hu02_estereotipo}{Prototipo de la HU-02:
   Popup de subida en curso mostrando progreso en tiempo real y botones Pausar/Cancelar.
   Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
@@ -237,7 +235,7 @@ motivo o hay un timeout el proceso debe también cambiar al estado `pausada'.\ne
 \multicolumn{2}{|p{13.5cm}|}{La pausa arbitraria permite optimizar el uso del ancho de banda en
 horarios de alto tráfico o liberar recursos temporalmente.} \\
 \hline
-\huestereotipo{Images/Pausar - Initial.jpg}{fig:hu03_estereotipo}{Estereotipo de la HU-03:
+\huestereotipo{Images/Pausar - Initial.jpg}{fig:hu03_estereotipo}{Prototipo de la HU-03:
   Popup con subida pausada mostrando botones Reanudar/Cancelar.
   Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
@@ -277,7 +275,7 @@ reanudación estén confirmados. Recalcular checksums de fragmentos no confirmad
 \multicolumn{2}{|p{13.5cm}|}{Esta funcionalidad es crítica para la tolerancia a fallos de red y
 desconexiones temporales del usuario.} \\
 \hline
-\huestereotipo{Images/Reanudar - Initial.jpg}{fig:hu04_estereotipo}{Estereotipo de la HU-04:
+\huestereotipo{Images/Reanudar - Initial.jpg}{fig:hu04_estereotipo}{Prototipo de la HU-04:
   Popup reanudando una subida pausada desde el último fragmento confirmado.
   Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
@@ -317,7 +315,7 @@ base de datos.} \\
 \hline
 \multicolumn{2}{|p{13.5cm}|}{Las subidas canceladas se mantienen en el historial para auditoría.} \\
 \hline
-\huestereotipo{Images/Pausar - Initial.jpg}{fig:hu05_estereotipo}{Estereotipo de la HU-05:
+\huestereotipo{Images/Pausar - Initial.jpg}{fig:hu05_estereotipo}{Prototipo de la HU-05:
   Confirmación de cancelación de subida en el popup.
   Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
@@ -365,7 +363,7 @@ muestra dinámicamente las operaciones válidas: cruz (X) para cancelar/eliminar
 botones Iniciar/Pausar/Reanudar según estado de transferencia, botón Procesar para videos completados
 sin procesar, y botón Ver para videos procesados.} \\
 \hline
-\huestereotipo{Images/Lista de subidas Bien - Initial.jpg}{fig:hu06_estereotipo}{Estereotipo de
+\huestereotipo{Images/Lista de subidas Bien - Initial.jpg}{fig:hu06_estereotipo}{Prototipo de
   la HU-06: Página de gestión de subidas con lista agrupable, filtrable y columna de acciones
   contextuales. Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
@@ -410,7 +408,7 @@ abierto, y en la página de gestión muestra los botones `Eliminar' (X) y `Proce
 video, desacoplando la transferencia del procesamiento de metadatos y renderizado.} \\
 \hline
 \huestereotipo{Images/Lista de subidas sin publicar - Initial.jpg}{fig:hu07_estereotipo}{%
-  Estereotipo de la HU-07: Lista de gestión mostrando videos completados en estado ``Sin Procesar''
+  Prototipo de la HU-07: Lista de gestión mostrando videos completados en estado ``Sin Procesar''
   con botón Procesar disponible. Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
@@ -461,7 +459,7 @@ múltiples transcodificaciones simultáneas. Los estados intermedios permiten al
 seguimiento del progreso.} \\
 \hline
 \huestereotipo{Images/Lista de subidas sin publicar Monit - Initial.jpg}{fig:hu08_estereotipo}{%
-  Estereotipo de la HU-08: Lista de gestión mostrando videos en proceso de transcodificación con
+  Prototipo de la HU-08: Lista de gestión mostrando videos en proceso de transcodificación con
   estados ``Procesando'', ``En cola'' o ``Fallida''. Elaborado con Visual Paradigm como referencia
   visual.}
 \end{longtable}
@@ -501,7 +499,7 @@ correspondiente y el video es reproducible.} \\
 del resultado final.} \\
 \hline
 \huestereotipo{Images/Lista de subidas publicadas - Initial.jpg}{fig:hu09_estereotipo}{%
-  Estereotipo de la HU-09: Lista de gestión mostrando videos procesados con botón ``Ver'' para
+  Prototipo de la HU-09: Lista de gestión mostrando videos procesados con botón ``Ver'' para
   navegar a la publicación. Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
@@ -543,7 +541,7 @@ mensaje de éxito o error.\newline
 \multicolumn{2}{|p{13.5cm}|}{La eliminación es irreversible y debe liberar espacio en MinIO.} \\
 \hline
 \huestereotipo{Images/Lista de subidas Bien - Initial.jpg}{fig:hu10_estereotipo}{%
-  Estereotipo de la HU-10: Lista de gestión con acción de eliminar disponible para subidas
+  Prototipo de la HU-10: Lista de gestión con acción de eliminar disponible para subidas
   canceladas o sin procesar. Elaborado con Visual Paradigm como referencia visual.}
 \end{longtable}
 
@@ -551,7 +549,7 @@ mensaje de éxito o error.\newline
 
 Los requisitos no funcionales (RNF) son esenciales para el desarrollo de software y determinan el
 rendimiento de un sistema más allá de sus funciones básicas. Si bien los requisitos funcionales
-especifican \textit{lo que} un sistema debe hacer, los RNF definen \textit{qué tan bien} debe
+especifican lo que un sistema debe hacer, los RNF definen qué tan bien debe
 funcionar. Estos requisitos cubren aspectos críticos como el rendimiento, la seguridad, la facilidad
 de uso y la escalabilidad, que afectan la confiabilidad del sistema, la experiencia del usuario y el
 éxito a largo plazo \citep{Wiegers2013}.
@@ -586,7 +584,7 @@ resulte en pérdida de progreso o datos para el usuario.
 \endlastfoot
 
 RnF-C1 & Persistencia ante interrupciones &
-El sistema debe guardar automáticamente el progreso de cada subida fragmentada ante cualquier
+El sistema debe guardar automáticamente el progreso de cada carga fragmentada ante cualquier
 interrupción de red o energía, tanto del lado del cliente como del servidor, garantizando la
 reanudación sin pérdida de datos. \\ \hline
 
@@ -625,7 +623,7 @@ El tiempo de ejecución de cada transacción API no debe superar 1 segundo bajo 
 operación de red. \\ \hline
 
 RnF-E2 & Capacidad de procesamiento &
-El sistema debe ser capaz de gestionar hasta 500 solicitudes de inicio de subida fragmentada por
+El sistema debe ser capaz de gestionar hasta 500 solicitudes de inicio de carga fragmentada por
 segundo y soportar hasta 500 usuarios concurrentes sin degradación del rendimiento. \\ \hline
 
 \end{longtable}
@@ -667,7 +665,7 @@ Modelado &
 Visual Paradigm v17.0 para la generación de todos los artefactos UML del proyecto. \\ \hline
 
 Codificación &
-El código Python debe adherirse al estándar PEP 8. Se deben aplicar buenas prácticas de diseño ágil
+El código Python v3.9.6 debe adherirse al estándar PEP 8. Se deben aplicar buenas prácticas de diseño ágil
 durante todo el desarrollo. \\ \hline
 
 Interfaz &
@@ -702,7 +700,7 @@ simultánea del desarrollador. La conversión se obtiene mediante la siguiente e
 \hline
 HU-01 & Crear publicación y abrir popup & 8 & 1 \\
 \hline
-HU-02 & Iniciar proceso de subida fragmentada & 18 & 1 \\
+HU-02 & Iniciar proceso de carga fragmentada & 18 & 1 \\
 \hline
 HU-03 & Pausar subida de video en curso & 10 & 1 \\
 \hline
@@ -731,16 +729,23 @@ HU-10 & Eliminar registros de subidas & 6 & 3 \\
 \end{tabular}
 \end{table}
 
-El esfuerzo total estimado es de \textbf{102 horas de desarrollo}, distribuidas en 3 sprints. 
-Aplicando la fórmula de conversión:
- 
+El esfuerzo total estimado para la implementación del sistema es de 102 horas de desarrollo, las cuales 
+se encuentran distribuidas en tres iteraciones o \textit{sprints}. Para la determinación del cronograma real, 
+es necesario convertir el esfuerzo estimado (horas-hombre) en tiempo calendario (semanas).
+
+Esta conversión se fundamenta en la planificación de la capacidad efectiva semanal, considerando que el tiempo 
+dedicado exclusivamente al desarrollo técnico se ve limitado por actividades transversales como la documentación, 
+el estudio de tecnologías, la gestión del proyecto y posibles contingencias técnicas. Bajo este criterio, se 
+establece una disponibilidad de 10 horas semanales de trabajo efectivo en el código.
+
 \begin{equation}
-  \text{Semanas} = \frac{\text{Horas estimadas}}{10}
+\text{Semanas} = \frac{\text{Horas estimadas}}{10}
 \label{eq:conversion_semanas}
 \end{equation}
- 
-se obtiene una duración de \textbf{10.2 semanas} para el proyecto completo, redondeando a 
-\textbf{11 semanas} para mantener márgenes de maniobra ante imprevistos.
+
+Al aplicar la Ecuación \ref{eq:conversion_semanas}, se obtiene una duración de 10.2 semanas para el proyecto completo. 
+Se ha decidido redondear este valor a 11 semanas, con el objetivo de garantizar un margen de maniobra adecuado ante 
+imprevistos en la infraestructura.
  
 
 \section{Plan de Entrega}
@@ -760,7 +765,7 @@ las historias de usuario. A continuación, se presenta el plan de entrega elabor
 \textbf{Sprint} & \textbf{Historias de Usuario} & \textbf{Duración} \\
 \hline
 \multirow{5}{*}{\textbf{Sprint 1}} & HU-01: Crear publicación y abrir popup & \multirow{5}{*}{5.4 semanas} \\
-& HU-02: Iniciar proceso de subida fragmentada & \\
+& HU-02: Iniciar proceso de carga fragmentada & \\
 & HU-03: Pausar subida de video en curso & \\
 & HU-04: Reanudar subida pausada & \\
 & HU-05: Cancelar subida desde popup & \\
@@ -772,7 +777,7 @@ las historias de usuario. A continuación, se presenta el plan de entrega elabor
 \hline
 \textbf{Sprint 3} & HU-10: Eliminar registros de subidas & 0.6 semanas \\
 \hline
-\multicolumn{2}{|c|}{\textbf{Duración total del proyecto}} & \textbf{10.2 semanas} \\
+\multicolumn{2}{|c|}{\textbf{Duración total del proyecto}} & \textbf{11.2 semanas} \\
 \hline
 \end{tabular}
 \end{table}
@@ -780,7 +785,7 @@ las historias de usuario. A continuación, se presenta el plan de entrega elabor
 \textbf{Justificación de la distribución:}
  
 \begin{itemize}
-  \item \textbf{Sprint 1 (54h / 5.4 semanas):} Establece la funcionalidad core de subida fragmentada 
+  \item \textbf{Sprint 1 (54h / 5.4 semanas):} Establece la funcionalidad core de carga fragmentada 
   con control de estados (iniciar, pausar, reanudar, cancelar) desde el popup. Al finalizar este 
   sprint, el usuario puede subir videos de forma tolerante a fallos, aunque aún sin la interfaz de 
   gestión centralizada.
@@ -804,113 +809,68 @@ Para el presente módulo se adoptaron patrones que resuelven los dos problemas p
 identificados en el Capítulo I: la vulnerabilidad de la subida ante interrupciones de red
 y el acoplamiento entre la subida y el renderizado.
 
-\subsection{Arquitectura Dirigida por Eventos}
+\subsection{Arquitectura CQRS (\textit{Command Query Responsibility Segregation})}
 
-Este patrón constituye el aporte arquitectónico central propuesto en la investigación. En el flujo 
-monolítico original de Picta, la subida del video y su renderizado ocurrían de forma síncrona dentro 
-de la misma transacción HTTP, lo que mantenía la conexión del cliente abierta durante todo el proceso 
-de transcodificación, consumiendo recursos del servidor de forma continua y exponiéndose a timeouts 
-ante conexiones inestables.
+El patrón arquitectónico CQRS propone separar físicamente las operaciones de escritura
+(\textit{commands}) de las operaciones de lectura (\textit{queries}), permitiendo que cada
+camino se optimice de forma independiente \citep{Young2010}. En la API de Picta esta
+separación se materializa a través de dos versiones del mismo recurso: \texttt{/v1/publicacion/}
+gestiona la escritura y \texttt{/v2/publicacion/} gestiona la lectura, cada una respaldada
+por un almacén de datos diferente y especializado.
 
-La arquitectura dirigida por eventos propuesta desacopla estos dos procesos \citep{Richards2020} mediante la 
-emisión de un evento de dominio al completarse la subida y la carga de metadatos. Un \textit{message 
-broker} o corredor de mensajes es un patrón arquitectónico que permite la comunicación asíncrona entre 
-componentes mediante el intercambio de mensajes a través de colas \citep{Hohpe2003}. En sistemas distribuidos, 
-el broker actúa como intermediario que garantiza la entrega de eventos incluso ante fallos temporales 
-de los consumidores.
+La Figura~\ref{fig:cqrs} ilustra la arquitectura resultante, donde el \textit{write path}
+y el \textit{read path} comparten únicamente el punto de entrada del cliente, divergiendo
+a partir de ahí en componentes, serializadores y fuentes de datos independientes.
 
-Para la implementación del desacoplamiento, se propone la integración de \textbf{Celery} 
-\citep{CeleryDocs2024}, un sistema distribuido de colas de tareas para Python ampliamente adoptado en 
-aplicaciones Django. Celery utiliza un broker de mensajes subyacente ---típicamente Redis o RabbitMQ--- 
-para gestionar la cola de tareas pendientes. Se selecciona \textbf{Redis} \citep{Redis2024} como broker 
-por las siguientes razones:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{Images/cqrs_picta.pdf}
+  \caption{Arquitectura CQRS implementada en la API de Picta. Elaboración propia.}
+  \label{fig:cqrs}
+\end{figure}
 
-\begin{enumerate}
-  \item \textbf{Rendimiento:} Redis es una base de datos en memoria que ofrece latencias submilisegundo 
-  para operaciones de lectura/escritura, lo que garantiza tiempos de respuesta mínimos en la emisión 
-  y consumo de eventos.
-  
-  \item \textbf{Simplicidad operacional:} A diferencia de RabbitMQ, que requiere configuración de 
-  exchanges, bindings y políticas de persistencia, Redis proporciona operaciones de cola mediante 
-  estructuras de datos nativas (listas, sorted sets) con una curva de aprendizaje menor.
-  
-  \item \textbf{Ecosistema Django:} Redis ya se utiliza en Picta para gestión de sesiones y caché, 
-  por lo que su adopción como broker no introduce dependencias adicionales al stack tecnológico.
-  
-  \item \textbf{Compatibilidad con Celery:} Redis es el broker recomendado por la documentación oficial 
-  de Celery para aplicaciones de baja a media escala \citep{CeleryDocs2024}, soportando completamente 
-  el protocolo de acknowledgment y retry de mensajes.
-\end{enumerate}
+\subsubsection*{\textit{Command} — camino de escritura (\texttt{/v1/publicacion/})}
 
-En la implementación desarrollada, el endpoint \texttt{complete} del \texttt{MultipartUploadViewSet} 
-finaliza la subida multipart en MinIO y actualiza el estado de la sesión a \texttt{completed}, 
-liberando inmediatamente la conexión HTTP:
+El camino de escritura está implementado en \texttt{PublicacionViewSet}, que hereda de
+\texttt{ModelViewSet} y expone las operaciones \texttt{create}, \texttt{update} y
+\texttt{partial\_update}. Toda escritura se ejecuta dentro de una transacción atómica
+(\texttt{@transaction.atomic}), garantizando la consistencia de los datos ante fallos
+parciales. El \texttt{PublicacionSerializer} concentra la lógica de validación y las
+reglas de negocio: verifica permisos del usuario, valida las URLs de MinIO y aplica
+límites operacionales antes de persistir el registro en PostgreSQL mediante el ORM
+de Django.
 
-\begin{lstlisting}[language=Python, caption={Finalización de subida en MultipartUploadViewSet}]
-@action(detail=True, methods=['post'])
-def complete(self, request, pk=None):
-    upload = self.get_object()
-    # Validaciones de estado y permisos
-    parts_json = request.data.get('parts', [])
-    uploaded_parts_list = []
-    
-    for part_dict in parts_json:
-        etag_limpio = part_dict['ETag'].strip('"')
-        uploaded_parts_list.append(
-            Part(part_number=part_dict['part_number'],
-                 etag=etag_limpio)
-        )
-    
-    client._complete_multipart_upload(
-        upload.bucket_name, upload.file_name,
-        upload.upload_id, uploaded_parts_list
-    )
-    
-    upload.status = 'completed'
-    upload.parts = parts_for_db
-    upload.save(update_fields=['status','parts','updated_at'])
-    
-    return Response({"status": "completed"}, 
-                    status=status.HTTP_200_OK)
-\end{lstlisting}
+Una vez guardado el objeto, la señal \texttt{post\_save} de Django dispara
+automáticamente la actualización del índice en Elasticsearch, manteniendo la sincronía
+entre el almacén de escritura y el de lectura sin acoplar la lógica de persistencia
+con la de indexación.
 
-Una vez persistido el estado \texttt{completed}, la arquitectura propuesta contempla la emisión de 
-una tarea Celery que será consumida de forma asíncrona por un worker independiente. Este worker 
-ejecutará el pipeline de renderizado y transcodificación sin ninguna dependencia del ciclo de vida 
-de la conexión HTTP original. La integración se realizará mediante la invocación de una tarea Celery 
-al finalizar el método \texttt{complete}:
+\subsubsection*{\textit{Query} — camino de lectura (\texttt{/v2/publicacion/})}
 
-\begin{lstlisting}[language=Python, caption={Finalización de subida en MultipartUploadViewSet}]
-@action(detail=True, methods=['post'])
-def complete(self, request, pk=None):
-    upload = self.get_object()
-    # Validaciones de estado y permisos
-    parts_json = request.data.get('parts', [])
-    uploaded_parts_list = []
-    
-    for part_dict in parts_json:
-        etag_limpio = part_dict['ETag'].strip('"')
-        uploaded_parts_list.append(
-            Part(part_number=part_dict['part_number'],
-                 etag=etag_limpio)
-        )
-    
-    client._complete_multipart_upload(
-        upload.bucket_name, upload.file_name,
-        upload.upload_id, uploaded_parts_list
-    )
-    
-    upload.status = 'completed'
-    upload.parts = parts_for_db
-    upload.save(update_fields=['status','parts','updated_at'])
-    
-    return Response({"status": "completed"}, 
-                    status=status.HTTP_200_OK)
-\end{lstlisting}
+El camino de lectura está implementado en \texttt{PublicacionDocViewSet}, que hereda
+de \texttt{DocumentViewSet} de la biblioteca \texttt{django-elasticsearch-dsl-drf}.
+Este \textit{viewset} no interactúa con PostgreSQL en ningún momento: todas sus
+consultas se resuelven directamente contra el índice \texttt{publicacion} de
+Elasticsearch mediante la librería \texttt{elasticsearch-dsl}. El
+\texttt{PublicacionDocSerializer} transforma los documentos del índice al formato
+JSON esperado por el cliente, aplicando además los filtros de seguridad pertinentes
+según el rol del usuario (administrador o usuario regular).
 
-De esta forma, el servidor web queda liberado para atender nuevas solicitudes inmediatamente después 
-de confirmar la recepción del evento, reduciendo sustancialmente la carga sostenida sobre los recursos 
-del servidor.
+Esta separación aporta dos ventajas concretas al sistema: las consultas de búsqueda
+se benefician de las capacidades de \textit{full-text search}, filtrado anidado y
+paginación nativa de Elasticsearch, sin penalizar el rendimiento de escritura; y la
+carga de lectura, que constituye la operación más frecuente en una plataforma de
+contenido, queda completamente desacoplada del motor relacional.
+
+\subsubsection*{Sincronización entre almacenes}
+
+La coherencia entre PostgreSQL y Elasticsearch se mantiene a través del mecanismo
+de señales de Django. Al completarse cualquier operación de escritura,
+\texttt{django-elasticsearch-dsl} intercepta la señal \texttt{post\_save} del modelo
+\texttt{Publicacion} e invoca \texttt{registry.update()}, que actualiza el documento
+correspondiente en el índice. Este mecanismo actúa como un \textit{Observer} implícito,
+desacoplando la capa de persistencia relacional de la capa de indexación sin requerir
+llamadas explícitas entre ambas.
 
 \section{Patrones de Diseño}
 
@@ -1007,16 +967,41 @@ if upload.status == 'completed' or upload.status == 'cancelada':
 
   Este patrón garantiza la consistencia del estado de las sesiones y previene operaciones inválidas
   sobre subidas ya finalizadas o canceladas.
+
+  \item \textbf{Experto en Información:} El patrón Experto en Información
+  \citep{Larman2004} establece que una responsabilidad debe asignarse a la clase que
+  posee la información necesaria para cumplirla. En el módulo implementado, el modelo
+  \texttt{SubidaMultipart} concentra toda la información relativa a una sesión de
+  carga fragmentada: el identificador de la carga (\texttt{upload\_id}), el nombre
+  del objeto en MinIO (\texttt{file\_name}), el \textit{bucket} destino
+  (\texttt{bucket\_name}) y las partes ya confirmadas (\texttt{parts}). En
+  consecuencia, cualquier operación que requiera razonar sobre el estado de la subida
+  ---como verificar si puede completarse o construir la lista de partes para el
+  ensamblado final--- se delega al propio modelo, y no a la vista o a funciones
+  auxiliares externas. Esto mantiene la lógica cohesionada con los datos que la
+  sustentan y evita la dispersión de responsabilidades entre capas.
+
+  \item \textbf{Controlador:} El patrón Controlador \citep{Larman2004} asigna
+  la responsabilidad de recibir y coordinar los eventos del sistema a una clase que
+  represente un caso de uso o un subsistema, sin ejecutar ella misma la lógica de
+  negocio pesada. En la implementación, \texttt{MultipartUploadViewSet} cumple
+  exactamente este rol: recibe cada solicitud HTTP, valida el estado y los permisos,
+  y delega las operaciones sobre MinIO al cliente de almacenamiento y las
+  persistencias al modelo. El ViewSet no calcula ni transforma datos por sí mismo;
+  actúa como coordinador que distribuye el trabajo entre los componentes especializados.
+  Esta separación mantiene las vistas delgadas (\textit{thin controllers}) y concentra
+  la lógica de dominio en el modelo, en línea con las convenciones de Django REST
+  Framework.
 \end{enumerate}
 
 \section{Conclusiones Parciales}
 
-La propuesta de solución define un módulo de subida fragmentada que integra seis funcionalidades 
+La propuesta de solución define un módulo de carga fragmentada que integra seis funcionalidades 
 fundamentales ---gestión de estados, pausa arbitraria, reanudación desde el último fragmento, 
 persistencia histórica, procesamiento diferido de metadatos y listado de videos pendientes--- 
 orientadas al rol de administrador de canal. El análisis del modelo de usuarios sustentó la 
 delimitación del alcance mediante la herencia de permisos existente en Django, garantizando una 
-integración \textit{seamless} \citep{Zhuk2004} con la arquitectura de autorización en producción.
+integración \textit{seamless} con la arquitectura de autorización en producción.
 
 La especificación de requisitos mediante historias de usuario bajo el marco Scrum permitió 
 formalizar las expectativas del cliente en términos de funcionalidades verificables. La estimación 

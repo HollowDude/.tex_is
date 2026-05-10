@@ -26,7 +26,7 @@ recursos del servidor? Para abordar este problema, se define como \textbf{objeto
 de subida y renderizado de videos, y como \textbf{campo de acción} específico, este mismo proceso dentro 
 del ecosistema de la plataforma Picta.
 
-El \textbf{objetivo general} de esta investigación es desarrollar un sistema de subida fragmentada y 
+El \textbf{objetivo general} de esta investigación es desarrollar un sistema de carga fragmentada y 
 renderizado asíncrono de videos para la plataforma Picta que mejore la eficiencia en el uso de recursos 
 y la experiencia del usuario frente a las limitaciones de la infraestructura de red nacional. Para alcanzar 
 este propósito, se establecen los siguientes \textbf{objetivos específicos}:
@@ -37,7 +37,7 @@ este propósito, se establecen los siguientes \textbf{objetivos específicos}:
 
   \item Analizar aplicaciones con funcionalidades similares a las requeridas.
 
-  \item Diseñar un sistema de subida fragmentada que permita la persistencia del progreso y el
+  \item Diseñar un sistema de carga fragmentada que permita la persistencia del progreso y el
   control del usuario durante la carga de videos.
 
   \item Implementar un mecanismo de renderizado asíncrono que separe la subida del video de su
@@ -70,11 +70,7 @@ En cuanto a los \textbf{métodos empíricos}, se emplean:
 \begin{itemize}
   \item \textbf{Estudio comparativo:} Se realiza un análisis de sistemas homólogos con 
   funcionalidades similares para identificar fortalezas y limitaciones que informan el diseño de 
-  la solución especializada para Picta.
-
-  \item \textbf{Observación:} Se aplica para caracterizar el flujo actual de subida y 
-  renderizado en la plataforma, identificando patrones de fallo y limitaciones derivadas de la 
-  infraestructura de red nacional.
+  la solución especializada para Picta \citep{Wohlin2012}.
 
   \item \textbf{Experimentación:} Se ejecutan pruebas de rendimiento del sistema implementado 
   para validar mejoras en tiempo de subida, uso de ancho de banda y experiencia del usuario, 

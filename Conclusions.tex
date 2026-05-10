@@ -1,5 +1,35 @@
 \conclusions
-
-
-
-Escribir aquÃƒÂ¯Ã‚¿Ã‚Â½ las conclusiones.
+ 
+La caracterización del flujo de subida y renderizado de videos en Picta permitió constatar que el
+mecanismo monolítico preexistente constituía el principal cuello de botella del proceso de
+publicación. Cualquier interrupción de red durante la transferencia obligaba al administrador de
+canal a reiniciar la subida completa desde cero, el servidor Django actuaba como intermediario
+innecesario de todos los bytes transferidos, y el procesamiento de metadatos bloqueaba la interfaz
+hasta su finalización, impidiendo la gestión concurrente de múltiples contenidos. El estudio de
+plataformas con funcionalidades similares confirmó que el protocolo de subida multipart con
+persistencia de estado y procesamiento asíncrono constituye el estándar de la industria en sistemas
+de gestión de contenido audiovisual, y fundamentó las decisiones de diseño e implementación
+adoptadas a lo largo del proyecto.
+ 
+El módulo desarrollado resuelve las deficiencias identificadas mediante tres mecanismos
+complementarios. En primer lugar, el sistema de carga fragmentada divide el archivo en fragmentos
+de tamaño configurable y persiste el índice del último fragmento confirmado tanto en IndexedDB del
+navegador como en el servidor, garantizando que ante cualquier forma de interrupción ---voluntaria,
+accidental o por fallo de red--- la transferencia pueda retomarse desde el punto exacto de
+interrupción sin retransmitir datos ya enviados. En segundo lugar, la delegación de la transferencia
+de bytes directamente al almacenamiento MinIO S3 mediante URLs prefirmadas eliminó al servidor
+Django como proxy de la transferencia, reduciendo su carga de CPU y consumo de ancho de banda
+durante las subidas. En tercer lugar, la introducción del estado intermedio \textit{sin\_procesar}
+y la delegación del procesamiento de metadatos a una cola de tareas Celery desacoplaron
+completamente la subida del renderizado final, permitiendo al administrador de canal gestionar
+múltiples contenidos de forma concurrente sin esperas bloqueantes.
+ 
+La evaluación del sistema, realizada mediante trece casos de prueba funcionales y diez pruebas de
+aceptación contrastadas contra los criterios de las historias de usuario, arrojó un índice de
+cumplimiento del 100~\% en cuatro navegadores de escritorio. Las métricas de tiempo de subida
+resultaron proporcionales al tamaño del archivo sin degradación apreciable al aumentar el número de
+fragmentos, y la comparación con el sistema anterior confirmó mejoras concretas en tolerancia a
+fallos, persistencia de progreso, control del usuario, rendimiento del servidor y gestión
+concurrente de sesiones. Estos resultados validan que las decisiones arquitectónicas adoptadas
+se traducen en un avance técnico sustancial respecto al mecanismo que operaba previamente en
+producción.

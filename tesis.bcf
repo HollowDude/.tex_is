@@ -2379,19 +2379,19 @@
     <bcf:citekey order="2" intorder="1">Press2011</bcf:citekey>
     <bcf:citekey order="2" intorder="2">Hernandez2021</bcf:citekey>
     <bcf:citekey order="3" intorder="1">UCI2025</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Richards2020</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Fuentes2025</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Avizienis2004</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Pressman2021</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">ISO2016</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Ylonen2006</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">AWS2023</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Richardson2003</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Zhuk2004</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Fielding2000</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Richards2020</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Wysocki2019</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">BernersLee1992</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Wohlin2012</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Richards2020</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Fuentes2025</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Avizienis2004</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Pressman2021</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">ISO2016</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Ylonen2006</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">AWS2023</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Richardson2003</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Zhuk2004</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Fielding2000</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Richards2020</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Wysocki2019</bcf:citekey>
     <bcf:citekey order="17" intorder="1">Sommerville2015</bcf:citekey>
     <bcf:citekey order="18" intorder="1">Messerschmitt2003</bcf:citekey>
     <bcf:citekey order="19" intorder="1">Gadban2021</bcf:citekey>
@@ -2421,22 +2421,24 @@
     <bcf:citekey order="43" intorder="1">Cohn2004</bcf:citekey>
     <bcf:citekey order="44" intorder="1">Pierra2022</bcf:citekey>
     <bcf:citekey order="45" intorder="1">Schwaber2020</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">Hernandez2018</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">Cohn2004</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">Stallings2017</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">Wiegers2013</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">Pressman2014</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">Cohn2005</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">Buschmann1996</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">Richards2020</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">Hohpe2003</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">CeleryDocs2024</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">Redis2024</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">CeleryDocs2024</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">Gamma1994</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">AWS2023</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">Gamma1994</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">Zhuk2004</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Cohn2004</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">Stallings2017</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">Wiegers2013</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">Pressman2014</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Cohn2005</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">Buschmann1996</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">Young2010</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">Gamma1994</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">AWS2023</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">Gamma1994</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">Larman2004</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">Larman2004</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">OMG2017</bcf:citekey>
+    <bcf:citekey order="58" intorder="2">Booch2005</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">Larman2004</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Myers2011</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">Sommerville2016</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Cohn2004</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

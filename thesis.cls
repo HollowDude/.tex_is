@@ -258,14 +258,14 @@
  \@center,
 \fi
 \fi
-Facultad \@facultyNum} \\
+\@facultyNum} \\
 }
 
 \newcommand{\@doctypeText}
 {
 \centering
 {\bfseries Trabajo de diploma para optar por el título de
-Ingeniero en Ciencias Informóticas }
+Ingeniero en Ciencias Informáticas }
 }
 
 \newcommand{\doctype}[1]

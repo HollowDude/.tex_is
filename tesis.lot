@@ -2,20 +2,31 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{\ignorespaces Comparación de aplicaciones analizadas}}{7}{table.1.1}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Comparativa de metodologías ágiles}}{11}{table.1.2}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Comparativa de metodologías ágiles}}{12}{table.1.2}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces HU-01 Crear publicación y abrir popup de subida}}{17}{table.2.1}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces HU-02 Iniciar proceso de subida fragmentada}}{18}{table.2.2}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces HU-03 Pausar subida de video en curso}}{19}{table.2.3}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces HU-04 Reanudar subida pausada}}{20}{table.2.4}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces HU-05 Cancelar subida desde popup}}{22}{table.2.5}%
-\contentsline {table}{\numberline {2.6}{\ignorespaces HU-06 Gestionar subidas en página dedicada}}{23}{table.2.6}%
-\contentsline {table}{\numberline {2.7}{\ignorespaces HU-07 Completar subida y marcar como sin procesar}}{24}{table.2.7}%
-\contentsline {table}{\numberline {2.8}{\ignorespaces HU-08 Procesar video subido}}{26}{table.2.8}%
-\contentsline {table}{\numberline {2.9}{\ignorespaces HU-09 Ver publicación de video procesado}}{28}{table.2.9}%
-\contentsline {table}{\numberline {2.10}{\ignorespaces HU-10 Eliminar registros de subidas}}{29}{table.2.10}%
-\contentsline {table}{\numberline {2.11}{\ignorespaces Requisitos de Confiabilidad}}{31}{table.2.11}%
-\contentsline {table}{\numberline {2.12}{\ignorespaces Requisitos de Eficiencia}}{31}{table.2.12}%
-\contentsline {table}{\numberline {2.13}{\ignorespaces Restricciones de Diseño e Implementación}}{31}{table.2.13}%
-\contentsline {table}{\numberline {2.14}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{32}{table.caption.19}%
-\contentsline {table}{\numberline {2.15}{\ignorespaces Plan de entrega por sprint}}{33}{table.caption.20}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces HU-01 Crear publicación y abrir popup de subida}}{18}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces HU-02 Iniciar proceso de carga fragmentada}}{19}{table.2.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces HU-03 Pausar subida de video en curso}}{20}{table.2.3}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces HU-04 Reanudar subida pausada}}{22}{table.2.4}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces HU-05 Cancelar subida desde popup}}{23}{table.2.5}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces HU-06 Gestionar subidas en página dedicada}}{24}{table.2.6}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces HU-07 Completar subida y marcar como sin procesar}}{25}{table.2.7}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces HU-08 Procesar video subido}}{27}{table.2.8}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces HU-09 Ver publicación de video procesado}}{29}{table.2.9}%
+\contentsline {table}{\numberline {2.10}{\ignorespaces HU-10 Eliminar registros de subidas}}{30}{table.2.10}%
+\contentsline {table}{\numberline {2.11}{\ignorespaces Requisitos de Confiabilidad}}{32}{table.2.11}%
+\contentsline {table}{\numberline {2.12}{\ignorespaces Requisitos de Eficiencia}}{32}{table.2.12}%
+\contentsline {table}{\numberline {2.13}{\ignorespaces Restricciones de Diseño e Implementación}}{32}{table.2.13}%
+\contentsline {table}{\numberline {2.14}{\ignorespaces Estimación de esfuerzo por historia de usuario}}{33}{table.caption.19}%
+\contentsline {table}{\numberline {2.15}{\ignorespaces Plan de entrega por sprint}}{34}{table.caption.20}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Especificaciones del equipo anfitrión}}{43}{table.caption.26}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Stack tecnológico del entorno de pruebas}}{44}{table.caption.28}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Resultados de los casos de borde TC-008 a TC-013}}{46}{table.caption.36}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Matriz de compatibilidad entre navegadores}}{47}{table.caption.38}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Métricas de rendimiento por escenario de subida}}{47}{table.caption.39}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Comparación entre el sistema de subida anterior y el módulo implementado}}{49}{table.caption.40}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Pruebas de aceptación --- Sprint 1}}{50}{table.3.7}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Pruebas de aceptación --- Sprint 2}}{52}{table.3.8}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Pruebas de aceptación --- Sprint 3}}{53}{table.3.9}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces Resumen de pruebas de aceptación por sprint}}{53}{table.caption.45}%

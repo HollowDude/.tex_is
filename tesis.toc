@@ -6,26 +6,36 @@
 \contentsline {section}{\numberline {1.1}Definiciones y conceptos fundamentales}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Sistemas homólogos}{6}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Caracterización del flujo actual}{7}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Herramientas y Tecnologías}{9}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Selección del lenguaje de programación}{9}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Herramientas utilizadas}{9}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Bibliotecas y Frameworks utilizados}{10}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Selección de una metodología de desarrollo}{11}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Roles en SCRUM}{12}{subsection.1.5.1}%
-\contentsline {section}{\numberline {1.6}Conclusiones Parciales}{13}{section.1.6}%
-\contentsline {chapter}{\numberline {2}Propuesta de Solución}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Propuesta de solución}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Posibles estados de una subida}{16}{section.2.2}%
+\contentsline {section}{\numberline {1.4}Herramientas y Tecnologías}{10}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Selección del lenguaje de programación}{10}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Herramientas}{11}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Bibliotecas y Frameworks}{11}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Selección de una metodología de desarrollo}{12}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Roles en SCRUM}{14}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Conclusiones Parciales}{15}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Propuesta de Solución}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Propuesta de solución}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Posibles estados de una subida}{17}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Historias de Usuario}{17}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Requisitos No Funcionales}{30}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Confiabilidad}{30}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Eficiencia}{31}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Restricciones de Diseño e Implementación}{31}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Estimación de esfuerzo por historia de usuario y plan de iteraciones}{32}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Plan de Entrega}{33}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Patrones Arquitectónicos}{34}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Arquitectura Dirigida por Eventos}{34}{subsection.2.7.1}%
-\contentsline {section}{\numberline {2.8}Patrones de Diseño}{36}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Conclusiones Parciales}{39}{section.2.9}%
-\contentsline {chapter}{Recomendaciones}{40}{chapter*.22}%
-\contentsline {chapter}{Referencias bibliográficas}{41}{chapter*.23}%
+\contentsline {section}{\numberline {2.4}Requisitos No Funcionales}{31}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Confiabilidad}{31}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Eficiencia}{32}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Restricciones de Diseño e Implementación}{32}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Estimación de esfuerzo por historia de usuario y plan de iteraciones}{33}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Plan de Entrega}{34}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Patrones Arquitectónicos}{35}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Arquitectura CQRS (\textit {Command Query Responsibility Segregation})}{35}{subsection.2.7.1}%
+\contentsline {section}{\numberline {2.8}Patrones de Diseño}{37}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Conclusiones Parciales}{40}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Resultados}{41}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Arquitectura}{41}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Validación}{43}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Entorno de pruebas}{43}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Pruebas funcionales}{44}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Análisis de resultados}{47}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Comparación con el sistema antiguo}{48}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Pruebas de aceptación}{50}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Conclusiones Parciales}{53}{section.3.3}%
+\contentsline {chapter}{Conclusiones}{55}{chapter*.47}%
+\contentsline {chapter}{Recomendaciones}{56}{chapter*.49}%
+\contentsline {chapter}{Referencias bibliográficas}{57}{chapter*.50}%

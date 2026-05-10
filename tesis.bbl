@@ -136,34 +136,47 @@
       \verb 10.1109/TDSC.2004.2
       \endverb
     \endentry
-    \entry{BernersLee1992}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d469e0df304c98f67b55d087ea6187a1}{%
-           family={Berners-Lee},
-           familyi={B\bibinithyphendelim L\bibinitperiod},
-           given={Tim},
-           giveni={T\bibinitperiod},
+    \entry{Booch2005}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e4f07715269e006a4d4a4efa3ce3f996}{%
+           family={Booch},
+           familyi={B\bibinitperiod},
+           given={Grady},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8ace965f1ffa84dd4512f7e64c62d75}{%
+           family={Rumbaugh},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e8f03cc324f52193ab00c1fab4df61a}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Ivar},
+           giveni={I\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{282db63790560cddab64edb482ae1b3e}
-      \strng{fullhash}{282db63790560cddab64edb482ae1b3e}
-      \strng{fullhashraw}{282db63790560cddab64edb482ae1b3e}
-      \strng{bibnamehash}{282db63790560cddab64edb482ae1b3e}
-      \strng{authorbibnamehash}{282db63790560cddab64edb482ae1b3e}
-      \strng{authornamehash}{282db63790560cddab64edb482ae1b3e}
-      \strng{authorfullhash}{282db63790560cddab64edb482ae1b3e}
-      \strng{authorfullhashraw}{282db63790560cddab64edb482ae1b3e}
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{fullhash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{fullhashraw}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{bibnamehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authorbibnamehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authornamehash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authorfullhash}{be6f3ff47123ebcb32f54f571b015ebc}
+      \strng{authorfullhashraw}{be6f3ff47123ebcb32f54f571b015ebc}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Electronic Networking}
-      \field{title}{World-Wide Web: The Information Universe}
-      \field{year}{1992}
+      \field{edition}{2}
+      \field{title}{The Unified Modeling Language User Guide}
+      \field{year}{2005}
     \endentry
     \entry{Buschmann1996}{book}{}{}
       \name{author}{5}{}{%
@@ -220,36 +233,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Pattern-Oriented Software Architecture, Volume 1: A System of Patterns}
       \field{year}{1996}
-    \endentry
-    \entry{CeleryDocs2024}{manual}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a1db27179aedb5c3ca1937ad8598f620}{%
-           family={{Celery Project}},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{fullhash}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{fullhashraw}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{bibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{authorbibnamehash}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{authornamehash}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{authorfullhash}{a1db27179aedb5c3ca1937ad8598f620}
-      \strng{authorfullhashraw}{a1db27179aedb5c3ca1937ad8598f620}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Documentación oficial del sistema de colas distribuidas para Python}
-      \field{title}{Celery: Distributed Task Queue}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://docs.celeryq.dev/
-      \endverb
-      \verb{url}
-      \verb https://docs.celeryq.dev/
-      \endverb
     \endentry
     \entry{Christie2024}{book}{}{}
       \name{author}{1}{}{%
@@ -591,74 +574,6 @@
       \verb https://rcci.uci.cu/
       \endverb
     \endentry
-    \entry{Hernandez2018}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=14430b76cb0a2926c90bb6f77b8e3cb3}{%
-           family={Hernández-Sampieri},
-           familyi={H\bibinithyphendelim S\bibinitperiod},
-           given={Roberto},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {McGraw-Hill}%
-      }
-      \strng{namehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{fullhash}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{fullhashraw}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{bibnamehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{authorbibnamehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{authornamehash}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{authorfullhash}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \strng{authorfullhashraw}{14430b76cb0a2926c90bb6f77b8e3cb3}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Metodología de la investigación}
-      \field{year}{2018}
-    \endentry
-    \entry{Hohpe2003}{book}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=2ed2f5feceafdf9a03a27134da39d3d0}{%
-           family={Hohpe},
-           familyi={H\bibinitperiod},
-           given={Gregor},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8ea1767d5a1edce116c79b82a83c54da}{%
-           family={Woolf},
-           familyi={W\bibinitperiod},
-           given={Bobby},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Boston, MA}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley Professional}%
-      }
-      \strng{namehash}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{fullhash}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{fullhashraw}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{bibnamehash}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{authorbibnamehash}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{authornamehash}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{authorfullhash}{ddf3be6dfde807c1811cbd3352154f04}
-      \strng{authorfullhashraw}{ddf3be6dfde807c1811cbd3352154f04}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Referencia fundamental sobre patrones de mensajería empresarial}
-      \field{title}{Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions}
-      \field{year}{2003}
-    \endentry
     \entry{ISO2016}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=0828a8408614177181026ea908d5594a}{%
@@ -682,6 +597,36 @@
       \field{title}{Information technology -- Data integrity (ISO/IEC 10118)}
       \field{type}{techreport}
       \field{year}{2016}
+    \endentry
+    \entry{Larman2004}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=be7db5922f05fc919bdc1c036502e5ee}{%
+           family={Larman},
+           familyi={L\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{fullhash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{fullhashraw}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{bibnamehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authorbibnamehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authornamehash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authorfullhash}{be7db5922f05fc919bdc1c036502e5ee}
+      \strng{authorfullhashraw}{be7db5922f05fc919bdc1c036502e5ee}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development}
+      \field{year}{2004}
     \endentry
     \entry{Lutz2013}{book}{}{}
       \name{author}{1}{}{%
@@ -810,6 +755,81 @@
       \endverb
       \verb{url}
       \verb https://min.io/docs/minio/linux/developers/python/API.html
+      \endverb
+    \endentry
+    \entry{Myers2011}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=156343f4cbccb0e4838a03e1aa379f1c}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Glenford\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bedbc386e093a07f6c0696fa075b157}{%
+           family={Sandler},
+           familyi={S\bibinitperiod},
+           given={Corey},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14b5444d5651db3fbde7bcd5553fd0ec}{%
+           family={Badgett},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{fullhash}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{fullhashraw}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{bibnamehash}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{authorbibnamehash}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{authornamehash}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{authorfullhash}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \strng{authorfullhashraw}{de4835ca5e0529d5a2f5f52e5e9cc011}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-1118133132}
+      \field{title}{The Art of Software Testing}
+      \field{year}{2011}
+    \endentry
+    \entry{OMG2017}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d6b6fbad838f7618c462458711482fa}{%
+           family={{Object Management Group}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{fullhash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{fullhashraw}{4d6b6fbad838f7618c462458711482fa}
+      \strng{bibnamehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authorbibnamehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authornamehash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authorfullhash}{4d6b6fbad838f7618c462458711482fa}
+      \strng{authorfullhashraw}{4d6b6fbad838f7618c462458711482fa}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unified Modeling Language Specification, Version 2.5.1}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.omg.org/spec/UML/2.5.1
+      \endverb
+      \verb{url}
+      \verb https://www.omg.org/spec/UML/2.5.1
       \endverb
     \endentry
     \entry{Pierra2022}{article}{}{}
@@ -958,36 +978,6 @@
       \field{title}{Software Engineering: A Practitioner's Approach}
       \field{year}{2021}
     \endentry
-    \entry{Redis2024}{manual}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5931ee9e163586335d0830f3e4a0df39}{%
-           family={{Redis Ltd.}},
-           familyi={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{fullhash}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{fullhashraw}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{bibnamehash}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{authorbibnamehash}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{authornamehash}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{authorfullhash}{5931ee9e163586335d0830f3e4a0df39}
-      \strng{authorfullhashraw}{5931ee9e163586335d0830f3e4a0df39}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Base de datos en memoria utilizada como broker de mensajes y caché}
-      \field{title}{Redis Documentation: An In-Memory Data Structure Store}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://redis.io/docs/
-      \endverb
-      \verb{url}
-      \verb https://redis.io/docs/
-      \endverb
-    \endentry
     \entry{Richards2020}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=8e3c0b09130cc7c13c7cda6ef28a7d48}{%
@@ -1113,6 +1103,7 @@
       \strng{authornamehash}{70341b3bfcce7026902f4eb1e4111b58}
       \strng{authorfullhash}{70341b3bfcce7026902f4eb1e4111b58}
       \strng{authorfullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
@@ -1122,6 +1113,41 @@
       \field{edition}{10th}
       \field{title}{Software Engineering}
       \field{year}{2015}
+    \endentry
+    \entry{Sommerville2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=70341b3bfcce7026902f4eb1e4111b58}{%
+           family={Sommerville},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{fullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{bibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorbibnamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authornamehash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhash}{70341b3bfcce7026902f4eb1e4111b58}
+      \strng{authorfullhashraw}{70341b3bfcce7026902f4eb1e4111b58}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10th}
+      \field{isbn}{978-0133943030}
+      \field{title}{Software Engineering}
+      \field{year}{2016}
     \endentry
     \entry{Stallings2017}{book}{}{}
       \name{author}{1}{}{%
@@ -1252,6 +1278,71 @@
       \field{title}{Software Requirements}
       \field{year}{2013}
     \endentry
+    \entry{Wohlin2012}{book}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e1ce15e2eeb53e3fc8c6035fd761594b}{%
+           family={Wohlin},
+           familyi={W\bibinitperiod},
+           given={Claes},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d1752e9463ffc1043c0939de72a9097}{%
+           family={Höst},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dad21e576e61668b8797b95088d02dd}{%
+           family={Ohlsson},
+           familyi={O\bibinitperiod},
+           given={Magnus\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8eecf1f137629fc30fb7258aa4b03ffc}{%
+           family={Regnell},
+           familyi={R\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7eba9f830d70baeeae41735c97bbd8b2}{%
+           family={Wesslén},
+           familyi={W\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg, Germany}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{fullhash}{01ecfd973289c2623ca22a0b0b032dcf}
+      \strng{fullhashraw}{01ecfd973289c2623ca22a0b0b032dcf}
+      \strng{bibnamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authorbibnamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authornamehash}{55ccf4d2f8f1d35fa125fcc569510989}
+      \strng{authorfullhash}{01ecfd973289c2623ca22a0b0b032dcf}
+      \strng{authorfullhashraw}{01ecfd973289c2623ca22a0b0b032dcf}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Experimentation in Software Engineering}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1007/978-3-642-29044-2
+      \endverb
+    \endentry
     \entry{Wysocki2019}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7bc3383ca54b0c60d7bb599c26062763}{%
@@ -1317,6 +1408,42 @@
       \field{title}{The Secure Shell (SSH) Protocol Architecture}
       \field{type}{RFC}
       \field{year}{2006}
+    \endentry
+    \entry{Young2010}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b8dca3f8cf8dee092ae02dfcf246e6db}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {CQRS Info}%
+      }
+      \strng{namehash}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{fullhash}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{fullhashraw}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{bibnamehash}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{authorbibnamehash}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{authornamehash}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{authorfullhash}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \strng{authorfullhashraw}{b8dca3f8cf8dee092ae02dfcf246e6db}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CQRS Documents}
+      \field{type}{techreport}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb http://cqrs.info/
+      \endverb
+      \verb{url}
+      \verb http://cqrs.info/
+      \endverb
     \endentry
     \entry{Zhuk2004}{book}{}{}
       \name{author}{1}{}{%
