@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Análisis de resultados}{47}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Comparación con el sistema antiguo}{48}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Pruebas de aceptación}{50}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Conclusiones Parciales}{53}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Conclusiones Parciales}{54}{section.3.3}%
 \contentsline {chapter}{Conclusiones}{55}{chapter*.47}%
 \contentsline {chapter}{Recomendaciones}{56}{chapter*.49}%
 \contentsline {chapter}{Referencias bibliográficas}{57}{chapter*.50}%

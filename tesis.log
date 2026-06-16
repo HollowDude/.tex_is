@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  9 MAY 2026 23:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  3 JUN 2026 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2205,24 +2205,53 @@ LaTeX Info: Redefining \% on input line 450.
 LaTeX Font Info:    Font shape `T1/txr/b/it' in size <10> not available
 (Font)              Font shape `T1/txr/bx/it' tried instead on input line 469.
 
-Underfull \hbox (badness 2173) in paragraph at lines 491--491
+Underfull \hbox (badness 2173) in paragraph at lines 493--493
 []|\T1/txr/m/n/10 Iniciar pro-ce-so de car-ga
  []
 
 
 ignored: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \. on input line 523.
-LaTeX Info: Redefining \% on input line 523.
+LaTeX Info: Redefining \. on input line 536.
+LaTeX Info: Redefining \% on input line 536.
 [50]
-LaTeX Info: Redefining \. on input line 590.
-LaTeX Info: Redefining \% on input line 590.
- [51]
-LaTeX Info: Redefining \. on input line 621.
-LaTeX Info: Redefining \% on input line 621.
- [52]) (./Conclusions.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [53]
+Underfull \hbox (badness 10000) in paragraph at lines 570--576
+[]|\T1/txr/bx/n/10 Given: \T1/txr/m/n/10 El ad-mi-nis-tra-dor de ca-nal es-tá
+ []
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 570--576
+\T1/txr/m/n/10 au-ten-ti-ca-do. \T1/txr/bx/n/10 When: \T1/txr/m/n/10 Na-ve-ga a la pá-gi-na
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 570--576
+\T1/txr/m/n/10 de ges-tión de su-bi-das. \T1/txr/bx/n/10 Then: \T1/txr/m/n/10 La pá-gi-na
+ []
+
+
+Underfull \hbox (badness 7888) in paragraph at lines 570--576
+\T1/txr/m/n/10 fil-tros fun-cio-na-les (\T1/txr/m/it/10 To-das\T1/txr/m/n/10 , \T1/txr/m/it/10 Sin pro-ce-sar\T1/txr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 570--576
+\T1/txr/m/it/10 Pro-ce-sa-das\T1/txr/m/n/10 ), y una co-lum-na \T1/txr/m/it/10 Ac-ción \T1/txr/m/n/10 con
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 570--576
+\T1/txr/m/n/10 bo-to-nes con-tex-tua-les co-rrec-tos pa-ra ca-da
+ []
+
+LaTeX Info: Redefining \. on input line 616.
+LaTeX Info: Redefining \% on input line 616.
+[51]
+LaTeX Info: Redefining \. on input line 623.
+LaTeX Info: Redefining \% on input line 623.
+ [52]
+LaTeX Info: Redefining \. on input line 695.
+LaTeX Info: Redefining \% on input line 695.
+ [53]) (./Conclusions.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [54]) (./Suggestions.tex [55
@@ -2272,7 +2301,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  113i,12n,131p,2573b,3678s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/aurical/JanaSkrivanaSlant.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tesis.pdf (73 pages, 1689269 bytes).
+Output written on tesis.pdf (73 pages, 1690701 bytes).
 PDF statistics:
  1150 PDF objects out of 1200 (max. 8388607)
  984 compressed objects within 10 object streams

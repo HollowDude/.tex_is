@@ -466,12 +466,12 @@ aceptación para este sprint.
 \caption{Pruebas de aceptación --- Sprint 1}
 \label{tab:aceptacion_s1}\\
 \hline
-\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Then} verificado} & \textbf{Estado} \\
+\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Given-When-Then} verificado} & \textbf{Estado} \\
 \hline
 \endfirsthead
 \caption[]{Continuación --- Sprint 1} \\
 \hline
-\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Then} verificado} & \textbf{Estado} \\
+\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Given-When-Then} verificado} & \textbf{Estado} \\
 \hline
 \endhead
 \multicolumn{4}{r}{{\small Continúa en la próxima página}} \\
@@ -481,42 +481,55 @@ aceptación para este sprint.
 
 HU-01 &
 Crear publicación y abrir popup de subida &
-Al completar el formulario y presionar \textit{Guardar}, la publicación se registró en estado
-\textit{pendiente} y se presentó el popup modal con la barra de progreso en 0~\%, los botones
-\textit{Iniciar} y \textit{Cancelar}, y la cruz de cierre funcional hacia la página de gestión. &
+\textbf{Given:} El administrador está autenticado y accede al formulario de creación.
+\textbf{When:} Completa los campos obligatorios y presiona \textit{Guardar}.
+\textbf{Then:} La publicación se registró en estado \textit{pendiente} y se presentó 
+el popup modal con la barra de progreso en 0~\%, los botones \textit{Iniciar} y 
+\textit{Cancelar}, y la cruz de cierre funcional hacia la página de gestión. &
 \checkmark \\
 \hline
 
 HU-02 &
 Iniciar proceso de carga fragmentada &
-Al presionar \textit{Iniciar}, el sistema registró la sesión en estado \textit{en curso}, dividió el
-archivo en fragmentos, inició la transferencia secuencial a MinIO con validación de checksum por
-fragmento, actualizó la barra de progreso en tiempo real y cambió los controles disponibles a
-\textit{Pausar} y \textit{Cancelar}. &
+\textbf{Given:} El popup de subida está abierto con progreso en 0~\%.
+\textbf{When:} El usuario presiona el botón \textit{Iniciar}.
+\textbf{Then:} El sistema registró la sesión en estado \textit{en curso}, dividió el 
+archivo en fragmentos, inició la transferencia secuencial a MinIO con validación de 
+checksum por fragmento, actualizó la barra de progreso en tiempo real y cambió los 
+controles disponibles a \textit{Pausar} y \textit{Cancelar}. &
 \checkmark \\
 \hline
 
 HU-03 &
 Pausar subida de video en curso &
-Al presionar \textit{Pausar}, el frontend detuvo el envío de nuevos fragmentos una vez confirmado el
-último en tránsito, persistió el índice del último fragmento enviado, cambió el estado a
-\textit{pausada} y actualizó los controles a \textit{Reanudar} y \textit{Cancelar}. &
+\textbf{Given:} Una subida está en curso con estado \textit{en curso}.
+\textbf{When:} El usuario presiona \textit{Pausar} en el popup.
+\textbf{Then:} El frontend detuvo el envío de nuevos fragmentos una vez confirmado 
+el último en tránsito, persistió el índice del último fragmento enviado, cambió el 
+estado a \textit{pausada} y actualizó los controles a \textit{Reanudar} y 
+\textit{Cancelar}. &
 \checkmark \\
 \hline
 
 HU-04 &
 Reanudar subida pausada &
-Al presionar \textit{Reanudar}, el sistema consultó el último fragmento registrado en el backend,
-reanudó la transferencia desde el fragmento siguiente sin retransmitir los ya confirmados, actualizó
-el estado a \textit{en curso} y restauró los controles \textit{Pausar} y \textit{Cancelar}. &
+\textbf{Given:} Una subida está en estado \textit{pausada}.
+\textbf{When:} El usuario presiona \textit{Reanudar} en el popup.
+\textbf{Then:} El sistema consultó el último fragmento registrado en el backend, 
+reanudó la transferencia desde el fragmento siguiente sin retransmitir los ya 
+confirmados, actualizó el estado a \textit{en curso} y restauró los controles 
+\textit{Pausar} y \textit{Cancelar}. &
 \checkmark \\
 \hline
 
 HU-05 &
 Cancelar subida desde popup &
-Al presionar \textit{Cancelar} y confirmar la acción, el sistema detuvo la transferencia, registró
-el estado \textit{cancelada} con el \textit{timestamp} correspondiente, cerró el popup y preservó el
-registro en el historial sin eliminar la entrada de la base de datos. &
+\textbf{Given:} Una subida está en cualquier estado excepto \textit{cancelada} 
+o \textit{completada}.
+\textbf{When:} El usuario presiona \textit{Cancelar} en el popup y confirma la acción.
+\textbf{Then:} El sistema detuvo la transferencia, registró el estado 
+\textit{cancelada} con el \textit{timestamp} correspondiente, cerró el popup y 
+preservó el registro en el historial sin eliminar la entrada de la base de datos. &
 \checkmark \\
 \hline
 
@@ -539,12 +552,12 @@ Cuadro~\ref{tab:aceptacion_s2} presenta los resultados de aceptación correspond
 \caption{Pruebas de aceptación --- Sprint 2}
 \label{tab:aceptacion_s2}\\
 \hline
-\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Then} verificado} & \textbf{Estado} \\
+\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Given-When-Then} verificado} & \textbf{Estado} \\
 \hline
 \endfirsthead
 \caption[]{Continuación --- Sprint 2} \\
 \hline
-\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Then} verificado} & \textbf{Estado} \\
+\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Given-When-Then} verificado} & \textbf{Estado} \\
 \hline
 \endhead
 \multicolumn{4}{r}{{\small Continúa en la próxima página}} \\
@@ -554,36 +567,49 @@ Cuadro~\ref{tab:aceptacion_s2} presenta los resultados de aceptación correspond
 
 HU-06 &
 Gestionar subidas en página dedicada &
-La página \texttt{/publicaciones/procesos} listó todas las sesiones del usuario autenticado con
-agrupación configurable por nombre de video o por estado, filtros funcionales (\textit{Todas},
-\textit{Sin procesar}, \textit{Procesadas}), y una columna \textit{Acción} con botones contextuales
-correctos para cada estado. Al hacer clic en una fila se abrió el popup correspondiente. &
+\textbf{Given:} El administrador de canal está autenticado.
+\textbf{When:} Navega a la página de gestión de subidas.
+\textbf{Then:} La página \texttt{/publicaciones/procesos} listó todas las sesiones 
+del usuario con agrupación configurable por nombre de video o por estado, filtros 
+funcionales (\textit{Todas}, \textit{Sin procesar}, \textit{Procesadas}), y una 
+columna \textit{Acción} con botones contextuales correctos para cada estado. Al 
+hacer clic en una fila se abrió el popup correspondiente. &
 \checkmark \\
 \hline
 
 HU-07 &
 Completar subida y marcar como sin procesar &
-Al confirmarse el último fragmento mediante el endpoint \texttt{complete}, el sistema finalizó la
-sesión multipart en MinIO, actualizó el estado a \textit{completada | sin\_procesar} y mostró los
-botones \textit{Eliminar} y \textit{Procesar} en la columna \textit{Acción} de la página de gestión. &
+\textbf{Given:} Una subida está en estado \textit{en curso} y se ha enviado 
+exitosamente el último fragmento.
+\textbf{When:} El backend confirma la recepción y validación del último fragmento 
+mediante el endpoint \texttt{complete}.
+\textbf{Then:} El sistema finalizó la sesión multipart en MinIO, actualizó el estado 
+a \textit{completada | sin\_procesar} y mostró los botones \textit{Eliminar} y 
+\textit{Procesar} en la columna \textit{Acción} de la página de gestión. &
 \checkmark \\
 \hline
 
 HU-08 &
 Procesar video subido &
-Al presionar \textit{Procesar}, el sistema validó la ausencia de otro video procesándose para el
-mismo usuario, cambió el estado a \textit{Procesando} y delegó la tarea al \textit{worker} de
-Celery. El estado se actualizó automáticamente a \textit{Procesada} al concluir el procesamiento,
-momento en que el botón \textit{Acción} cambió a \textit{Ver} y la publicación quedó disponible en
-el canal. &
+\textbf{Given:} Un video está en estado \textit{completada | sin\_procesar}.
+\textbf{When:} El usuario presiona el botón \textit{Procesar} en la columna 
+\textit{Acción}.
+\textbf{Then:} El sistema validó la ausencia de otro video procesándose para el 
+mismo usuario, cambió el estado a \textit{Procesando} y delegó la tarea al 
+\textit{worker} de Celery. El estado se actualizó automáticamente a 
+\textit{Procesada} al concluir, momento en que el botón \textit{Acción} cambió 
+a \textit{Ver} y la publicación quedó disponible en el canal. &
 \checkmark \\
 \hline
 
 HU-09 &
 Ver publicación de video procesado &
-Desde la columna \textit{Acción} de un video con estado \textit{Procesada}, el botón \textit{Ver}
-navegó correctamente a la página pública de la publicación, donde el video resultó reproducible y
-los metadatos se presentaron de forma consistente. &
+\textbf{Given:} Un video está en estado \textit{Procesada}.
+\textbf{When:} El usuario presiona el botón \textit{Ver} en la columna 
+\textit{Acción}.
+\textbf{Then:} El sistema navegó correctamente a la página pública de la 
+publicación, donde el video resultó reproducible y los metadatos se presentaron 
+de forma consistente. &
 \checkmark \\
 \hline
 
@@ -606,14 +632,17 @@ de gestión desde la creación hasta la depuración del historial.
 \caption{Pruebas de aceptación --- Sprint 3}
 \label{tab:aceptacion_s3}\\
 \hline
-\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Then} verificado} & \textbf{Estado} \\
+\textbf{ID} & \textbf{Historia} & \textbf{Criterio \textit{Given-When-Then} verificado} & \textbf{Estado} \\
 \hline
 
 HU-10 &
 Eliminar registros de subidas &
-Al presionar la acción de eliminar y confirmar el diálogo, el sistema ejecutó la llamada
-\texttt{DELETE /v1/sesion/\{id\}/}, limpió los archivos asociados en MinIO y eliminó el registro de
-la lista de gestión de forma inmediata, sin permitir la operación sobre sesiones en estado
+\textbf{Given:} Un video está en estado \textit{cancelada} o 
+\textit{completada | sin\_procesar}.
+\textbf{When:} El usuario presiona la acción de eliminar y confirma el diálogo.
+\textbf{Then:} El sistema ejecutó la llamada \texttt{DELETE /v1/sesion/\{id\}/}, 
+limpió los archivos asociados en MinIO y eliminó el registro de la lista de gestión 
+de forma inmediata, sin permitir la operación sobre sesiones en estado 
 \textit{procesando} o \textit{procesada}. &
 \checkmark \\
 \hline
